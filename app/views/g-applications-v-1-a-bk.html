@@ -1,0 +1,255 @@
+{% extends "layout-jui.html" %}
+
+{% block page_title %}
+  View Applications
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+ <!--     <a href="la-dashboard.html" class="link-back">Back</a>-->
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="g-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Applications
+    </li>
+
+  </ol>
+</div>
+
+      <h1 class="govuk-heading-l">
+         Applications
+      </h1>
+<!--<div class="column-full" style="border-bottom: 1px solid #ccc; display: block; padding: 0px;"> <nav class="app-c-navigation govuk-h-clearfix">
+  <ul class="app-c-navigation__list">
+    <li class="app-c-navigation--current-page">
+      <a class="govuk-link" href="la-view-applications.html">C110a application</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="-la-c2-applications"> C2 application</a>
+    </li>
+
+
+
+  </ul>
+		</nav></div>-->
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        New applications   </h2>
+<p class="form-hint">Make your allocation on the applications maked as "needs allocation". After you have made your allocation, an email is sent to judge for approval. After judge approves your allocation, you can issue standard directions. </p>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+		  <div >
+          <dt class="cya-question ">
+            Application number
+          </dt>
+			<dd class="cya-answer app-mobile-hide">
+           <strong style="font-weight: bold;"> From </strong>
+          </dd>
+          <dd class="cya-answer app-mobile-hide">
+          <strong style="font-weight: bold;"> Date </strong>
+          </dd>
+          <dd class="cya-change">
+
+         <strong style="font-weight: bold;"> Status</strong>
+
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+          <a href="g-allocation-approved">  C110A #00388 </a>
+          </dt>
+			<dd class="cya-answer-">
+            Swansea
+          </dd>
+          <dd class="cya-answer">
+            20 Jul 2018
+          </dd>
+          <dd class="cya-change">
+
+              approved by judge<span class="visually-hidden">  application</span>
+
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+			  <a href="g-process-application"> C110A #00382</a> <!--<span class="task-new"> urgent</span>-->
+          </dt>
+			  <dd class="cya-answer-">
+           Port Talbot
+			  </dd>
+          <dd class="cya-answer">
+            20 Jul 2018
+          </dd>
+          <dd class="cya-change">
+
+            needs allocation
+            </a>
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+			  <a href="g-process-application" > C110A #00386</a>
+          </dt>
+			  <dd class="cya-answer-">
+             Neath
+			  </dd>
+          <dd class="cya-answer">
+             20 Jul 2018
+          </dd>
+          <dd class="cya-change">
+
+              needs allocation
+
+          </dd>
+        </div>
+		   
+
+
+
+
+
+
+
+      </dl>
+
+<h2 class="heading-medium">
+        Upcoming applications   </h2>
+	<p class="form-hint">List of upcoming applications in the near future so that appropriate resources can be put in place to support them. </p>
+
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+		  <div>
+          <dt class="cya-question">
+            Application number
+          </dt>
+			<dd class="cya-answer-">
+           <strong class="govuk-heading-s"> From </strong>
+          </dd>
+          <dd class="cya-answer ">
+          <strong style="font-weight: bold;">  </strong>
+          </dd>
+          <dd class="cya-change">
+
+         <strong class="govuk-heading-s"> Status</strong>
+
+          </dd>
+        </div>
+         <div>
+          <dt class="cya-question">
+			  <a href="g-upcoming-application" >  C110A #00383</a>
+          </dt>
+			  <dd class="cya-answer-">
+              Swansea
+			  </dd>
+          <dd class="cya-answer">
+
+          </dd>
+          <dd class="cya-change">
+
+              80% complete <span class="visually-hidden"> </span>
+
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+			  <a href="g-process-application"> C110A #00389</a>
+          </dt>
+			  <dd class="cya-answer-">
+           Swansea
+			  </dd>
+          <dd class="cya-answer">
+
+          </dd>
+          <dd class="cya-change">
+
+            30% complete
+            </a>
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+			  <a href="g-upcoming-application" > C110A #00383</a>
+          </dt>
+			  <dd class="cya-answer-">
+             Swansea
+			  </dd>
+          <dd class="cya-answer">
+
+          </dd>
+          <dd class="cya-change">
+
+             20% complete
+
+          </dd>
+        </div>
+		   <div>
+          <dt class="cya-question">
+			  <a href="g-upcoming-application" >  C110A #00383</a>
+          </dt>
+			  <dd class="cya-answer-">
+           Swansea
+			  </dd>
+          <dd class="cya-answer">
+
+          </dd>
+          <dd class="cya-change">
+            60% complete
+
+          </dd>
+        </div>
+		   <div>
+          <dt class="cya-question">
+			  <a href="g-upcoming-application" >  C110A #00383</a>
+          </dt>
+			  <dd class="cya-answer-">
+              Swansea
+			  </dd>
+          <dd class="cya-answer">
+
+          </dd>
+          <dd class="cya-change">
+
+              80% complete <span class="visually-hidden"> </span>
+
+          </dd>
+        </div>
+
+
+
+
+
+
+      </dl>
+
+
+
+
+
+     <br/>  <br/>
+
+
+
+
+
+
+<br/>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

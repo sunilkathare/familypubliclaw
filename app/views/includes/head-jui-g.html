@@ -1,0 +1,361 @@
+<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application_old.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/images/application.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/nav-style.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+
+
+<style>
+	
+	.content-fixed {
+	top: 0;
+	position: fixed
+}
+.shim {
+	display: block
+}
+	/* Smartphones (portrait and landscape)  ----------- */
+
+	.app-left-nav{ width:200px!important; float: left; }
+	.app-right-content{margin: 0px;  width: 760px !important; float: right}
+
+	/* Smartphones (portrait and landscape) ----------- */
+   @media screen and (max-width: 990px) {
+		.app-left-nav{display: none; }
+		.app-right-content{display: block; width: 100% !important; padding: 0px;}
+	   .notifications-menu-view{ display: none;}
+
+}
+
+   @media screen and (max-width: 760px) {
+
+	 	.app-mobile-hide-{display: none;}
+	   .app-mobile-hide-2{display: none;}
+	   .jui-casefile-page-content{ padding: 5px!important;  box-shadow: 0 #fff!important; }
+		.jui-casefile-page{ padding: 5px!important; box-shadow: 0 #fff!important; }
+
+
+}
+
+	@media screen and (max-width: 480px) {
+
+		.app-mobile-hide{display: none;}
+	   .notifications-menu-view{ display: none;}
+
+		.jui-casefile-page-content{ padding: 5px!important; box-shadow:#fff!important; }
+		.jui-casefile-page{ padding: 5px!important}
+		.floating-button{  display: block; width: 100%; margin: 2px;
+		}
+/* Styles */
+}
+	.govuk-heading-s{  padding-top: 10px;}
+
+
+	.page-contents__list li{ margin: 8px 0;}
+	.page-contents__list li a{ text-decoration: ; font-size: 75%}
+	#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #f8f8f8;
+}
+
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #000;
+    color: #fff;
+}
+	.jui-casebar{padding:10px 16px 20px 20px; }
+
+	.govuk-table__header{ width: 290px; font-size: 15px; }
+
+
+
+	.govuk-table__cell{width: 400px;font-size: 15px; }
+
+	/* Style variants
+     ========================================================================== */
+@media (min-width: 40.0625em) {
+  .jui-button-actions__item--inline {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+/* ==========================================================================
+   #CASEFILE
+   This is just for demo purposes only. Not for production usage!
+   ========================================================================== */
+.jui-casefile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jui-casefile-files {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 0 30px 30px;
+  width: 300px;
+}
+
+.jui-casefile-page {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 900px;
+}
+
+.jui-casefile-page-head {
+  height: 74px;
+  margin-bottom: 40px;
+}
+
+.jui-casefile-page-content {
+  background: #ffffff;
+  box-shadow: 0 4px 6px 0 rgba(11, 12, 12, 0.1);
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 50px;
+  position: relative;
+  width: 100%;
+  min-height: 1100px;
+}
+
+.jui-casefile-page-content:first-child {
+  margin-top: 0;
+}
+
+.jui-casefile-page-content[data-page]::after {
+  color: #6f777b;
+  content: attr(data-page);
+  line-height: 1;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.jui-casefile-list {
+  list-style: none;
+  margin: 0;
+  padding: 30px 0 0;
+  position: sticky;
+  top: 0;
+}
+
+.jui-casefile-list li {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.jui-casefile-list a[aria-current] {
+  color: #0b0c0c;
+}
+
+.jui-casefile-list ul {
+  margin: 20px 0 20px 20px;
+  padding: 0;
+}
+
+.jui-casefile-list ul li {
+  font-weight: normal;
+}
+
+	.sub-header{ padding: 6px 0; padding-left: 20px; border-bottom: 0px solid #ccc; border-left: 0px solid #f8f8f8;}
+	.sub-cell{border-bottom: 0px solid #ccc; padding: 6px 0; }
+
+		 .key-tag {
+    display: -moz-inline-stack;
+    display: inline-block;
+    margin: 0 8px 30px 0;
+    padding: 8px 10px ;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+			 background-color: #005EA5 ;}
+
+
+	.dashboard-box-link a .govuk-box-highlight p{color: #fff !important;}
+
+	.govuk-width-container{margin: 0px; width: 100%; max-width: 100%; } #content{margin: 0px; 0; padding: 20px;} .govuk-main-wrapper{padding: 0px;} .govuk-template__body{width: 100%; margin: 0px; padding: 0px; margin: 0;
+    background-color: #ffffff;}
+    #content{padding-top: 0px}
+    .govuk-footer {padding: 20px;}
+
+/* ==========================================================================
+   #CASE BAR
+   ========================================================================== */
+.jui-casebar {
+  background-color: #005ea5;
+  color: #ffffff;
+  padding: 10px 20px;
+  height: 20px; font-family: sans-serif;
+  font-size: 80%;
+}
+
+.jui-casebar:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 40.0525em) {
+  .jui-casebar__options {
+    margin-top: 10px;
+  }
+  .jui-casebar__options:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .jui-casebar__details {
+    float: left;
+  }
+  .jui-casebar__options {
+    float: right;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+.jui-casebar__title {
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* ==========================================================================
+   #CASE ACTIONS
+   ========================================================================== */
+.jui-case-actions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jui-case-actions__item {
+  margin-right: 10px;
+  float: left;
+}
+
+.jui-case-actions__item:last-child {
+  margin-right: 0;
+}
+
+.jui-case-actions__link {
+  background-color: #f8f8f8;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.jui-case-actions__link:link, .jui-case-actions__link:visited, .jui-case-actions__link:active {
+  color: #0b0c0c;
+}
+
+.jui-case-actions__link:hover {
+  background-color: #dee0e2;
+}
+/* notification */
+.notifications-menu-view{line-height:0}.notifications-menu-view .gn-title.c-notifications-menu{display:inline-block;cursor:pointer;text-align:center}.notifications-menu-view .gn-title.c-notifications-menu:hover{opacity:.7}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{display:inline-block;background:url(/public/images/icon-notification@2x.png) 0px 0px no-repeat;width:22px;height:24px;position:relative; background-size: cover;}@media only screen and (-o-min-device-pixel-ratio:150/100),only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-resolution:1.5dppx),only screen and (min-resolution:144dpi){.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{background-image:url(/public/images/icon-notification@2x.png);background-size:70px 70px; background-size: cover;}}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount{position:absolute;top:-3px;right:-5px;display:block;border-radius:2px;border:1px solid #fff;padding:0 4px;font:normal 11px Arial,sans-serif;line-height:11px;background:#000;color:#fff}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount.hidden{display:none}.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount,.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount:hover{box-sizing:border-box;height:16px;min-width:16px;text-align:center;line-height:17px;border-radius:8px;font-size:12px;font-family:inherit;border:none;right:-10px;top:-11px;background:#ff0084}
+
+/* Accordian */
+
+	.accordion-controls {
+  text-align: right;
+}
+
+.accordion-expand-all {
+  display: inline;
+  background: transparent;
+  border-width: 0;
+  font-size: 16px;
+  color: #005EA5;
+  cursor: pointer;
+}
+
+.accordion .accordion-section[aria-expanded="false"] .accordion-section-body {
+  display: none;
+}
+
+.accordion.with-js {
+  border-bottom-width: 1px;
+  border-bottom-color: #bfc1c3;
+  border-bottom-style: solid;
+}
+
+.accordion.with-js .accordion-section {
+  border-top-width: 1px;
+  border-top-color: #bfc1c3;
+  border-top-style: solid;
+}
+
+.accordion.with-js h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.accordion.with-js .accordion-section-header {
+  cursor: pointer;
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+
+.accordion.with-js .accordion-section-header h2 {
+  color: #005EA5;
+}
+
+.accordion.with-js .accordion-section-header:hover {
+  background-color: #f8f8f8;
+}
+
+.accordion.with-js .icon {
+
+  position: absolute;
+  top: 50%;
+  right: 15px;
+
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+
+  /* Note: you may have to update these URL paths */;
+
+  /* PNG fallback for SVG */
+  background-image: url('/public/images/icon-plus-minus.png');
+
+  /* SVG sprite */
+  background: url("public/images/icon-plus-minus.svg"), linear-gradient(transparent, transparent);
+  background: url("public/images/icon-plus-minus.svg"), linear-gradient(transparent, transparent);
+
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+}
+
+.accordion.with-js .accordion-section[aria-expanded="true"] .icon {
+  background-position: 0 0;
+}
+
+/* highted event */
+.highlighted-event{padding:1.75em 0.75em 1.25em; olor: #fff; background-color:#28a197; text-align: center; }
+
+.highlighted-event p{ color: #fff; font-family:"nta", Arial, sans-serif;font-weight:400;text-transform:none;font-size:24px;line-height:1.2;display:block;padding-top:9px;padding-bottom:6px;font-weight:bold;padding:0;margin:0}
+.highlighted-event p span{ color: #fff; display:block;font-family:"nta", Arial, sans-serif;font-weight:400;text-transform:none;font-size:24px;line-height:1.2;display:block;padding-top:9px;padding-bottom:6px;font-weight:bold}
+
+.highlighted-event p em{ font-style:normal; display:block;font-family:"nta", Arial, sans-serif;font-weight:400;text-transform:none;font-size:80px;line-height:1.0377358491;display:block;padding-top:8px;padding-bottom:7px;font-weight:bold;margin-bottom:0;padding:0;padding-top:0.2em;padding-bottom:0.1em}
+.subscribe p a{ margin: 30px 0 0 0; display:block;font-weight:600;background:url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;min-height:2.5em;padding:0 0 0 3em}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){article .subscribe p a{background-image:url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);background-size:29px 24px}}
+
+</style>
+
+

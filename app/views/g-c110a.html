@@ -1,0 +1,1558 @@
+{% extends "layout-jui-blank.html" %}
+
+{% block page_title %}
+ C110A
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>-->
+ <div class="jui-casebar" style="padding:10px 16px 20px 20px; display: none">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+      #0093939983<span class="jui-casebar__title"> London Borough of Southwark versus	Samantha Smith & Paul Smith </span>
+    </div>
+
+
+    <div class="jui-casebar__options" style="display: none;">
+
+    <nav class="jui-case-actions" >
+  <ul class="jui-case-actions__list" >
+
+      <li class="jui-case-actions__item" >
+        <a  class="jui-case-actions__link" href="g-make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-list-for-hearing">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav><!--  -->
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav" style="display: none;">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li >
+      <a class="govuk-link" href="g-case-summary" data-topnav="Case summary"> Case summary</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-parties" data-topnav="Parties">Parties</a>
+    </li>
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="g-case-file" data-topnav="Case file">Case file</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="g-directions" data-topnav="directions">Directions</a>
+    </li>
+	  <li>
+      <a class="govuk-link" href="g-orders" data-topnav="timeline" >Orders</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-timeline" data-topnav="timeline" >Status & timeline</a>
+    </li>
+	  <li>
+      <a class="govuk-link" href="g-questions" data-topnav="timeline" >Questions</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-case-summary" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Case summary</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="g-case-summary">Case details </a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="g-case-summary-by-la">Summary by LA</a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-parties" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Parties</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+              <a class="govuk-link" href="g-parties#children">Children</a>
+            </li>
+			  <li>
+          <a class="govuk-link" href="g-parties#respondents">Respondents</a>
+        </li>
+            <li>
+              <a class="govuk-link" href="g-parties#applicant">Applicant </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="g-parties#cafcass">CAFCASS</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-case-file" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Case file</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+
+
+          <ul class="app-mobile-nav__theme-nav"  style="display: none;">
+			  <li>
+          <a class="govuk-link" href="g-case-file">C110a Application </a>
+        </li>
+            <!--<li>
+              <a class="govuk-link" href="/public/images/SWET.pdf" target="_blank">SWET</a>
+            </li>-->
+
+			  <li>
+              <a class="govuk-link" href="g-case-file-documents">Documents</a>
+            </li>
+			  <!-- <li>
+              <a class="govuk-link" href="g-case-file-upload">Upload</a>
+            </li>-->
+
+
+          </ul>
+
+      </ul>
+		<li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-directions" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Directions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="g-directions">View directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+	  <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-orders" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Orders</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="g-standard-directions">Standard directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+<li>
+          <a class="govuk-link" href="g-cmo">CMO </a>
+        </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-timeline" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">Status/ Timeline</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="g-timeline">Timeline</a>
+        </li>
+
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-questions" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">Questions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="g-questions">View questions</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="g-questions-ask">Ask questions </a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+<div class="app-pane__body">
+  <div class="app-pane__subnav app-hide-mobile">
+<nav class="app-subnav">
+	<h4 class="app-subnav__theme">Case file  </h4>
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="g-case-file">C110a application</a>
+            </li>
+            <!--<li class="app-subnav__section-item">
+              <a class="govuk-link" href="/public/images/SWET.PDF" target="_blank">SWET</a>
+            </li>-->
+
+			   <li class="app-subnav__section-item">
+              <a class="govuk-link" href="g-case-file-documents">Documents</a>
+            </li>
+			  <!-- <li class="app-subnav__section-item">
+              <a class="govuk-link" href="g-case-file-upload">Upload new document</a>
+            </li>-->
+          </ul>
+</nav>
+  </div>
+ <div class="app-pane__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-xl">  C110a</span>
+       Application for a care, supervision or emergency protection order
+
+
+        </h1>
+
+
+      </div>
+
+		 <div class="jui-casefile-page" style="width: 470px; padding: 5px;" >
+
+        <!-- page 1 -->
+        <div class="jui-casefile-page-content" style="padding: 5px;" >
+
+
+          <div class="jui-casefile-page-body" >
+
+            
+
+			  <div > <span class="key-tag">BABY IN HOSPITAL    </span>  <span class="key-tag">NEGLECT  </span><span class="key-tag">CONTESTED ICO                </span></div>
+
+			  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed" style="font-size:50%!important">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Child 1</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Name </th>
+
+
+
+      <td class="govuk-table__cell ">Adam Smith <br/>
+
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Age</th>
+
+
+
+      <td class="govuk-table__cell ">
+   2 days old
+</td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Date of birth</th>
+
+
+
+      <td class="govuk-table__cell ">
+   15 June 2018
+</td>
+
+
+    </tr><tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Gender	</th>
+
+
+
+      <td class="govuk-table__cell ">
+  boy
+</td>
+
+
+    </tr>
+
+
+   <!-- <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Accommodated</th>
+
+
+
+      <td class="govuk-table__cell ">Yes - newborn in hospital awaiting discharge </td>
+
+
+    </tr>-->
+
+  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Key dates for this child	</th>
+
+
+
+      <td class="govuk-table__cell ">-
+  </td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Child’s situation 	</th>
+
+
+
+      <td class="govuk-table__cell ">Newborn in hospital <br>
+Accommodated for 2 days<br>
+Discharge date: ready to be discharged<br>
+Withdrawing from drugs? No
+  </td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Care plan	</th>
+
+
+
+      <td class="govuk-table__cell ">Place baby in local authority foster care until further assessments are completed.
+Supervised contact with parents to be arranged.
+  </td>
+
+      </tr>
+
+
+    </tr>
+
+      <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Additional needs	</th>
+
+
+
+      <td class="govuk-table__cell ">None
+  </td>
+
+
+    </tr>
+  </tbody>
+</table>
+
+			  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Respondent 1</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Name </th>
+
+
+
+      <td class="govuk-table__cell ">Samantha Smith <br/>
+
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Age</th>
+
+
+
+      <td class="govuk-table__cell ">
+   25
+</td>
+
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Address</th>
+
+
+
+      <td class="govuk-table__cell ">72 Guild Street
+London
+SE23 6FH
+</td>
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Relationship to child</th>
+
+
+
+      <td class="govuk-table__cell ">Mother
+</td>
+
+
+    </tr>
+
+    </tr>
+		   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Litigation capacity issues?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Disability - help or facilities needed?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+			   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Assessments needed?</th>
+
+
+
+      <td class="govuk-table__cell ">Yes
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Interpreter needed?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+			 <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Other information </th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+
+
+
+
+
+  </tbody>
+</table>
+<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Respondent 2</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Name </th>
+
+
+
+      <td class="govuk-table__cell ">Paul Smith <br/>
+
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Age</th>
+
+
+
+      <td class="govuk-table__cell ">
+   25
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Address</th>
+
+
+
+      <td class="govuk-table__cell ">Living in residential unit
+</td>
+
+
+    </tr>
+	     <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Litigation capacity issues?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Relationship to child</th>
+
+
+
+      <td class="govuk-table__cell ">Father
+</td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Has the local authority been in contact with this person during pre-proceedings?</th>
+
+
+
+      <td class="govuk-table__cell ">Yes
+</td>
+
+
+    </tr>
+	  <!--<tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Is this person in prison?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>-->
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Disability - help or facilities needed?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+			   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Assessments needed ?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Interpreter needed?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+	  	 <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Other information </th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+
+  </tbody>
+</table>
+            <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Orders
+</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Orders applied for</th>
+
+
+
+      <td class="govuk-table__cell ">Interim care order</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row"></th>
+
+
+
+           <td class="govuk-table__cell ">	Care order</td>
+
+
+
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+
+
+            <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Grounds for the application</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Child is</th>
+
+
+
+      <td class="govuk-table__cell ">not receiving care that would be reasonably expected of a parent </td>
+
+
+    </tr>
+
+
+
+
+
+  </tbody>
+</table>
+
+
+
+            <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Risks and harm to children</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Physical harm through neglect</th>
+
+
+
+      <td class="govuk-table__cell ">Past harm & future risk</td>
+
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Non-accidental injury </th>
+
+
+
+      <td class="govuk-table__cell ">No</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Emotional harm</th>
+
+
+
+      <td class="govuk-table__cell ">   Future risk </td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Sexual abuse</th>
+
+
+
+      <td class="govuk-table__cell ">No</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Neglect</th>
+
+
+
+      <td class="govuk-table__cell ">Past neglect &
+     future risk
+</td>
+
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+
+
+
+            <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s">Factors affecting parenting</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Alcohol and drugs </th>
+
+
+
+      <td class="govuk-table__cell ">Yes <br/>
+Uses cannabis and cocaine on a daily basis
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Mental health issues</th>
+
+
+
+      <td class="govuk-table__cell ">Yes<br/>
+     Significant concerns around severe depression. No    assessment started yet
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Domestic violence</th>
+
+
+
+      <td class="govuk-table__cell ">No</td>
+
+
+    </tr>
+	   </tbody>
+</table>
+	 <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s">Threshold</caption>
+
+
+  <tbody class="govuk-table__body">
+
+  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">What prompted you to start court proceedings now?</th>
+
+
+
+      <td class="govuk-table__cell ">Newborn baby in hospital, ongoing concerns about mother during pregnancy</td>
+
+
+    </tr>
+
+  </tbody>
+</table>
+
+            <table class="govuk-table govuk-!-f-16  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s">Threshold evidence</caption>
+
+
+  <tbody class="govuk-table__body">
+
+
+
+
+    <tr class="govuk-table__row" >
+
+
+    <!--  <th class="govuk-table__header" scope="row">Threshold is met because:  </th>-->
+
+
+
+      <td class="govuk-table__cell" style="width: 700px;"><h3 style="padding: 10px 0;"> Threshold is met because:</h3><p>Pursuant to section 31 of the Children Act 1989, the Local Authority submits that at the relevant date, the baby was suffering and was likely to suffer significant harm. The harm (and the likelihood of harm) was attributable to the care given to the child (or likely to have been given to the child without an order being made) not being what it would be reasonable to expect a parent give him.
+</p>
+<p>The Local Authority rely on the following:
+</p>
+<p>1) The respondent mother and putative father have had past experiences of neglectful and harmful parenting from their own parents. They both limited insight into the impact of their experiences on their behaviours.
+</p>
+<p>2) There is a history of aggressive behaviours, drugs and alcohol use. They have not been able to make any significant changes to their lifestyles during the pre birth assessment period.</p>
+
+		  <p>3) The respondent mother has placed herself and her unborn children in risky situations. She jumped out of a window and ended up with cuts but refused to let anyone check her or the unborn baby.</p>
+
+		  <p>4) There have been missed antenatal appointments and failure to take necessary medication for diabetes.</p>
+		  <p>5) The respondent mother has continued to use drugs and drink alcohol throughout her pregnancy. Baby was born prematurely.
+ </p>
+		  <p>6) The mother is unable to address her own care needs consistently. She is often unwashed and doesn’t take prescribed medication as instructed. As such, there are concerns about her ability to ensure a routine and basic care for the baby. The respondent mother’s accommodation is dirty and unhygienic, faeces have been smeared on the wall, clothes are not washed. There are frequent visitors, the identity of whom </p>
+
+		    <p>7) There are ongoing concerns about violence between the parents. The father has made threats to harm the mother and unborn baby. On 6 April 2018, the respondent mother stated that the father had hit her and recently pushed her over in the street and she fell into the road.
+ </p>
+</td>
+
+
+    </tr>
+
+
+
+  </tbody>
+</table>
+			 <!--<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Plan for children</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Local authority proposal  </th>
+
+
+
+      <td class="govuk-table__cell ">Place baby in local authority foster care until further assessments are completed.
+Supervised contact with parents to be arranged.
+</td>
+
+
+    </tr>
+
+
+
+
+
+  </tbody>
+</table> -->
+            <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Hearings needed</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Hearing needed in next 24 hours? </th>
+
+
+
+      <td class="govuk-table__cell ">No <br/>
+
+</td>
+
+
+    </tr>
+
+
+
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Hearing needed in the next 12 days</th>
+
+
+
+      <td class="govuk-table__cell "> Yes
+
+
+</td>
+
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row" >Reason  </th>
+
+
+
+      <td class="govuk-table__cell sub-cell"> Baby will be discharged from hospital on 21 Jun 2018
+
+
+
+
+</td>
+
+
+    </tr> <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row" >Hearing date requested</th>
+
+
+
+      <td class="govuk-table__cell sub-cell">  20 Jun 2018
+
+
+</td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row" >Application type </th>
+
+
+
+      <td class="govuk-table__cell sub-cell"> Contested ICO?
+
+		  <br/>
+
+
+</td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Without notice?</th>
+
+
+
+      <td class="govuk-table__cell ">
+
+No
+</td>
+
+
+    </tr>
+  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Reduced notice</th>
+
+
+
+      <td class="govuk-table__cell ">Yes <br/>Reason: Baby needs to be discharged from hospital
+</td>
+
+
+    </tr>
+   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Are respondents aware of proceedings?</th>
+
+
+
+      <td class="govuk-table__cell ">Yes
+</td>
+
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Respondents’ views on proceedings</th>
+
+
+
+      <td class="govuk-table__cell ">They seek to care for baby in mother and baby unit or in residential assessment unit
+</td>
+
+
+    </tr>
+
+
+  </tbody>
+</table>
+<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+<caption class="govuk-table__caption govuk-heading-s"> Arrangements needed for hearing</caption>
+
+
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+
+
+<th class="govuk-table__header" scope="row">Welsh proceedings?</th>
+
+
+
+<td class="govuk-table__cell ">No
+</td>
+
+
+</tr>
+
+
+
+<tr class="govuk-table__row">
+
+
+<th class="govuk-table__header" scope="row">Interpreter?</th>
+
+
+
+<td class="govuk-table__cell ">No</td>
+
+
+</tr>
+
+
+</tr>
+
+<!--<tr class="govuk-table__row">
+
+
+<th class="govuk-table__header sub-header" scope="row" >Person 1</th>
+
+
+
+<td class="govuk-table__cell sub-cell">Susan Williams</td>
+
+
+</tr>
+
+<tr class="govuk-table__row">
+
+
+<th class="govuk-table__header sub-header" scope="row">Relationship	</th>
+
+
+
+<td class="govuk-table__cell sub-cell">Maternal aunt</td>
+
+
+</tr>
+<tr class="govuk-table__row">
+
+
+<th class="govuk-table__header sub-header" scope="row" style="border-bottom: 1px solid #ccc">Location	</th>
+
+
+
+<td class="govuk-table__cell sub-cell "style="border-bottom: 1px solid #ccc">Lives in Dubai</td>
+
+
+</tr>-->
+<tr class="govuk-table__row">
+
+
+<th class="govuk-table__header" scope="row">Security?   </th>
+
+
+
+<td class="govuk-table__cell ">No</td>
+
+
+</tr>
+
+
+
+</tbody>
+</table>
+
+			  <!--<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s">Litigation capacity or other issues</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Litigation capacity issues </th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Learning disability referrals</th>
+
+
+
+      <td class="govuk-table__cell ">None
+</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Any other information</th>
+
+
+
+      <td class="govuk-table__cell ">No</td>
+
+
+    </tr>
+
+
+
+  </tbody>
+</table>-->
+
+			    <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> International element</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Aware of international element?</th>
+
+
+
+      <td class="govuk-table__cell ">No
+</td>
+
+
+    </tr>
+
+
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Is there anyone in genogram who lives outside UK and has been assessed a possible carer?</th>
+
+
+
+      <td class="govuk-table__cell ">No</td>
+
+
+    </tr>
+
+
+    </tr>
+
+    <!--<tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row" >Person 1</th>
+
+
+
+      <td class="govuk-table__cell sub-cell">Susan Williams</td>
+
+
+    </tr>
+
+			   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row">Relationship	</th>
+
+
+
+      <td class="govuk-table__cell sub-cell">Maternal aunt</td>
+
+
+    </tr>
+			   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row" style="border-bottom: 1px solid #ccc">Location	</th>
+
+
+
+      <td class="govuk-table__cell sub-cell "style="border-bottom: 1px solid #ccc">Lives in Dubai</td>
+
+
+    </tr>-->
+  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Aware of proceedings outside UK?   </th>
+
+
+
+      <td class="govuk-table__cell ">No</td>
+
+
+    </tr>
+
+
+
+  </tbody>
+</table>
+ <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Previous or ongoing proceedings</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Aware of previous or ongoing proceedings?</th>
+
+
+
+      <td class="govuk-table__cell ">Yes
+</td>
+
+
+    </tr>
+
+
+
+    <tr class="govuk-table__row" >
+
+
+      <th class="govuk-table__header sub sub-header" scope="row" >Case no</th>
+
+
+
+      <td class="govuk-table__cell sub-cell" >79879879879</td>
+
+
+    </tr>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row" >Started</th>
+
+
+
+      <td class="govuk-table__cell sub-cell" >Sep 2009</td>
+
+
+    </tr>
+
+			   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row">Ended	</th>
+
+
+
+      <td class="govuk-table__cell sub-cell" >Apr 2010</td>
+
+
+    </tr>
+			   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row">Orders made	</th>
+
+
+
+      <td class="govuk-table__cell  sub-cell">Supervision, interim supervision</td>
+
+
+    </tr>
+  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row">Judge	  </th>
+
+
+
+      <td class="govuk-table__cell sub-cell ">DDJ Jones</td>
+
+
+    </tr>
+		  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row">Guardian  </th>
+
+
+
+      <td class="govuk-table__cell sub-cell">Helen Yates</td>
+
+
+    </tr> <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header" scope="row">Same guardian needed? </th>
+
+
+
+      <td class="govuk-table__cell sub-cell">No</td>
+
+
+    </tr>
+
+
+
+  </tbody>
+</table>
+<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s"> Allocation proposal</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Applicant’s allocation proposal</th>
+
+
+
+      <td class="govuk-table__cell ">District Judge level
+</td>
+
+
+    </tr>
+
+
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Applicable
+paragraphs from the schedule to
+the President’s Guidance on the
+distribution of business</th>
+
+
+
+      <td class="govuk-table__cell ">Risk of serious physical or emotional harm arising from death of another child in family, a parent or other
+significant person. History of suspicious death of a child in the family.</td>
+
+
+    </tr>
+
+
+
+
+
+
+  </tbody>
+</table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+<!--application end-->
+      </div>
+    </main>
+
+    <div class="app-pane__subnav-mobile-overview app-hide-desktop">
+<nav class="app-subnav">
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item">
+              <a class="govuk-link" href="g-case-file"> C110a Application</a>
+            </li>
+           <!-- <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="public/images/SWET.pdf" target="_blank">SWET</a>
+            </li>-->
+
+			  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-documents">Documents/a>
+            </li>
+				<!--  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-upload">Upload new document/a>
+            </li>-->
+          </ul>
+</nav>
+    </div>
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row-">
+    <div class="column-full column-minimum" style="">
+
+	<!--Breadscrumbs
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "-la-dashboard"
+    },
+    {
+      text: "Cases",
+      href: "la-cases"
+    },
+    {
+      text: "#0093939983"
+    }
+,		{
+      text: "Case summary"
+    }
+  ]
+}) }}-->
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

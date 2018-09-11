@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Accounts
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-dashboard">Dashboard</a>
+    </li>
+	  <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-accounts">Accounts</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Invitation sent confirmation
+    </li>
+
+  </ol>
+</div>
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">
+        Invitation sent to Joe Bloggs 
+        </h1>
+        <p class="font-large" style="color: #fff !important">
+          Your reference number is <br>
+          <strong class="bold" >HDJ2123F</strong>
+        </p>
+      </div>
+
+      <p>
+        We have sent Joe Bloggs an email with instruction to create a new paasword.
+      </p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>Once the user creates a new password they will be able login with the rights that have been set.</p>
+      <p>Return to <a href="la-dashboard.html">Dashboard</a></p>
+		<h3 class="heading-medium">IDAM activation email sent </h3>
+   <a href="index.html" >  <img src="/public/images/idam-process.jpg" width="1000" height="1291" alt=""/> </a></div>
+  </div>
+</main>
+
+{% endblock %}

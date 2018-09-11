@@ -1,0 +1,449 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+ (C110A) - Apply for a care, supervision or emergency protection order
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>
+ <div class="jui-casebar">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+      #0093939983<span class="jui-casebar__title"> London Borough of Southwark  versus 	Samantha Smith & Paul Smith </span>
+    </div>
+
+
+    <div class="jui-casebar__options">
+
+      <nav class="jui-case-actions">
+  <ul class="jui-case-actions__list">
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/mark-as-prepared">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="#" data-topnav="Get started">Cases</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="https://design-system.service.gov.uk/styles" data-topnav="Styles">Applications</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="https://design-system.service.gov.uk/components" data-topnav="Components">Events calendar</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="https://design-system.service.gov.uk/patterns" data-topnav="Patterns">How to videos</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="https://design-system.service.gov.uk/community" data-topnav="Community">User management</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="https://design-system.service.gov.uk/get-started" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Cases</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+        <li>
+          <a class="govuk-link" href="https://design-system.service.gov.uk/get-started">Case list </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/get-started/production">link 1</a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="https://design-system.service.gov.uk/get-started/prototyping">tes 2</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/get-started/updating">test 3</a>
+            </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="https://design-system.service.gov.uk/styles" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Applications</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+        <li>
+          <a class="govuk-link" href="https://design-system.service.gov.uk/styles">C110a</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/styles/colour">C2 </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/styles/images">c100</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/styles/layout">c200</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/styles/spacing">c8</a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="https://design-system.service.gov.uk/components" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Events calendar</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="https://design-system.service.gov.uk/components">test </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/components/back-link">test</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/components/breadcrumbs">test</a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="https://design-system.service.gov.uk/patterns" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">How to videos</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="https://design-system.service.gov.uk/patterns">How file C110A application?</a>
+        </li>
+
+            <h4 class="app-mobile-nav__theme">How upload E-bundle?</h4>
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/patterns/addresses">How file part 45 application?</a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="https://design-system.service.gov.uk/community" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">user management</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="https://design-system.service.gov.uk/community">test</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/community/backlog">test 2</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/community/how-you-can-contribute">test</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/community/contribution-criteria">test</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://design-system.service.gov.uk/community/design-system-working-group">test</a>
+            </li>
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>-->
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+	<!--Breadscrumbs-->
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "la-dashboard-v3"
+    },
+    
+    {
+      text: "C110A application"
+    }
+  ]
+}) }}
+
+	<div class="govuk-grid-row  govuk-grid-column-two-thirds column-minimum govuk-clearfix">
+    <h1 class="govuk-heading-l">
+        <span class="govuk-caption-xl">  C110A</span>
+    Apply for a care, supervision or emergency protection order <!--or other order under part 4 of the Children Act 1989-->
+
+
+    </h1>
+
+      <ol class="task-list">
+		  <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">1. </span>Select the orders sought and hearing needed
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="c110a-orders?change=false" aria-describedby="eligibility-completed">
+                Orders needed
+              </a>
+              {% if data['order-type']  %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+			   <li class="task-list-item">
+              <a class="task-name" href="c110a-hearing?change=false" aria-describedby="contact-details-completed">
+                Hearing needed
+              </a>
+              {% if data['hearing-day'] and data['hearing-type'] and data['without-notice'] and data['reduced-notice'] and data['respondents-notified']%}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+
+            </li>
+            <!--<li class="task-list-item">
+              <a class="task-name" href="-c110a-respondent?change=false" aria-describedby="read-declaration-completed">
+                Addtional information required 
+              </a>
+              {% if data['respondent-1-full-name'] and data['respondent-1-gender'] and data['respondent-1-contact-number']and data['respondent-1-child-1-relationship']and data['respondent-1-child-1-full-name']and data['respondent-1-current-address'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+             
+              {% endif %}
+
+
+            </li>-->
+			  
+          </ul>
+        </li>
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">2. </span>Enter people in the case
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="c110a-children?change=false" aria-describedby="eligibility-completed">
+                Children
+              </a>
+              {% if data['key-dates'] and data['child-1-full-name'] and data['child-1-dob-year'] and data['child-1-gender'] and data['child-situation'] and data['care-plan'] and data['child-1-mother-name'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="c110a-respondent?change=false" aria-describedby="read-declaration-completed">
+                Respondents
+              </a>
+              {% if data['respondent-1-full-name'] and data['respondent-1-gender'] and data['respondent-1-contact-number']and data['respondent-1-child-1-relationship']and data['respondent-1-child-1-full-name']and data['respondent-1-current-address'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+
+            </li>
+			  <li class="task-list-item">
+              <a class="task-name" href="c110a-applicant?change=false" aria-describedby="read-declaration-completed">
+                Applicant
+              </a>
+               {% if data['applicant-full-name'] and data['applicant-contact-name'] and data['applicant-job-title']and data['applicant-address']and data['applicant-mobile-number']and data['la-dx-number'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+			  <li class="task-list-item">
+              <a class="task-name" href="c110a-others?change=false" aria-describedby="read-declaration-completed">
+                Others who should be given notice
+              </a>
+              {% if data['other-1-full-name'] and data['other-1-gender'] and data['other-1-place-birth']  %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+             
+              {% endif %}
+            </li><!-- -->
+          </ul>
+        </li>
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">3. </span>  Enter legal opinion
+          </h2>
+          <ul class="task-list-items">
+           <!-- <li class="task-list-item">
+              <a class="task-name" href="-c110a-orders?change=false" aria-describedby="company-information-completed">
+               Orders needed
+              </a>
+              {% if data['order-type']  %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              
+              {% endif %}
+
+            </li> <li class="task-list-item">
+              <a class="task-name" href="-c110a-urgency?change=false" aria-describedby="contact-details-completed">
+                Hearings needed
+              </a>
+              {% if data['hearing-24-hours'] and data['hearing-12-days'] and data['without-notice'] and data['reduced-notice'] and data['respondents-notified']%}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+            
+              {% endif %}
+
+
+            </li>-->
+           
+
+			  <li class="task-list-item">
+              <a class="task-name" href="c110a-grounds?change=false">
+                Grounds for application
+              </a>
+              {% if data['grounds-for-application'] and data['threshold-evidence']  %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+            </li>
+
+            <li class="task-list-item">
+                  <a class="task-name" href="c110a-risk-harm?change=false">
+                   Risks and harm to children
+                  </a>
+                  {% if data['physical-harm'] and data['emotional-harm'] and data['sexual-abuse'] and data['neglect']  %}
+                    <strong class="task-completed" id="eligibility-completed">Completed</strong>
+                  {% else %}
+                  <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+                  {% endif %}
+                </li>
+                <li class="task-list-item">
+                      <a class="task-name" href="c110a-parenting?change=false">
+                       Factors affecting parenting
+                      </a>
+                        {% if data['alcohol-and-drugs'] and data['mental-health-issues'] and data['domestic-violence'] %}
+                        <strong class="task-completed" id="eligibility-completed">Completed</strong>
+                      {% else %}
+                      <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+                      {% endif %}
+                    </li>
+                <li class="task-list-item">
+                  <a class="task-name" href="c110a-international?change=false">
+                   International element
+                  </a>
+                  {% if data['international-element'] and data['genogram-outside-uk'] and data['outside-uk'] and data['proceedings-outside-uk']  %}
+                    <strong class="task-completed" id="eligibility-completed">Completed</strong>
+                  {% else %}
+                  <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+                  {% endif %}
+                </li>
+			  <li class="task-list-item">
+              <a class="task-name" href="c110a-allocation?change=false">
+               Other proceedings and allocation proposal
+              </a>
+              {% if data['previous-proceedings'] and data['allocation-proposal'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="c110a-attending?change=false">
+              Attending hearing
+              </a>
+              {% if data['interpreter'] and data['intermediary'] and data['litigation-capacity-issues'] and data['learning-disability']  and data['welsh'] and data['security'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+
+
+			  <!--<li class="task-list-item">
+              <a class="task-name" href="-c110a-allocation" aria-describedby="medical-information-completed">
+               Allocation proposal
+              </a><span class="grey-text" style=" float: right;">(optional)</span>
+
+            </li>-->
+          </ul>
+        </li>
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">4. </span> Provide evidence
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="c110a-upload?change=false">
+                 Upload documents
+              </a>
+                {% if data['ammex-documents-01'] and data['ammex-documents-02'] and data['ammex-documents-03'] and data['ammex-documents-04'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+
+          </ul>
+        </li>
+          </ul>
+        </li>
+
+
+		   <h2 class="task-list-section">
+            <span class="task-list-section-number">5. </span> Review and submit
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="c110a-review">
+                Check your answers before submitting
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

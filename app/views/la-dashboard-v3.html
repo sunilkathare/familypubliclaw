@@ -1,0 +1,237 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+  View Applications
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+ <!--     <a href="la-dashboard.html" class="link-back">Back</a>-->
+
+		<!--Breadscrumbs
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Applications
+    </li>
+
+  </ol>
+</div>--><br/>
+
+      <h1 class="govuk-heading-l"><span class="govuk-caption-m"> Welcome Paul Farmer </span>
+         Dashboard <div style="float: right;" > </div>
+      </h1>
+<!--<div class="column-full" style="border-bottom: 1px solid #ccc; display: block; padding: 0px;"> <nav class="app-c-navigation govuk-h-clearfix">
+  <ul class="app-c-navigation__list">
+    <li class="app-c-navigation--current-page">
+      <a class="govuk-link" href="la-view-applications.html">C110a application</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="-la-c2-applications"> C2 application</a>
+    </li>
+
+
+
+  </ul>
+		</nav></div>-->
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        Applications in progess
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-long">
+        <div>
+          <dt class="cya-question">
+            C110A application 00381
+          </dt>
+          <dd class="cya-answer">
+            30% Complete
+          </dd>
+          <dd class="cya-change">
+            <a href="c110a.html">
+              Complete<span class="visually-hidden"> Complete application</span>
+            </a>
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+            C110A application 00382
+          </dt>
+          <dd class="cya-answer">
+            20% Complete
+          </dd>
+          <dd class="cya-change">
+            <a href="c110a.html">
+              Complete<span class="visually-hidden"> Complete application</span>
+            </a>
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+            C110A application 00383
+          </dt>
+          <dd class="cya-answer">
+            80% Complete
+          </dd>
+          <dd class="cya-change">
+            <a href="c110a.html">
+              Complete<span class="visually-hidden"> Complete application</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+
+
+
+      </dl>
+
+
+
+
+
+     <br/>  
+
+
+
+
+<a href="c110a.html" class="govuk-button govuk-button--start">Start a new C110A application </a>
+		
+		
+		
+		
+		
+<h2 class="govuk-heading-m">
+         Cases in progress 
+      </h2>
+
+
+<p class="form-hint">View case information,  view orders, update directions status, view documents, upload documents and more. 
+	
+		</p>
+     
+
+      
+      <dl class="govuk-check-your-answers cya-questions-short" >
+		  <div >
+          <dt class="cya-question ">
+            Case
+          </dt>
+			  <dd class="cya-answer app-mobile-hide-2">
+           <strong style="font-weight: bold;"> Status </strong>
+          </dd>
+			
+          <dd class="cya-answer app-mobile-hide-2">
+          <strong style="font-weight: bold;"> Type </strong>
+          </dd>
+			  <dd class="cya-answer app-mobile-hide-2">
+          <strong style="font-weight: bold;"> Date </strong>
+          </dd>
+          <dd class="cya-change">
+            
+         <strong style="font-weight: bold;"> Action</strong>
+         
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+          <a href="la-case-summary.html"> PL00388</a> 
+          </dt>
+			<dd class="cya-answer">
+            CMH scheduled
+          </dd>
+			
+			<dd class="cya-answer">
+            Care and EPO
+          </dd>
+          <dd class="cya-answer">
+            20 Jun 2018
+          </dd>
+          <dd class="cya-change">
+           
+             <a href="la-case-summary.html"> View</a> 
+           
+          </dd>
+        </div>
+		
+		  
+		  <div>
+          <dt class="cya-question">
+          <a href="la-case-summary.html">  PL00388</a>  
+          </dt>
+			  <dd class="cya-answer">
+            CMH scheduled
+          </dd>
+			
+			<dd class="cya-answer">
+             Care order
+          </dd>
+          <dd class="cya-answer">
+          20 Jun 2018
+          </dd>
+          <dd class="cya-change">
+            
+               <a href="la-case-summary.html"> View</a> 
+           
+          </dd>
+        </div>
+		  
+
+
+
+
+
+      </dl>
+
+		
+		<!--<details>
+
+  <summary><span class="summary">Guidance notes </span></summary>
+
+  <div class="panel panel-border-narrow">
+
+
+	  <h2 class="heading-small">C110A - application for a care or supervision order and other orders under Part 4 of the Children Act 1989 or an Emergency Protection Order under section 44 of the Children Act 1989</h2>
+<hr/>
+
+		<p>
+View <a href="#" traget="_blank"> guidance notes </a>to file C110A application.
+		</p>
+
+   <p>Before you start you'll need check if the <a href="" target="_blank"> S.31 Threshold</a> has been exceeded... lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+	  <p>
+			If you are inactive for 25 minutes you will be automatically logged out.
+</p>
+
+
+
+
+  </div>
+
+</details>-->
+
+
+<br/>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

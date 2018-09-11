@@ -1,0 +1,151 @@
+{% extends "layout-c.html" %}
+
+{% block page_title %}
+  Make your allocation
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+ <!--     <a href="la-dashboard.html" class="link-back">Back</a>-->
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="c-dashboard">Dashboard</a>
+    </li>
+    
+	  <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+     <a class="govuk-c-breadcrumbs__link" href="c-assign-guardian.html"> C110A 00388</a>
+    </li>
+	   <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Assign guardian
+    </li>
+
+  </ol>
+</div>
+
+      <h1 class="govuk-heading-l">
+
+      <!--  Application for a care, supervision or emergency protection order-->
+      Assign guardian
+      </h1>
+		<h2 class="govuk-heading-m">
+
+      <!--  Application for a care, supervision or emergency protection order
+      Please discuss the case with your team.  Then make your allocation and list for hearings. You can speak to district judge, admin staff or schedule and listings team to get information on availability of judges and venue for hearing. -->
+      </h2>
+
+<form action="c-guardian-confirm.html">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+	  
+	    
+	    <!-- Guardian -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
+    <span class="govuk-label--s"> Guardian's full  name </span>
+  </label>
+	<span id="more-detail-hint" class="govuk-hint">
+    For example, Helen Ryan
+  </span>
+  <input class="govuk-input govuk-!-width-two-thirds" id="new-direction-1-title" name="cafcass-guardian" type="text" value="{{ data['cafcass-guardian'] }}">
+</div>
+	  
+	  <!-- Telephone number -->
+<div class="form-group">
+  <label class="form-label" for="guardian-telephone-number" >
+    Telephone number
+    <span class="form-hint">  For example, 020 2772772</span>
+  </label>
+  <input type="text" class="form-control" id="guardian-telephone-number" name="guardian-telephone-number" value="{{ data['guardian-telephone-number'] }}">
+</div>
+			<!-- Email -->
+<div class="form-group">
+  <label class="form-label" for="guardian-email" >
+    Email
+    <span class="form-hint"> For example, joeblogg@la.com  </span>
+  </label>
+  <input type="text" class="form-control" id="guardian-email" name="guardian-email" value="{{ data['guardian-email'] }}">
+</div>
+
+
+<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<h2 class='heading-medium'>More details </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Addtional info  </label>  <textarea type='textarea' class='form-control' id='child-2-full-name'> </textarea><br/> <br/> ";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add more details" onClick="addInput('dynamicInput');">
+
+
+
+<br/><br/>
+
+	  <button type="submit" class="govuk-button">
+ Approve application and issue standard directions
+</button>
+	  </form>
+
+
+
+
+
+
+     <br/>  <br/>
+
+
+
+
+
+
+<br/>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

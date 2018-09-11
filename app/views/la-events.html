@@ -1,0 +1,386 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Events calendar
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+ <!--     <a href="la-dashboard.html" class="link-back">Back</a>-->
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Events
+    </li>
+
+  </ol>
+</div>
+		<div class="govuk-grid-row column-minimum govuk-clearfix column-full">
+
+    <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">  </span>
+   Events
+
+    </h1>
+		<div class="govuk-tabs govuk-!-margin-bottom-6" data-module="tabs">
+  <h2 class="govuk-tabs__title">
+    Events
+  </h2>
+
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#key-events">
+          Next key events
+        </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#all-events">
+          All upcoming events
+        </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-events">
+          Past events
+        </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#new-event">
+          Add a new event
+        </a>
+    </li>
+  </ul>
+
+  <section class="govuk-tabs__panel" id="key-events">
+
+
+    <div class="highlighted-event">
+                      <p>The next key event is case management hearing on </p>
+                      <p>
+                        <em>31 June </em>
+
+                        <span> at 10:00 at Fox Court(South East)  </span>
+                      </p>
+                      <p>Case #007376389</p>
+                    </div>
+
+<div class="subscribe">
+                <p><a title="Download these dates so you can add them to a calendar application such as iCal or Outlook" href="public/images/events.ics">Add these events to your calendar (ICS, 10KB)</a>
+                </p>
+              </div>
+
+              <h2 class="govuk-heading-m"> Upcoming events<a href="calendar/events-calendar" target="_blank" class="   floating-button "> Calendar view</a></h2> 
+                  <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Date</th>
+          <th class="govuk-table__header" scope="col"> Day </th>
+          <th class="govuk-table__header" scope="col"> Event details</th>
+          <th class="govuk-table__header" scope="col"> Case number</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">25 July at 10:00</td>
+          <td class="govuk-table__cell ">Wednesday</td>
+          <td class="govuk-table__cell ">Adovcate's meeting at Fox courts  </td>
+          <td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">27 July at 10:00</td>
+          <td class="govuk-table__cell ">Friday</td>
+          <td class="govuk-table__cell ">Case management hearing at Fox courts </td>
+          <td class="govuk-table__cell "><a href="la-case-summary">  #007376344</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">27 August at 15:00</td>
+          <td class="govuk-table__cell ">Monday</td>
+          <td class="govuk-table__cell ">Issue management hearing at Fox courts  </td>
+          <td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel" id="all-events">
+    <h2 class="govuk-heading-l">Upcoming events</h2>
+    <table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">Date</th>
+<th class="govuk-table__header" scope="col"> Day </th>
+<th class="govuk-table__header" scope="col"> Event details</th>
+<th class="govuk-table__header" scope="col"> Case number</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">25 July at 10:00</td>
+<td class="govuk-table__cell ">Wednesday</td>
+<td class="govuk-table__cell ">Adovcate's meeting at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">27 July at 10:00</td>
+<td class="govuk-table__cell ">Friday</td>
+<td class="govuk-table__cell ">Case management hearing at Fox courts </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376345</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">27 August at 15:00</td>
+<td class="govuk-table__cell ">Monday</td>
+<td class="govuk-table__cell ">Issue management hearing at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+</tr>
+
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">10 October at 10:00</td>
+<td class="govuk-table__cell ">Wednesday</td>
+<td class="govuk-table__cell ">Adovcate's meeting at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376384</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">20 October at 10:00</td>
+<td class="govuk-table__cell ">Friday</td>
+<td class="govuk-table__cell ">Case management hearing at Fox courts </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376345</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">27 October at 15:00</td>
+<td class="govuk-table__cell ">Monday</td>
+<td class="govuk-table__cell ">Issue management hearing at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+</tr>
+
+</tbody>
+</table>
+
+
+  </section>
+  <section class="govuk-tabs__panel" id="past-events">
+    <h2 class="govuk-heading-l">Past events</h2>
+
+      <h3 class="govuk-heading-m">2017</h3>
+    <table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">Date</th>
+<th class="govuk-table__header" scope="col"> Day </th>
+<th class="govuk-table__header" scope="col"> Event details</th>
+<th class="govuk-table__header" scope="col"> Case number</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">25 May at 13:00</td>
+<td class="govuk-table__cell ">Wednesday</td>
+<td class="govuk-table__cell ">Adovcate's meeting at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">27 July at 16:00</td>
+<td class="govuk-table__cell ">Friday</td>
+<td class="govuk-table__cell ">Case management hearing at Fox courts </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #0073763454</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">27 August 09:00</td>
+<td class="govuk-table__cell ">Monday</td>
+<td class="govuk-table__cell ">Issue management hearing at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+</tr>
+
+</tbody>
+</table>
+<h3 class="govuk-heading-m">2016</h3>
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">Date</th>
+<th class="govuk-table__header" scope="col"> Day </th>
+<th class="govuk-table__header" scope="col"> Event details</th>
+<th class="govuk-table__header" scope="col"> Case number</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">25 July at 11:00</td>
+<td class="govuk-table__cell ">Wednesday</td>
+<td class="govuk-table__cell ">Adovcate's meeting at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">27 July at 10:00</td>
+<td class="govuk-table__cell ">Friday</td>
+<td class="govuk-table__cell ">Case management hearing at Fox courts </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #0073763454</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">27 August at 13:00</td>
+<td class="govuk-table__cell ">Monday</td>
+<td class="govuk-table__cell ">Issue management hearing at Fox courts  </td>
+<td class="govuk-table__cell "><a href="la-case-summary">  #007376389</a></td>
+</tr>
+
+</tbody>
+</table>
+
+  </section>
+  <section class="govuk-tabs__panel" id="new-event">
+    <h2 class="govuk-heading-l">Add a new event</h2>
+
+<!-- Date -->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Select case
+      </label>
+      <select class="govuk-select govuk-!-width-three-quarters" id="sort" name="sort">
+        <option value="published">#007376389</option>
+        <option value="updated" selected>#007376389</option>
+        <option value="views">#007376389</option>
+        <option value="comments">#007376389</option>
+      </select>
+    </div>
+
+
+<!-- Case details-->
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+    Enter case details
+  </label>
+  <span id="email-hint" class="govuk-hint">
+    For example, Advocates meeting at Fox courts
+  </span>
+  <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" type="text" aria-describedby="email-hint">
+</div>
+    <!-- date -->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+        <legend class="govuk-label">
+
+            Event date
+
+        </legend>
+        <span id="dob-hint" class="govuk-hint">
+        For example, 31 3 1980
+      </span>
+        <div class="govuk-date-input" id="dob">
+          <div class="govuk-date-input__item govuk-date-input__item--day">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="dob-day">
+              Day
+            </label>
+              <input class="govuk-input govuk-date-input__input" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="govuk-date-input__item govuk-date-input__item--month">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="dob-month">
+              Month
+            </label>
+              <input class="govuk-input govuk-date-input__input" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="govuk-date-input__item govuk-date-input__item--year">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="dob-year">
+              Year
+            </label>
+              <input class="govuk-input govuk-date-input__input" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-third" for="full-name">
+    Event Time
+  </label>
+  <input class="govuk-input govuk-!-width-one-third" id="full-name" name="full-name" type="text">
+</div>
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h3 class="govuk-label">
+        Parties if invite
+      </h3>
+    </legend>
+    <span id="nationality-hint" class="govuk-hint">
+    <!--For example, CAFCASS, Parent's solicitor and Judge-->
+  </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="CAFCASS solicitor">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+       Guardian  solcitor
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="Paren't solcitor ">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+        Parent's solicitor
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="Judge">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+        Judge
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+	  
+
+    <button type="submit" class="govuk-button">
+  Add a new event
+</button>
+
+  </section>
+</div>
+
+
+
+
+		<div class="govuk-grid-row grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+
+
+
+     <br/>  <br/>
+
+
+
+
+
+
+<br/>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

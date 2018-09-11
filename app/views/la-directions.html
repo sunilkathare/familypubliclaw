@@ -1,0 +1,336 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+ Directions
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>-->
+ <div class="jui-casebar" style="display: none">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+     00388<span class="jui-casebar__title"> London Borough of Southwark  versus 	Samantha Smith  </span>
+    </div>
+
+
+    <div class="jui-casebar__options">
+
+  <!--    <nav class="jui-case-actions">
+  <ul class="jui-case-actions__list">
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/mark-as-prepared">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav>-->
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li >
+      <a class="govuk-link" href="la-case-summary" data-topnav="Case summary"> Case summary</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-parties" data-topnav="Parties">Parties</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-case-file" data-topnav="Case file">Case file</a>
+    </li>
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="la-directions" data-topnav="directions">Directions</a>
+    </li>
+	  <li >
+      <a class="govuk-link" href="la-orders" data-topnav="directions">Orders</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-timeline" data-topnav="timeline" >Status & timeline</a>
+    </li>
+	  <li>
+      <a class="govuk-link" href="la-questions" data-topnav="Question" >Questions</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-summary" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Case summary</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+       
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-case-summary">Case details </a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="la-case-summary-by-la">Summary by LA</a>
+            </li>
+            
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-parties" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Parties</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+        
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+              <a class="govuk-link" href="la-parties#children">Children</a>
+            </li>
+			  <li>
+          <a class="govuk-link" href="la-parties#respondent">Respondent</a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-parties#applicant">Applicant </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-parties#cafcass">CAFCASS</a>
+            </li>
+            
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-file" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Case file</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+          <a class="govuk-link" href="la-case-file">C110a Application </a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-swet">SWET</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li>
+              <a class="govuk-link" href="la-case-file-documents">Documents</a>
+            </li>
+			   <li>
+              <a class="govuk-link" href="la-case-file-upload">Upload</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+		<li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-directions" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Directions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-directions">View directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+           
+
+          </ul>
+
+      </ul>
+    </li>
+	  <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-orders" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Orders</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-standard-directions">Standard directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+           
+<li>
+          <a class="govuk-link" href="la-cmo">CMO </a>
+        </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-timeline" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">Status/ Timeline</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="la-timeline">Timeline</a>
+        </li>
+
+           
+          <ul class="app-mobile-nav__theme-nav">
+           
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-questions" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">Questions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="la-questions">View questions</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-questions-ask">Ask questions </a>
+            </li>
+            
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row-">
+    <div class="column-full column-minimum" style="">
+
+	<!--Breadscrumbs
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "-la-dashboard"
+    },
+    {
+      text: "Cases",
+      href: "la-cases"
+    },
+    {
+      text: "#0093939983"
+    }
+,		{
+      text: "Case summary"
+    }
+  ]
+}) }}-->
+
+	<div class="govuk-grid-row column-minimum govuk-clearfix">
+		<br/>
+    <h1 class="govuk-heading-l">
+       <!-- <span class="govuk-caption-l"> Case 00388</span>-->
+     Directions
+
+    </h1>
+		
+		
+		
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+     
+	  
+		<table>
+  <thead>
+    <tr>
+      <th scope="col">Direction</th>
+      <th class="numeric" scope="col">Due date and time</th>
+      <th class="numeric" scope="col">Party</th>
+		<th class="numeric" scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="la-directions-view.html"> File and serve all documents to all parties  </a></th>
+      <td class="numeric">22 Sep 2017 <span class="grey-text"> |</span> 10:00</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="task-completed">Complete</span></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="la-directions-view.html"> File and serve case summary   </a></th>
+      <td class="numeric">27 Sep 2017 <span class="grey-text"> |</span> 18:00</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="">Waiting on</span></td>
+    </tr>
+	   <tr>
+      <th scope="row"><a href="la-directions-view.html"> Draft the case management order  </a></th>
+      <td class="numeric">28 Sep 2017 <span class="grey-text"> |</span> 09:00</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="">Waiting on</span></td>
+    </tr>
+	
+    <tr>
+      <th scope="row"><a href="la-directions-view.html"> Arrange advocate's meeting </a></th>
+      <td class="numeric">26 Sep 2017 <span class="grey-text"> |</span> 10:00</td>
+      <td class="numeric">CAFCASS</td>
+		<td class="numeric"><span class="task-completed">Complete</span></td>
+    </tr>
+	  <tr>
+      <th scope="row"><a href="la-directions-view.html"> File and serve a case analysis document </a></th>
+      <td class="numeric">27 Sep 2017 <span class="grey-text"> |</span> 18:00</td>
+      <td class="numeric">CAFCASS</td>
+		<td class="numeric"><span class="task-completed">Complete</span></td>
+    </tr>
+    <!--<tr>
+      <th scope="row"><a href="la-directions-view.html">Directions form Judge to get evidence</a></th>
+      <td class="numeric">15/02/2018</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="task-incomplete">Incomplete</span></td>
+    </tr>-->
+	   <tr>
+      <th scope="row"><a href="la-directions-view.html"> File parent's position statement</a></th>
+      <td class="numeric">27 Sep 2017 <span class="grey-text"> |</span> 18:00</td>
+      <td class="numeric">Parent's solicitor</td>
+		<td class="numeric"><span class="task-completed">Complete</span></td>
+    </tr>
+	 
+    
+  </tbody>
+</table>
+	  
+  </div>
+  
+</div>
+		  
+	 
+	  
+	  
+	
+	  
+	  
+		
+		
+		
+
+      
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

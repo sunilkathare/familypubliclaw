@@ -1,0 +1,267 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Attending the court
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review#attending">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+			 <h1 class="govuk-heading-xl">
+        Attending the court
+        </h1>
+
+	<fieldset>
+      <legend>
+
+        Any Interpreter required?
+		  <span class="form-hint">Give language (and any dialect, if known)
+</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="interpreter-yes">
+        <input id="radio-home-address" type="radio" name="interpreter" value="Yes" {{ checked('interpreter','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="interpreter-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="interpreter-details" rows="4" cols="80"></textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="interpreter" value="No" {{ checked('interpreter','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+			<br/>
+
+
+				<fieldset>
+
+      <legend>
+
+       Any intermediary required ?
+		  <span class="form-hint">For example, Welsh proceedings reqired with interpreter
+</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="intermediary-yes">
+        <input id="radio-home-address" type="radio" name="intermediary" value="Yes" {{ checked('intermediary','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="intermediary-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="intermediary-details" rows="4" cols="80"></textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="intermediary" value="No" {{ checked('intermediary','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+
+			<br/>
+      <fieldset>
+
+    <legend>
+
+      Litigation capacity issues
+    <span class="form-hint">For example, Respondent has metal health issues
+  </span>
+    </legend>
+
+    <div class="multiple-choice" data-target="litigation-capacity-yes">
+      <input id="radio-home-address" type="radio" name="litigation-capacity-issues" value="Yes" {{ checked('litigation-capacity-issues','Yes') }}>
+      <label for="radio-home-address">Yes </label>
+    </div>
+
+    <div class="panel panel-border-narrow js-hidden" id="litigation-capacity-yes">
+
+      <legend>
+
+        <span class="body-text">Give details</span>
+      </legend>
+  <textarea class="form-control" type="text" id="urgency-reason" name="litigation-capacity-issues-details" rows="4" cols="80">{{ data['litigation-capacity-issues-details'] }}</textarea>
+
+
+
+
+  </div>
+    <div class="multiple-choice" >
+     <input id="radio-other-address" type="radio" name="litigation-capacity-issues" value="No" {{ checked('litigation-capacity-issues','No') }}>
+      <label for="radio-other-address">No  </label>
+    </div>
+
+
+  </fieldset>
+
+    <br/>
+      <fieldset>
+
+    <legend>
+
+      Learning disability issues
+    <span class="form-hint">For example, Respondent has learning disability
+</span>
+    </legend>
+
+    <div class="multiple-choice" data-target="learning-disability-yes">
+      <input id="radio-home-address" type="radio" name="learning-disability" value="Yes" {{ checked('learning-disability','Yes') }}>
+      <label for="radio-home-address">Yes </label>
+    </div>
+
+    <div class="panel panel-border-narrow js-hidden" id="learning-disability-yes">
+
+      <legend>
+
+        <span class="body-text">Give details</span>
+      </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="learning-disability-details" rows="4" cols="80">{{ data['learning-disability-details'] }}</textarea>
+
+
+
+
+</div>
+    <div class="multiple-choice" >
+     <input id="radio-other-address" type="radio" name="learning-disability" value="No" {{ checked('learning-disability','No') }}>
+      <label for="radio-other-address">No  </label>
+    </div>
+
+
+  </fieldset>
+
+    <br/>
+
+				<fieldset>
+
+      <legend>
+
+        Do you need Welsh proceedings?
+		  <span class="form-hint">For example, Welsh proceedings reqired with interpreter
+</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="welsh-yes">
+        <input id="radio-home-address" type="radio" name="welsh" value="Yes" {{ checked('welsh','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="welsh-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="welsh-details" rows="4" cols="80">{{ data['welsh-details'] }}</textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="welsh" value="No" {{ checked('welsh','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+
+			<br/>
+				<fieldset>
+
+      <legend>
+
+        Any security needed?
+		  <span class="form-hint">For example, Need separate waiting rooms due to domestic violence
+</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="security-yes">
+        <input id="radio-home-address" type="radio" name="security" value="Yes" {{ checked('security','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="security-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="security-details" rows="4" cols="80">{{ data['security-details'] }}</textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="security" value="No" {{ checked('security','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+	  <hr />
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

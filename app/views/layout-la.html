@@ -1,0 +1,159 @@
+{% extends "template.njk" %}
+
+{% from "back-link/macro.njk"     import govukBackLink %}
+{% from "breadcrumbs/macro.njk"   import govukBreadcrumbs %}
+{% from "button/macro.njk"        import govukButton %}
+{% from "checkboxes/macro.njk"    import govukCheckboxes %}
+{% from "date-input/macro.njk"    import govukDateInput %}
+{% from "details/macro.njk"       import govukDetails %}
+{% from "error-message/macro.njk" import govukErrorMessage %}
+{% from "error-summary/macro.njk" import govukErrorSummary %}
+{% from "fieldset/macro.njk"      import govukFieldset %}
+{% from "file-upload/macro.njk"   import govukFileUpload %}
+{% from "input/macro.njk"         import govukInput %}
+{% from "label/macro.njk"         import govukLabel %}
+{% from "panel/macro.njk"         import govukPanel %}
+{% from "phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "radios/macro.njk"        import govukRadios %}
+{% from "select/macro.njk"        import govukSelect %}
+{% from "skip-link/macro.njk"     import govukSkipLink %}
+{% from "table/macro.njk"         import govukTable %}
+{% from "tag/macro.njk"           import govukTag %}
+{% from "textarea/macro.njk"      import govukTextarea %}
+{% from "warning-text/macro.njk"  import govukWarningText %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block main %}
+  {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+
+<div class="app-pan app-pane--enabled clear-fix govuk-clearfix">
+
+
+  <div class="app-pane__header">
+<header class="app-header" role="banner" style="margin-bottom:0px;">
+  <a href="/index" class="govuk-link app-header__link">
+    <span class="app-header__logotype">
+
+      <!--<svg role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" class="app-header__logotype-crown" width="36" height="32" viewBox="0 0 132 97">
+        <path d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z" fill="currentColor" fill-rule="evenodd"></path>
+
+        <image src="/assets/images/govuk-logotype-crown.png" xlink:href="" class="app-header__logotype-crown-fallback-image"></image>
+      </svg>-->
+      <span class="app-header__logotype-text app-mobile-small ">
+        HMCTS
+      </span>
+    </span>
+    <span class="app-header__title ">
+     <span class="app-mobile-small" > Family Public Law</span> 
+    </span>
+  </a>	<div style="float:right; margin: 5px 15px 0px 5px;" class="app-mobile-hide" >
+
+
+	<a href="index"   style="color:#fff; text-decoration: none; font-family:arial; font-weight:bold;"  >Signout</a></div><div style="float:right; margin: 5px 15px 0px 5px;" class="app-mobile-hide" >   <a href="la-dashboard-v3" style="color:#fff; text-decoration: none; font-family:arial; font-weight:bold;">Dashboard</a></div>
+  <!--<div style="float:right;" class="notifications-container"><ul class="gn-tools" role="menubar" style="background: #000000 ; padding:  4px 8px 2px 2px ;">
+		<li role="menuitem" id="notifications">
+						<div class="view notifications-menu-view" id="yui_3_16_0_1_1529615275985_276"><a class="gn-title c-notifications-menu" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Notifications" data-rapid_p="182" href="la-notifications">
+	<span class="c-notification-icon" aria-hidden="true">
+		<span class="c-notification-unseencount" style="background: #df3034;box-sizing:border-box;height:18px;min-width:16px;text-align:center;line-height:17px;border-radius:8px;font-size:12px;font-family:inherit;border:none;right:-10px;top:-11px; padding-top:1px">16</span>
+	</span>
+</a></div>
+			<div id="notification_bar">
+<div id="arrowUp"></div>
+<div id="notification_bar_header"><h2 class="govuk-heading-s">Notifications</h2></div>
+	<div id="notification_bar_content"><p><a href="#">New document uploaded</a></p>
+				<p><a href="#">New application approved and standard direction issued</a></p>
+				<p><a href="#">New direction issued by Judge case #48855905</a></p></div>
+<div id="notification_bar_footer"><a href="la-notifications">See All</a></div>
+</div>
+					</li>
+
+			</ul></div >
+-->
+  <div class="app-header-mobile-nav-toggler-wrapper" style="float:right; margin: -14px 0px 0px 5px;">
+    <button id="app-mobile-nav-toggler" class="govuk-button app-header-mobile-nav-toggler js-app-mobile-nav-toggler" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="app-mobile-nav">
+      Menu
+    </button>
+
+</div>
+	
+	
+	<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler" style="font-size: 70%!important;">
+  <ul class="app-mobile-nav__theme-nav" >
+            <li >
+              <a class="govuk-link" href="la-dashboard-v3.html">Dashboard </a>
+            </li>
+            <li >
+              <a class="govuk-link" href="index">Signout</a>
+            </li>
+            
+          </ul>
+	</nav>
+</header>
+  </div>
+  <div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3"><!--<div style="float: right; padding: 5px 10px 5px 0; "> English&nbsp;| <a href="#">   Welsh (Cymraeg)</a></div>-->
+<p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+Alpha
+</strong>
+<span class="govuk-phase-banner__text">
+    This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.
+  </span>
+</p>
+</div>
+{% endblock %}
+
+{% block footer %}
+	
+	<div style="margin: 20px;">
+	<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     Do you need help?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+     
+			  <h2 class="govuk-heading-m">Email</h2>
+          <p><a href="send-a-message" target="_blank"> Send us a message </a> (Opens in a new page)
+<br> We’ll get back to you within 2 days.</p>
+
+			   <h2 class="govuk-heading-m">Live chat</h2>
+          <p><a href="#ttps://hmcts.dcbp.co.uk/Divorce.htm" target="_blank"> Open live chat. </a> (Opens in a new page)
+<br>Monday to Friday, 9.00am to 5.00pm.</p>
+          <h2 class="govuk-heading-m">Telephone</h2>
+          <p>0300 123 7050 <br>  (Monday to Friday, 9.00am to 5.00pm)</p>
+
+  </div>
+</details>
+	</div>
+  {{ govukFooter({
+  "meta": {
+    "items": [
+      {
+        "href": "/prototype-admin/clear-data",
+        "text": "Clear data"
+	
+	 
+      }
+	
+	
+    ]
+  }
+}) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block page_scripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}

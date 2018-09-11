@@ -1,0 +1,216 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Cases
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Notifications
+    </li>
+
+  </ol>
+
+
+</div>
+
+      <h1 class="govuk-heading-l">
+         Notifications
+      </h1>
+
+
+
+
+<div class="govuk-tabs govuk-!-margin-bottom-6" data-module="tabs">
+  <h2 class="govuk-tabs__title">
+    Messages
+  </h2>
+
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-day">
+          New
+        </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+          Past week
+        </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-month">
+          Past month
+        </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-year">
+          Past year
+        </a>
+    </li>
+  </ul>
+
+  <section class="govuk-tabs__panel" id="past-day">
+    <h2 class="govuk-heading-l">New</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Subject</th>
+          <th class="govuk-table__header" scope="col">Date  & time received </th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="la-directions.html"> C110a application #83738 approved & standard directions issued</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-case-file.html"> E-bundle uploaded </a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-directions.html">direction issued by judge</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+		   <tr class="govuk-table__row">
+			   <td class="govuk-table__cell"><a href="la-questions.html">New question from Judge</a> </td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel" id="past-week">
+    <h2 class="govuk-heading-l">Past week</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Subject</th>
+          <th class="govuk-table__header" scope="col">Date  & time received </th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="la-directions.html"> C110a application #83738 approved & standard directions issued</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-case-file.html"> E-bundle uploaded </a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-directions.html">direction issued by judge</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+		   <tr class="govuk-table__row">
+			   <td class="govuk-table__cell"><a href="la-questions.html">New question from Judge</a> </td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel" id="past-month">
+    <h2 class="govuk-heading-l">Past month</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Subject</th>
+          <th class="govuk-table__header" scope="col">Date  & time received </th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="la-directions.html"> C110a application #83738 approved & standard directions issued</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-case-file.html"> E-bundle uploaded </a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-directions.html">direction issued by judge</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+		   <tr class="govuk-table__row">
+			   <td class="govuk-table__cell"><a href="la-questions.html">New question from Judge</a> </td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel" id="past-year">
+    <h2 class="govuk-heading-l">Past year</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Subject</th>
+          <th class="govuk-table__header" scope="col">Date  & time received </th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="la-directions.html"> C110a application #83738 approved & standard directions issued</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-case-file.html"> E-bundle uploaded </a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="la-directions.html">direction issued by judge</a></td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+		   <tr class="govuk-table__row">
+			   <td class="govuk-table__cell"><a href="la-questions.html">New question from Judge</a> </td>
+          <td class="govuk-table__cell ">30 Jan 2018 at 12:00</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

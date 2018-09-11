@@ -1,0 +1,81 @@
+{% extends "layout-start-page.html" %}
+
+{% block pageTitle %}
+  The total amount you're claiming
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  Alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/contact">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		
+	<!--	<a href="start3" class="link-back">Back</a>-->
+
+      <h1 class="govuk-heading-l">Tell us what you need help with
+      </h1>
+
+      <form class="form" action="/thanks-plain" method="get">
+
+        
+         
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail"><!--<span id="email-hint" class="govuk-hint">
+				If you are having a problem with the page, include any error messages you saw.</span>-->
+            </label>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+            Your telephone number or email address
+            </label>
+            <span id="more-detail-hint" class="govuk-hint">We’ll use this to reply to you. (Responses can take up to 2 working days)</span>
+            <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+          </div>
+         
+
+          <button class="govuk-button">Send message</button>
+</form>
+<!--<form class="form" action="/thanks-plain" method="get">
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Contact us for help
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+			  
+			  <h2 class="govuk-heading-m">Email</h2>
+          <p><a href="#" target="_blank"> Send us a message </a> (Opens in a new page)
+<br> We’ll get back to you within 2 days.</p>
+
+			   <h2 class="govuk-heading-m">Live chat</h2>
+          <p><a href="#ttps://hmcts.dcbp.co.uk/Divorce.htm" target="_blank"> Open live chat. </a> (Opens in a new page)
+<br>Monday to Friday, 9.00am to 5.00pm.</p>
+          <h2 class="govuk-heading-m">Telephone</h2>
+          <p>0300 123 7050 <br>  (Monday to Friday, 9.00am to 5.00pm)</p>
+
+          
+          
+
+          </div>
+        </details>
+      </form>-->
+
+    </div>
+  </div>
+
+{% endblock %}

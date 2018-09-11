@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Accounts - Invite new user
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-dashboard">Dashboard</a>
+    </li>
+	  <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-accounts">Accounts</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Invite new user
+    </li>
+
+  </ol>
+</div>
+
+      <h1 class="govuk-heading-l">
+         Invite a new user
+      </h1>
+
+		<form action="la-accounts-confirmation.html">
+
+
+
+			<!--  Email Address name -->
+<div class="form-group">
+  <label class="form-label" for="child-1-full-name">
+  New user's email address
+    <span class="form-hint">User will use this email to create a new account and sign in </span>
+  </label>
+  <input type="text" class="form-control" id="child-1-full-name" name="new-user-email-id" value="{{ data['new-user-email-id'] }}">
+</div>
+ <!--<div class="form-group">
+  <label class="form-label" for="select-box">User Role? </label>
+  <select class="form-control" id="select-box" name="select-box">
+	  <option>LA Solicitor </option>
+    <option>LA Legal Advisor </option>
+	  <option>LA Social Worker </option>
+    <option>Parent Solicitor </option>
+	  <option>Parent </option>
+
+  </select>
+</div>-->
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h2 class="govuk-heading-m">
+        Permission level
+      </h2>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-1" name="level 1" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+        Level 1 - full adminstrator rights, including rights to
+          <span class="form-hint"> User management<span>
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="level 2">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        Level 2 - limited rights, including rights to
+        <span class="form-hint"> View and edit application info<span>
+          <span class="form-hint"> Send application to HMCTS <span>
+          <span class="form-hint"> View and edit orders<span>
+            <span class="form-hint"> Send orders to HMCTS <span>
+              <span class="form-hint"> View users<span>
+                <span class="form-hint"> View case info<span>
+                    <span class="form-hint"> Upload documents<span>
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="level 3" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        Level 3 - very limited rights, including rights to
+        <span class="form-hint"> View and edit application info<span>
+          <span class="form-hint"> View and edit orders<span>
+              <span class="form-hint"> view case info<span>
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="level 4">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+          Level 4 - view only rights, including rights to
+                <span class="form-hint"> view case info  <span>
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+ <div class="form-group">
+  <label class="form-label" for="select-box">Allocate case(s) </label>
+  <select class="form-control" id="select-box" name="select-box">
+    <option>Case #0005361</option>
+    <option>Case #0005361 </option>
+    <option>Case #0005361</option>
+    <option>Case #0005361 </option>
+    <option> All cases(for LA Admin)</option>
+  </select>
+</div>
+		<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<select class='form-control' id='select-box' name='select-box'><option>Case #0005361</option><option>Case #0005361 </option><option>Case #0005361</option><option>Case #0005361 </option></select></div> <br/><br/>";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add more cases" onClick="addInput('dynamicInput');">
+
+<br/><br/>
+
+<input class="button" type="submit" value="Send invitation email ">
+
+</form>
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

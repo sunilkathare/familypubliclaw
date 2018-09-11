@@ -1,0 +1,241 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Grounds for application
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review#risk-harm">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+
+			 <h1 class="govuk-heading-xl">
+          Risks and harm to children
+        </h1>
+
+<h2 class="govuk-heading-m"> Is there evidence of any of the following?</h2>
+			<div class="form-group">
+    <fieldset>
+
+      <legend>
+
+
+
+      Physical harm through neglect
+      </legend>
+
+      <div class="multiple-choice" data-target="physical-harm-yes">
+        <input id="grounds-for-application" type="radio" name="physical-harm" value="Yes" {{ checked('physical-harm','Yes') }}>
+        <label for="grounds-for-application">Yes </label>
+      </div>
+  <div class="panel panel-border-narrow js-hidden" id="physical-harm-yes">
+
+      <div class="multiple-choice">
+        <input id="care" name="physical-harm" type="checkbox" value="Past harm" {{ checked('physical-harm','Past harm') }}>
+        <label for="care">Past harm</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="Supervision" name="physical-harm" type="checkbox" value="Future risk of harm" {{ checked('physical-harm','Future risk of harm') }}>
+        <label for="Supervision">Future risk of harm</label>
+      </div>
+  </div>
+
+      <div class="multiple-choice" >
+       <input id="grounds-for-application" type="radio" name="physical-harm" value="No" {{ checked('physical-harm','No') }}>
+        <label for="grounds-for-application">No </label>
+      </div>
+
+
+    </fieldset>
+  </div>
+<div class="form-group">
+    <fieldset>
+
+      <legend>
+
+
+
+     Non-accidental injury
+      </legend>
+
+      <div class="multiple-choice" data-target="non-accidental-injury-yes">
+        <input id="grounds-for-application" type="radio" name="non-accidental-injury" value="Yes" {{ checked('non-accidental-injury','Yes') }}>
+        <label for="grounds-for-application">Yes </label>
+      </div>
+  <div class="panel panel-border-narrow js-hidden" id="non-accidental-injury-yes">
+
+      <div class="multiple-choice">
+        <input id="care" name="non-accidental-injury" type="checkbox" value="Past harm" {{ checked('non-accidental-injury','Past harm') }}>
+        <label for="care">Past harm</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="Supervision" name="non-accidental-injury" type="checkbox" value="Future rish of harm" {{ checked('non-accidental-injury','Future risk of harm') }}>
+        <label for="Supervision">Future risk of harm</label>
+      </div>
+  </div>
+
+      <div class="multiple-choice" >
+       <input id="grounds-for-application" type="radio" name="non-accidental-injury" value="No" {{ checked('non-accidental-injury','No') }}>
+        <label for="grounds-for-application">No </label>
+      </div>
+
+
+    </fieldset>
+  </div>
+
+  			<div class="form-group">
+      <fieldset>
+
+        <legend>
+
+           <h3 class="heading-small-"></h3>
+
+        Emotional harm
+        </legend>
+
+        <div class="multiple-choice" data-target="emotional-harm-yes">
+          <input id="grounds-for-application" type="radio" name="emotional-harm" value="Yes" {{ checked('emotional-harm','Yes') }}>
+          <label for="grounds-for-application">Yes </label>
+        </div>
+    <div class="panel panel-border-narrow js-hidden" id="emotional-harm-yes">
+
+        <div class="multiple-choice">
+          <input id="care" name="emotional-harm" type="checkbox" value="Past harm" {{ checked('emotional-harm','Past harm') }}>
+          <label for="care">Past harm</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="Supervision" name="emotional-harm" type="checkbox" value="Future harm" {{ checked('emotional-harm','Future risk of harm') }}>
+          <label for="Supervision">Future risk of harm</label>
+        </div>
+    </div>
+
+        <div class="multiple-choice" >
+         <input id="grounds-for-application" type="radio" name="emotional-harm" value="No" {{ checked('emotional-harm','No') }}>
+          <label for="grounds-for-application">No </label>
+        </div>
+
+
+      </fieldset>
+    </div>
+
+    			<div class="form-group">
+        <fieldset>
+
+          <legend>
+
+             <h3 class="heading-small-"></h3>
+
+        Sexual abuse
+          </legend>
+
+          <div class="multiple-choice" data-target="sexual-abuse-yes">
+            <input id="grounds-for-application" type="radio" name="sexual-abuse" value="Yes" {{ checked('sexual-abuse','Yes') }}>
+            <label for="grounds-for-application">Yes </label>
+          </div>
+      <div class="panel panel-border-narrow js-hidden" id="sexual-abuse-yes">
+
+          <div class="multiple-choice">
+            <input id="care" name="sexual-abuse" type="checkbox" value="Past harm" {{ checked('sexual-abuse','Past harm') }}>
+            <label for="care">Past harm</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="Supervision" name="sexual-abuse" type="checkbox" value="Future harm" {{ checked('sexual-abuse','Future risk of harm') }}>
+            <label for="Supervision">Future risk of harm</label>
+          </div>
+      </div>
+
+          <div class="multiple-choice" >
+           <input id="grounds-for-application" type="radio" name="sexual-abuse" value="No" {{ checked('sexual-abuse','No') }}>
+            <label for="grounds-for-application">No </label>
+          </div>
+
+
+        </fieldset>
+      </div>
+  <div class="form-group">
+  <fieldset>
+
+  <legend>
+
+     <h3 class="heading-small-"></h3>
+
+  Neglect
+  </legend>
+
+  <div class="multiple-choice" data-target="neglect-yes">
+    <input id="grounds-for-application" type="radio" name="neglect" value="Yes" {{ checked('neglect','Yes') }}>
+    <label for="grounds-for-application">Yes </label>
+  </div>
+  <div class="panel panel-border-narrow js-hidden" id="neglect-yes">
+
+  <div class="multiple-choice">
+    <input id="care" name="neglect" type="checkbox" value="Past harm" {{ checked('neglect','Past harm') }}>
+    <label for="care">Past harm</label>
+  </div>
+  <div class="multiple-choice">
+    <input id="Supervision" name="neglect" type="checkbox" value="Future harm" {{ checked('neglect','Future risk of harm') }}>
+    <label for="Supervision">Future risk of harm</label>
+  </div>
+  </div>
+
+  <div class="multiple-choice" >
+   <input id="grounds-for-application" type="radio" name="neglect" value="No" {{ checked('neglect','No') }}>
+    <label for="grounds-for-application">No </label>
+  </div>
+
+
+  </fieldset>
+  </div>
+</fieldset>
+</div>
+
+
+
+</div>
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

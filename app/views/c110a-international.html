@@ -1,0 +1,264 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+
+C110A - Cases with International element
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="c110a-review#international">
+
+{% else %}
+
+  <form action="c110a">
+{% endif %}
+
+
+			 <h1 class="govuk-heading-xl">
+        International element
+        </h1>
+
+	  
+	  	
+  
+ 
+	  
+	   
+ <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Is there anyone in the genogram outside the UK who has been assessed as a possible carer?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="genogram-outside-uk-conditional-1" name="genogram-outside-uk" type="radio" value="Yes" {{ checked('genogram-outside-uk','Yes') }} data-aria-controls="conditional-genogram-outside-uk-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="genogram-outside-uk-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-genogram-outside-uk-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="genogram-outside-uk">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="genogram-outside-uk" name="genogram-outside-uk-details" rows="3" >{{ data['genogram-outside-uk-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="international-element-conditional-2" name="genogram-outside-uk" type="radio" value="No" {{ checked('genogram-outside-uk','No') }}>
+        <label class="govuk-label govuk-radios__label" for="genogram-outside-uk-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+	  
+	  	   
+ <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Are you aware of any significant events that have happened outside the UK?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="outside-uk-conditional-1" name="outside-uk" type="radio" value="Yes" {{ checked('outside-uk','Yes') }} data-aria-controls="conditional-outside-uk-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="genogram-outside-uk-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-outside-uk-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="outside-uk">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="outside-uk" name="outside-uk-details" rows="3" >{{ data['outside-uk-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="international-element-conditional-2" name="outside-uk" type="radio" value="No" {{ checked('outside-uk','No') }}>
+        <label class="govuk-label govuk-radios__label" for="outside-uk-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+  Are you aware of any issues with the jurisdiction of this case - for example under the Brussels 2 regulation?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="international-element-conditional-1" name="international-element" type="radio" value="Yes" {{ checked('international-element','Yes') }} data-aria-controls="conditional-international-element-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="international-element-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-international-element-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="international-element">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="international-element" name="international-element-details" rows="3" >{{ data['international-element-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="international-element-conditional-2" name="international-element" type="radio" value="No" {{ checked('international-element','No') }}>
+        <label class="govuk-label govuk-radios__label" for="international-element-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+	  
+	  	   
+ <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Are you aware of any proceedings outside the UK?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="proceedings-outside-uk-conditional-1" name="proceedings-outside-uk" type="radio" value="Yes" {{ checked('proceedings-outside-uk','Yes') }} data-aria-controls="conditional-proceedings-outside-uk-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="proceedings-outside-uk-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-proceedings-outside-uk-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="outside-uk">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="outside-uk" name="proceedings-outside-uk-details" rows="3" >{{ data['proceedings-outside-uk-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="international-element-conditional-2" name="proceedings-outside-uk" type="radio" value="No" {{ checked('proceedings-outside-uk','No') }}>
+        <label class="govuk-label govuk-radios__label" for="proceedings-outside-uk-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+	  	  	   
+ <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Has, or should, a government authority in another country been involved in this case?
+
+      </h2>
+		<span class="form-hint"> This can include a foreign consulate in the UK </span>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="another-country-conditional-1" name="another-country" type="radio" value="Yes" {{ checked('another-country','Yes') }} data-aria-controls="conditional-another-country-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="another-country-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-another-country-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="outside-uk">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+   
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="another-country" name="another-country-details" rows="3" >{{ data['another-country-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="international-element-conditional-2" name="another-country" type="radio" value="No" {{ checked('another-country','No') }}>
+        <label class="govuk-label govuk-radios__label" for="another-country-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+		<br/>
+				
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

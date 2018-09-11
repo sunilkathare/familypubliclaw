@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Help - FAQs and How to videos
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+ <!--     <a href="la-dashboard.html" class="link-back">Back</a>-->
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Help
+    </li>
+
+  </ol>
+</div>
+		<div class="govuk-grid-row column-minimum govuk-clearfix column-full">
+
+    <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">  </span>
+   Help
+
+    </h1>
+
+<h2 class="govuk-heading-m"> View guidance and training video on </h2>
+		<div class="govuk-grid-row grid-row">
+  <div class="govuk-grid-column-full">
+
+      <div class="accordion">
+
+        <div class="accordion-section">
+
+          <div class="accordion-section-header" aria-expanded="true">
+            <h2 class="heading-medium">C110A application</h2>
+          </div>
+          <div class="accordion-section-body">
+            <ul class="list"><li><!--<h2 class="govuk-heading-m"> Apply for a care, supervision or emergency protection order </h2>-->
+
+
+              <iframe src="https://player.vimeo.com/video/278935830" width="920" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              
+            </li></ul>
+          </div>
+
+        </div>
+        <div class="accordion-section">
+
+          <div class="accordion-section-header">
+            <h2 class="heading-medium">C2 application</h2>
+          </div>
+          <div class="accordion-section-body">
+            <ul class="list"><li>Section content coming soon.</li></ul>
+          </div>
+
+        </div>
+
+		  <div class="accordion-section">
+
+          <div class="accordion-section-header">
+            <h2 class="heading-medium"> Case summary</h2>
+          </div>
+          <div class="accordion-section-body">
+            <ul class="list"><li>Section content coming soon. </li></ul>
+          </div>
+			   </div>
+		  <div class="accordion-section">
+
+          <div class="accordion-section-header">
+            <h2 class="heading-medium"> Arranging an advocate's meeting</h2>
+          </div>
+          <div class="accordion-section-body">
+            <ul class="list"><li>Section content coming soon.</li></ul>
+          </div>
+			   </div>
+		   <div class="accordion-section">
+
+          <div class="accordion-section-header">
+            <h2 class="heading-medium"> Uploading e-bundle</h2>
+          </div>
+
+          <div class="accordion-section-body">
+            <ul class="list"><li><!--<h2 class="govuk-heading-m">How to upload e-bundle?</h2>-->
+
+
+				<p> <iframe src="https://player.vimeo.com/video/275616680" width="920" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/275616680">Common storage solution</a> </p></p>
+
+				</li></ul>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    <script>
+      if (
+        'addEventListener' in document &&
+        document.querySelectorAll
+        ) {
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+          var accordions = document.querySelectorAll('.accordion')
+
+          for (var i = accordions.length - 1; i >= 0; i--) {
+            new Accordion(accordions[i])
+          };
+
+        })
+
+      }
+    </script>
+			</div>
+			</div>
+
+
+
+
+
+     <br/>  <br/>
+
+
+
+
+
+
+<br/>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

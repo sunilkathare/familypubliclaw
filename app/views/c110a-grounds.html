@@ -1,0 +1,102 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+
+C110a - Grounds for application
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="c110a-review#grounds">
+
+{% else %}
+
+  <form action="c110a">
+{% endif %}
+
+
+			 <h1 class="govuk-heading-xl">
+       Grounds for application
+        </h1>
+ 
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s-">
+      <h2 class="govuk-fieldset__heading">
+        What are the grounds for this application?
+      </h2>
+    </legend>
+   <!-- <span id="changed-name-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently.
+    </span>-->
+    <div class="govuk-radios govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="grounds-for-application-1" name="grounds-for-application" type="radio" value="Not receiving care that would be reasonably expected from a parent" {{ checked('grounds-for-application','Not receiving care that would be reasonably expected from a parent') }}>
+        <label class="govuk-label govuk-radios__label" for="grounds-for-application-1">
+        Not receiving care that would be reasonably expected from a parent
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="grounds-for-application-2" name="grounds-for-application" type="radio" value="Beyond parental control" {{ checked('grounds-for-application','Beyond parental control') }}>
+        <label class="govuk-label govuk-radios__label" for="grounds-for-application-2">
+          Beyond parental control
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+	  
+	  <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+   Explain how the threshold criteria has been met
+  </label>
+  <!--<span id="more-detail-hint" class="govuk-hint">
+    Don’t include personal or financial information, eg your National Insurance number or credit card details.
+  </span>-->
+  <textarea class="govuk-textarea" id="more-detail" name="threshold-evidence" rows="25" cols="180" style="width: 90%;" aria-describedby="more-detail-hint">{{ data['threshold-evidence'] }} </textarea>
+</div>
+		
+
+
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

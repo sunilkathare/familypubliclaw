@@ -1,0 +1,594 @@
+<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/images/application.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/nav-style.css" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+
+<style>
+	
+	
+	.jui-casebar{padding:10px 16px 20px 20px; }
+
+	.govuk-table__header{ width: 290px; font-size: 15px; }
+
+
+
+	.govuk-table__cell{width: 400px;font-size: 15px; }
+
+	/* Style variants
+     ========================================================================== */
+@media (min-width: 40.0625em) {
+  .jui-button-actions__item--inline {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+/* ==========================================================================
+   #CASEFILE
+   This is just for demo purposes only. Not for production usage!
+   ========================================================================== */
+.jui-casefile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jui-casefile-files {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 0 30px 30px;
+  width: 300px;
+}
+
+.jui-casefile-page {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 900px;
+}
+
+.jui-casefile-page-head {
+  height: 74px;
+  margin-bottom: 40px;
+}
+
+.jui-casefile-page-content {
+  background: #ffffff;
+  box-shadow: 0 4px 6px 0 rgba(11, 12, 12, 0.1);
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 50px;
+  position: relative;
+  width: 100%;
+  min-height: 1100px;
+}
+
+.jui-casefile-page-content:first-child {
+  margin-top: 0;
+}
+
+.jui-casefile-page-content[data-page]::after {
+  color: #6f777b;
+  content: attr(data-page);
+  line-height: 1;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.jui-casefile-list {
+  list-style: none;
+  margin: 0;
+  padding: 30px 0 0;
+  position: sticky;
+  top: 0;
+}
+
+.jui-casefile-list li {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.jui-casefile-list a[aria-current] {
+  color: #0b0c0c;
+}
+
+.jui-casefile-list ul {
+  margin: 20px 0 20px 20px;
+  padding: 0;
+}
+
+.jui-casefile-list ul li {
+  font-weight: normal;
+}
+
+	.sub-header{ padding: 6px 0; padding-left: 20px; border-bottom: 0px solid #ccc; border-left: 0px solid #f8f8f8;}
+	.sub-cell{border-bottom: 0px solid #ccc; padding: 6px 0; }
+
+		 .key-tag {
+    display: -moz-inline-stack;
+    display: inline-block;
+    margin: 0 8px 30px 0;
+    padding: 8px 10px ;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+			 background-color: #005EA5 ;}
+
+
+	.dashboard-box-link a .govuk-box-highlight p{color: #fff !important;}
+
+	.govuk-width-container{margin: 0px; width: 100%; max-width: 100%; } #content{margin: 0px; 0; padding: 20px;} .govuk-main-wrapper{padding: 0px;} .govuk-template__body{width: 100%; margin: 0px; padding: 0px; margin: 0;
+    background-color: #ffffff;}
+    #content{padding-top: 0px}
+    .govuk-footer {padding: 20px;}
+
+/* ==========================================================================
+   #CASE BAR
+   ========================================================================== */
+.jui-casebar {
+  background-color: #005ea5;
+  color: #ffffff;
+  padding: 10px 20px;
+  height: 20px; font-family: sans-serif;
+  font-size: 80%;
+}
+
+.jui-casebar:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 40.0525em) {
+  .jui-casebar__options {
+    margin-top: 10px;
+  }
+  .jui-casebar__options:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .jui-casebar__details {
+    float: left;
+  }
+  .jui-casebar__options {
+    float: right;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+.jui-casebar__title {
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* ==========================================================================
+   #CASE ACTIONS
+   ========================================================================== */
+.jui-case-actions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jui-case-actions__item {
+  margin-right: 10px;
+  float: left;
+}
+
+.jui-case-actions__item:last-child {
+  margin-right: 0;
+}
+
+.jui-case-actions__link {
+  background-color: #f8f8f8;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.jui-case-actions__link:link, .jui-case-actions__link:visited, .jui-case-actions__link:active {
+  color: #0b0c0c;
+}
+
+.jui-case-actions__link:hover {
+  background-color: #dee0e2;
+}
+/* notification */
+.notifications-menu-view{line-height:0}.notifications-menu-view .gn-title.c-notifications-menu{display:inline-block;cursor:pointer;text-align:center}.notifications-menu-view .gn-title.c-notifications-menu:hover{opacity:.7}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{display:inline-block;background:url(/public/images/icon-notification@2x.png) 0px 0px no-repeat;width:22px;height:24px;position:relative; background-size: cover;}@media only screen and (-o-min-device-pixel-ratio:150/100),only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-resolution:1.5dppx),only screen and (min-resolution:144dpi){.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{background-image:url(/public/images/icon-notification@2x.png);background-size:70px 70px; background-size: cover;}}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount{position:absolute;top:-3px;right:-5px;display:block;border-radius:2px;border:1px solid #fff;padding:0 4px;font:normal 11px Arial,sans-serif;line-height:11px;background:#000;color:#fff}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount.hidden{display:none}.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount,.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount:hover{box-sizing:border-box;height:16px;min-width:16px;text-align:center;line-height:17px;border-radius:8px;font-size:12px;font-family:inherit;border:none;right:-10px;top:-11px;background:#ff0084}
+
+/* Accordian */
+
+	.accordion-controls {
+  text-align: right;
+}
+
+.accordion-expand-all {
+  display: inline;
+  background: transparent;
+  border-width: 0;
+  font-size: 16px;
+  color: #005EA5;
+  cursor: pointer;
+}
+
+.accordion .accordion-section[aria-expanded="false"] .accordion-section-body {
+  display: none;
+}
+
+.accordion.with-js {
+  border-bottom-width: 1px;
+  border-bottom-color: #bfc1c3;
+  border-bottom-style: solid;
+}
+
+.accordion.with-js .accordion-section {
+  border-top-width: 1px;
+  border-top-color: #bfc1c3;
+  border-top-style: solid;
+}
+
+.accordion.with-js h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.accordion.with-js .accordion-section-header {
+  cursor: pointer;
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+
+.accordion.with-js .accordion-section-header h2 {
+  color: #005EA5;
+}
+
+.accordion.with-js .accordion-section-header:hover {
+  background-color: #f8f8f8;
+}
+
+.accordion.with-js .icon {
+
+  position: absolute;
+  top: 50%;
+  right: 15px;
+
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+
+  /* Note: you may have to update these URL paths */;
+
+  /* PNG fallback for SVG */
+  background-image: url('/public/images/icon-plus-minus.png');
+
+  /* SVG sprite */
+  background: url("public/images/icon-plus-minus.svg"), linear-gradient(transparent, transparent);
+  background: url("public/images/icon-plus-minus.svg"), linear-gradient(transparent, transparent);
+
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+}
+
+.accordion.with-js .accordion-section[aria-expanded="true"] .icon {
+  background-position: 0 0;
+}
+
+/* highted event */
+.highlighted-event{padding:1.75em 0.75em 1.25em; olor: #fff; background-color:#28a197; text-align: center; }
+
+.highlighted-event p{ color: #fff; font-family:"nta", Arial, sans-serif;font-weight:400;text-transform:none;font-size:24px;line-height:1.2;display:block;padding-top:9px;padding-bottom:6px;font-weight:bold;padding:0;margin:0}
+.highlighted-event p span{ color: #fff; display:block;font-family:"nta", Arial, sans-serif;font-weight:400;text-transform:none;font-size:24px;line-height:1.2;display:block;padding-top:9px;padding-bottom:6px;font-weight:bold}
+
+.highlighted-event p em{ font-style:normal; display:block;font-family:"nta", Arial, sans-serif;font-weight:400;text-transform:none;font-size:80px;line-height:1.0377358491;display:block;padding-top:8px;padding-bottom:7px;font-weight:bold;margin-bottom:0;padding:0;padding-top:0.2em;padding-bottom:0.1em}
+.subscribe p a{ margin: 30px 0 0 0; display:block;font-weight:600;background:url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;min-height:2.5em;padding:0 0 0 3em}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){article .subscribe p a{background-image:url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);background-size:29px 24px}}
+
+	input, textarea, select {
+	border: none;
+	background-color: transparent;
+	font-size: 1rem;
+	outline: none;
+}
+input, textarea {
+	appearance: none;
+	-webkit-appearance: none;
+}
+textarea {
+	width: 90%;
+	height: 160px;
+}
+select {
+	border: 1px solid #f9f9f9;
+	background-color: transparent;
+	font-size: 1.1em;
+	outline: none;
+	padding: 10px;
+	font-weight: bold;
+}
+
+
+	input[type="text"], select {
+	padding: 5px;
+	border: 1px solid #006435;
+		margin: 0px;}
+	
+	 textarea, select {
+	padding: 10px;
+	border: 1px solid #006435;
+	margin: 5px;
+}
+input[type="button"], input[type="submit"] {
+	padding: 0.4rem 1.5rem;
+	background-color: #00823b;
+	border-radius: 1px;
+	color: white;
+	text-transform: uppercase;
+	box-shadow: 0 2px 2px #ccc;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	float: right;
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+	background-color: #006435;
+	box-shadow: 0 3px 3px #ccc;
+}
+input[type="button"]:active, input[type="submit"]:active {
+	background-color: #00823b;
+}
+section {
+	padding: 1rem 3rem;
+	background-color: #f0f0f0;
+}
+section > h1 {
+	padding: 0.5rem 0;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #000;
+}
+section > table {
+	margin: 0 auto;
+	border-spacing: 0;
+}
+section > table td, section > table th {
+	border: none;
+	padding: 0.5rem 1rem;
+}
+section > table th {
+	text-align: left;
+	border-bottom: 1px solid #444;
+}
+.clearfix {
+	clear: both;
+}
+.row-number {
+	float: left;
+	width: 30px;
+}
+.row-text {
+	float: left;
+	width: 80%;
+}
+.row-edit {
+	float: right;
+	width: 10%;
+}
+.row-3-col {
+	margin-bottom: 20px;
+	display: block;
+	clear: both;
+}
+	@media screen and (max-width: 480px) {
+
+		.app-mobile-hide{display: none;}
+	   .notifications-menu-view{ display: none;}
+
+		.jui-casefile-page-content{ padding: 5px!important; box-shadow:#fff!important; clear: both; width: 360px!important; }
+		.jui-casefile-page{ padding: 5px!important }
+		.floating-button{  display: block; width: 100%; margin: 2px; clear: both;
+		}
+</style>
+
+<script type="text/javascript">
+
+			var inlineEditRowContents = {};
+
+function inlineEdit(rowName, options) {
+	var tableRow = document.getElementById(rowName);
+	inlineEditRowContents[rowName] = {};
+	for (var i=0; i<tableRow.childElementCount; i++) {
+		var cell = tableRow.children[i];
+		inlineEditRowContents[rowName][i] = cell.innerHTML;
+		if (options.hasOwnProperty("updateCell"))
+			options.updateCell(cell, i, rowName, options);
+		else
+			inlineDefaultUpdateCell(cell, i, rowName, options);
+	}
+}
+
+function inlineDefaultUpdateCell(cell, i, rowName, options) {
+	var attributesFilter = ["inlineoptionsvalue", "inlineoptionstitle"];
+	var cellContent = "";
+	var key;
+	if (i === 0) {
+		cellContent += `<form id='${rowName}Form'></form>`;
+	}
+	switch (cell.dataset.inlinetype) {
+		case "plain":
+			cellContent += inlineEditRowContents[rowName][i];
+			break;
+		case "doneButton":
+			cellContent += `<input type='submit' value='Finish' form='${rowName}Form'/>`;
+			break;
+		case "button":
+			cellContent += inlineEditRowContents[rowName][i];
+			break;
+		case "link":
+			cellContent += `<input type='text' value='${cell.innerText}' form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += "/>";
+			break;
+		case "text":
+			cellContent += `<input type='text' value='${inlineEditRowContents[rowName][i]}' form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += "/>";
+			break;
+		case "date":
+			cellContent += `<input type='date' value='${inlineEditRowContents[rowName][i]}' form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += "/>";
+			break;
+		case "select":
+			cellContent += "<select";
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += ">";
+			var optionsTitle = JSON.parse(cell.dataset.inlineoptionstitle);
+			var optionsValue = cell.dataset.hasOwnProperty("inlineoptionsvalue") ? JSON.parse(cell.dataset.inlineoptionsvalue) : [];
+			for (var j=0; j<optionsTitle.length; j++) {
+				cellContent += "<option ";
+				cellContent += ((optionsValue.length<=j) ? "" : `value='${optionsValue[j]}'`);
+				cellContent += ((inlineEditRowContents[rowName][i] == optionsTitle[j]) ? " selected='selected'" : "");
+				cellContent += ">";
+				cellContent += optionsTitle[j];
+				cellContent += "</option>";
+			}
+			cellContent += "</select>";
+			break;
+		case "textarea":
+			cellContent += `<textarea form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += ">";
+			cellContent += inlineEditRowContents[rowName][i];
+			cellContent += "</textarea>";
+			break;
+		default:
+			cellContent += inlineEditRowContents[rowName][i];
+			break;
+	}
+	cell.innerHTML = cellContent;
+	if (i === 0) {
+		// set the onsubmit function of the form of this row
+		document.getElementById(rowName+"Form").onsubmit = function () {
+			event.preventDefault();
+			if (this.reportValidity()) {
+				if (options.hasOwnProperty("finish"))
+					options.finish(rowName, options);
+				else
+					inlineDefaultFinish(rowName, options);
+			}
+		};
+	}
+}
+
+function inlineDefaultFinish(rowName, options) {
+	var tableRow = document.getElementById(rowName);
+	var rowData = {};
+	for (var i=0; i<tableRow.childElementCount; i++) {
+		var cell = tableRow.children[i];
+		var getFromChildren = (i === 0) ? 1 : 0;
+		switch (cell.dataset.inlinetype) {
+			case "plain":
+				break;
+			case "doneButton":
+				break;
+			case "button":
+				break;
+			case "link":
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].value;
+				inlineEditRowContents[rowName][i] = "<a href='"+cell.dataset.inlinelinkformat.replace("%link%", cell.children[getFromChildren].value)+"'>"+cell.children[getFromChildren].value+"</a>";
+				break;
+			case "text":
+			case "date":
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].value;
+				inlineEditRowContents[rowName][i] = cell.children[getFromChildren].value;
+				break;
+			case "select":
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].selectedIndex;
+				rowData["_"+cell.dataset.inlinename+"Title"] = JSON.parse(cell.dataset.inlineoptionstitle)[cell.children[getFromChildren].selectedIndex];
+				rowData["_"+cell.dataset.inlinename+"Value"] = JSON.parse(cell.dataset.inlineoptionsvalue)[cell.children[getFromChildren].selectedIndex];
+				inlineEditRowContents[rowName][i] = JSON.parse(cell.dataset.inlineoptionstitle)[cell.children[getFromChildren].selectedIndex];
+				break;
+			case "textarea":
+				// TODO textarea value is \n not <br/>
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].value;
+				inlineEditRowContents[rowName][i] = cell.children[getFromChildren].value;
+				break;
+			default:
+				break;
+		}
+	}
+
+	// do whatever ajax magic
+	if (options.hasOwnProperty("finishCallback"))
+		options.finishCallback(rowData, rowName);
+
+	for (i=0; i<tableRow.childElementCount; i++) {
+		var cell = tableRow.children[i];
+		if (options.hasOwnProperty("finishCell")) {
+			// return true invokes the default finishCell function
+			if (options.finishCell(cell, i, rowName, inlineEditRowContents[rowName][i]) === true) {
+				inlineDefaultFinishCell(cell, i, rowName);
+			}
+		} else
+			inlineDefaultFinishCell(cell, i, rowName);
+	}
+}
+
+function inlineDefaultFinishCell(cell, i, rowName) {
+	var cellContent = "";
+	cellContent += inlineEditRowContents[rowName][i];
+	cell.innerHTML = cellContent;
+}
+
+
+			function simpleRowDataParser(rowData) {
+				var str = "";
+				for (var key in rowData) {
+ 					if (rowData.hasOwnProperty(key))
+    					str += key + ":" + rowData[key] + "\n";
+				}
+				return str;
+			}
+			function defaultSampleCallback(rowData, rowName) {
+				alert(rowName+"\n"+simpleRowDataParser(rowData));
+			}
+			function selectCallback(rowData, rowName) {
+				var colors = ["FF","CC","99","66","33","00"];
+				document.getElementById(rowName).children[3].style.backgroundColor = "#"+colors[rowData.red]+colors[rowData.green]+colors[rowData.blue];
+			}
+
+			var defaultSampleOptions = {"finishCallback": defaultSampleCallback};
+			var customFunctionsOptions = {"updateCell": inlineDefaultUpdateCell,
+										"finish": inlineDefaultFinish,
+										"finishCallback": defaultSampleCallback,
+										"finishCell": inlineDefaultFinishCell};
+			var sampleOptions = {"finishCallback": selectCallback};
+		</script>

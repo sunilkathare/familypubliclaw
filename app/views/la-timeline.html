@@ -1,0 +1,541 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+ Status & timeline - Case #0093939983
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>-->
+ <div class="jui-casebar" style="display: none">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+      #0093939983<span class="jui-casebar__title"> London Borough of Southwark  versus 	Samantha Smith  </span>
+    </div>
+
+
+    <div class="jui-casebar__options">
+
+  <!--    <nav class="jui-case-actions">
+  <ul class="jui-case-actions__list">
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/mark-as-prepared">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav>-->
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li >
+      <a class="govuk-link" href="la-case-summary" data-topnav="Case summary"> Case summary</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-parties" data-topnav="Parties">Parties</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-case-file" data-topnav="Case file">Case file</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="la-directions" data-topnav="directions">Directions</a>
+    </li>
+	  <li >
+      <a class="govuk-link" href="la-orders" data-topnav="directions">Orders</a>
+    </li>
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="la-timeline" data-topnav="timeline" >Status & timeline</a>
+    </li>
+	  <li>
+      <a class="govuk-link" href="la-questions" data-topnav="questions" >Questions</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-summary" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Case summary</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-case-summary">Case details </a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="la-case-summary-by-la">Summary by LA</a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-parties" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Parties</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+              <a class="govuk-link" href="la-parties#children">Children</a>
+            </li>
+			  <li>
+          <a class="govuk-link" href="la-parties#respondent">Respondent</a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-parties#applicant">Applicant </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-parties#cafcass">CAFCASS</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-file" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Case file</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+          <a class="govuk-link" href="la-case-file">C110a Application </a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-swet">SWET</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li>
+              <a class="govuk-link" href="la-case-file-documents">Documents</a>
+            </li>
+			   <li>
+              <a class="govuk-link" href="la-case-file-upload">Upload</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+		<li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-directions" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Directions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-directions">View directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+	  <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-orders" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Orders</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-standard-directions">Standard directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+<li>
+          <a class="govuk-link" href="la-cmo">CMO </a>
+        </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-timeline" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">Status/ Timeline</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="la-timeline">Timeline</a>
+        </li>
+
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-questions" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">Questions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="la-questions">View questions</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-questions-ask">Ask questions </a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+  </div>
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row-">
+    <div class="column-full column-minimum" style="">
+
+	<!--Breadscrumbs
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "-la-dashboard"
+    },
+    {
+      text: "Cases",
+      href: "la-cases"
+    },
+    {
+      text: "#0093939983"
+    }
+,		{
+      text: "Case summary"
+    }
+  ]
+}) }}-->
+
+	<div class="govuk-grid-row column-minimum govuk-clearfix">
+		<br/>
+    <h1 class="govuk-heading-l">
+      <!--  <span class="govuk-caption-l"> Case 00388</span>-->
+     Timeline
+
+    </h1>
+
+		<p class="heading-small">
+        Case status: <span class="blue-bold-text">Case Management Hearing scheduled </span>
+
+      </p>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+		<script type="text/javascript">
+function ShowHide()
+{
+   //
+   if( ! arguments.length ) { return; }
+   for(var i=0; i< arguments.length; i++)
+   {
+      var ta = arguments[i].split("=",2);
+      document.getElementById(ta[0]).style.display = ta[1];
+   }
+}
+</script>
+
+	<!-- Gem time line-->
+
+		<nav class="task-list-sidebar">
+    <div class="pub-c-task-list-related" data-module="track-click">
+
+  </div>
+
+    <div data-module="gemtasklist" class="gem-c-task-list  gem-c-task-list--active"><div class="gem-c-task-list__controls"></div>
+    <ol class="gem-c-task-list__groups">
+        <li class="gem-c-task-list__group ">
+          <span class="gem-c-task-list__circle gem-c-task-list__circle--number">
+            <span class="gem-c-task-list__circle-inner">
+              <span class="gem-c-task-list__circle-background">
+                <span class="visuallyhidden">Step</span> 1
+              </span>
+            </span>
+          </span>
+
+            <div class="gem-c-task-list__step js-step" id="check-you're-allowed-to-drive" data-track-count="tasklistSection">
+
+              <div class="gem-c-task-list__header js-toggle-panel" data-position="1.1">
+                <h3 class="gem-c-task-list__title js-step-title"><button class="gem-c-task-list__button gem-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-check-you're-allowed-to-drive-1">
+                  Application received <span class="grey-text"> ( 20th Sep 2017)</span>
+                </button></h3>
+
+
+				 <div class="ShowHide-block" >
+<span id="d-1-show" style="display:inline;"><a href="javascript:ShowHide('content-block-div=block','d-1-show=none','d-1-hide=inline')">Show </a></span>
+<span id="d-1-hide" style="display:none;"><a href="javascript:ShowHide('content-block-div=none','d-1-show=inline','d-1-hide=none')">Hide </a></span>
+</p>
+<div id="content-block-div" class="ShowHide-content-block">
+ <p class="gem-c-task-list__paragraph"> C110A application received on 20th September </p>
+
+</div>
+				  <p>
+
+</div>
+
+
+
+
+
+              </div>
+
+            </div>
+        </li>
+        <li class="gem-c-task-list__group " aria-current="step">
+          <span class="gem-c-task-list__circle gem-c-task-list__circle--number">
+            <span class="gem-c-task-list__circle-inner">
+              <span class="gem-c-task-list__circle-background">
+                <span class="visuallyhidden">Step</span> 2
+              </span>
+            </span>
+          </span>
+
+            <div class="gem-c-task-list__step js-step" id="get-a-provisional-driving-licence" data-track-count="tasklistSection" data-show="">
+
+              <div class="gem-c-task-list__header js-toggle-panel" data-position="2.1">
+                <h3 class="gem-c-task-list__title js-step-title"><button class="gem-c-task-list__button gem-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-get-a-provisional-driving-licence-1">
+                  Standard Directions issued <span class="grey-text"> ( 22nd Sep 2017)</span>
+                </button></h3>
+               <div class="ShowHide-block" >
+<span id="d-2-show" style="display:inline;"><a href="javascript:ShowHide('content-block-div-2=block','d-2-show=none','d-2-hide=inline')">Show </a></span>
+<span id="d-2-hide" style="display:none;"><a href="javascript:ShowHide('content-block-div-2=none','d-2-show=inline','d-2-hide=none')">Hide </a></span>
+</p>
+<div id="content-block-div-2" class="ShowHide-content-block">
+ <p> Standard Directions Issued on 22th September 2017</p>
+
+</div>
+
+            </div>
+        </li>
+        <li class="gem-c-task-list__group gem-c-task-list__group--active">
+          <span class="gem-c-task-list__circle gem-c-task-list__circle--number">
+            <span class="gem-c-task-list__circle-inner">
+              <span class="gem-c-task-list__circle-background">
+                <span class="visuallyhidden">Step</span> 3
+              </span>
+            </span>
+          </span>
+
+            <div class="gem-c-task-list__step js-step" id="driving-lessons-and-practice" data-track-count="tasklistSection">
+
+              <div class="gem-c-task-list__header js-toggle-panel" data-position="3.1">
+                <h3 class="gem-c-task-list__title js-step-title"><button class="gem-c-task-list__button gem-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-driving-lessons-and-practice-1">
+                  Case Management Hearing scheduled 	<span class="grey-text"> ( 29th Sep 2017)</span>
+                </button></h3>
+             <div class="ShowHide-block" >
+<span id="d-3-show" style="display:inline;"><a href="javascript:ShowHide('content-block-div-3=block','d-3-show=none','d-3-hide=inline')">Show </a></span>
+<span id="d-3-hide" style="display:none;"><a href="javascript:ShowHide('content-block-div-3=none','d-3-show=inline','d-3-hide=none')">Hide </a></span>
+</p>
+<div id="content-block-div-3" class="ShowHide-content-block">
+ <p>  Case Management Hearing scheduled for 29th September 2017</p>
+
+</div>
+
+
+
+
+
+              </div>
+
+            </div>
+            <div class="gem-c-task-list__step js-step" id="prepare-for-your-theory-test" data-track-count="tasklistSection">
+                <div class="gem-c-task-list__circle gem-c-task-list__circle--logic">
+                  <span class="gem-c-task-list__circle-inner">
+                    <span class="gem-c-task-list__circle-background">
+                      and
+                    </span>
+                  </span>
+                </div>
+
+              <div class="gem-c-task-list__header js-toggle-panel" data-position="3.2">
+                <h3 class="gem-c-task-list__title js-step-title"><button class="gem-c-task-list__button gem-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-prepare-for-your-theory-test-2">
+                  Evidence gathering
+                </button></h3>
+             <div class="ShowHide-block" >
+<span id="d-4-show" style="display:inline;"><a href="javascript:ShowHide('content-block-div-4=block','d-4-show=none','d-4-hide=inline')">Show </a></span>
+<span id="d-4-hide" style="display:none;"><a href="javascript:ShowHide('content-block-div-4=none','d-4-show=inline','d-4-hide=none')">Hide </a></span>
+</p>
+<div id="content-block-div-4" class="ShowHide-content-block">
+ <p>   Judge has issued order to Local Authority to gather evidence from School by 10th October 2017.  </p>
+
+</div>
+
+
+
+
+              </div>
+
+            </div>
+        </li>
+        <li class="gem-c-task-list__group ">
+          <span class="gem-c-task-list__circle gem-c-task-list__circle--number">
+            <span class="gem-c-task-list__circle-inner">
+              <span class="gem-c-task-list__circle-background">
+                <span class="visuallyhidden">Step</span> 4
+              </span>
+            </span>
+          </span>
+
+            <div class="gem-c-task-list__step js-step" id="book-and-manage-your-theory-test" data-track-count="tasklistSection">
+
+              <div class="gem-c-task-list__header js-toggle-panel" data-position="4.1">
+                <h3 class="gem-c-task-list__title js-step-title"><button class="gem-c-task-list__button gem-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-book-and-manage-your-theory-test-1">
+                  Issue Resolution Hearing
+                </button></h3>
+              <div class="ShowHide-block" >
+<span id="d-5-show" style="display:inline;"><a href="javascript:ShowHide('content-block-div-5=block','d-5-show=none','d-5-hide=inline')">Show </a></span>
+<span id="d-5-hide" style="display:none;"><a href="javascript:ShowHide('content-block-div-5=none','d-5-show=inline','d-5-hide=none')">Hide </a></span>
+</p>
+<div id="content-block-div-5" class="ShowHide-content-block">
+ <p>  Issue Resolution Hearing is estimated to be held by 20th October 2017.  </p>
+
+</div>
+
+
+
+
+              </div>
+
+            </div>
+        </li>
+        <li class="gem-c-task-list__group ">
+          <span class="gem-c-task-list__circle gem-c-task-list__circle--number">
+            <span class="gem-c-task-list__circle-inner">
+              <span class="gem-c-task-list__circle-background">
+                <span class="visuallyhidden">Step</span> 5
+              </span>
+            </span>
+          </span>
+
+            <div class="gem-c-task-list__step js-step" id="book-and-manage-your-driving-test" data-track-count="tasklistSection">
+
+              <div class="gem-c-task-list__header js-toggle-panel" data-position="5.1">
+                <h3 class="gem-c-task-list__title js-step-title"><button class="gem-c-task-list__button gem-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-book-and-manage-your-driving-test-1">
+                Final Hearing
+                </button></h3>
+              <div class="ShowHide-block" >
+<span id="d-6-show" style="display:inline;"><a href="javascript:ShowHide('content-block-div-6=block','d-6-show=none','d-6-hide=inline')">Show </a></span>
+<span id="d-6-hide" style="display:none;"><a href="javascript:ShowHide('content-block-div-6=none','d-6-show=inline','d-6-hide=none')">Hide </a></span>
+</p>
+<div id="content-block-div-6" class="ShowHide-content-block">
+ <p>  Final Hearing is estimated to be held by 1st March 2018.  </p>
+
+</div>
+
+
+            </div>
+        </li>
+        <li class="gem-c-task-list__group ">
+          <span class="gem-c-task-list__circle gem-c-task-list__circle--number">
+            <span class="gem-c-task-list__circle-inner">
+              <span class="gem-c-task-list__circle-background">
+                <span class="visuallyhidden">Step</span> 6
+              </span>
+            </span>
+          </span>
+
+            <div class="gem-c-task-list__step js-step" id="when-you-pass" data-track-count="tasklistSection">
+
+              <div class="gem-c-task-list__header js-toggle-panel" data-position="6.1">
+                <h3 class="gem-c-task-list__title js-step-title"><button class="gem-c-task-list__button gem-c-task-list__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-when-you-pass-1">
+                 Final case Order
+                </button></h3>
+                <div class="ShowHide-block" >
+<span id="d-7-show" style="display:inline;"><a href="javascript:ShowHide('content-block-div-7=block','d-7-show=none','d-7-hide=inline')">Show </a></span>
+<span id="d-7-hide" style="display:none;"><a href="javascript:ShowHide('content-block-div-7=none','d-7-show=inline','d-7-hide=none')">Hide </a></span>
+</p>
+<div id="content-block-div-7" class="ShowHide-content-block">
+ <p>  Final Order with will be issued after the the final Hearing.  </p>
+
+</div>
+
+            </div>
+        </li>
+    </ol>
+  </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+     <table>
+  <caption class="heading-small">4 weeks to 26 weeks deadline</caption>
+  <tbody>
+    <tr>
+      <td>Start date </td>
+		<td class="bold">20th Sep 2017</td>
+    </tr>
+    <tr>
+      <td>Estimated end date </td>
+      <td class="bold">1st March 2018</td>
+    </tr>
+    <tr>
+
+  </tbody>
+</table>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

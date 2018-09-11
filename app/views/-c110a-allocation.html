@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - International element
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review#allocation">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+
+			 <h1 class="govuk-heading-xl">
+         Other proceedings and allocation proposal 
+        </h1>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-label">
+        Are you aware of any ongoing or previous proceedings?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="previous-proceedings-yes" name="previous-proceedings" type="radio" value="Yes" data-aria-controls="conditional-previous-proceedings-yes" {{ checked('previous-proceedings','Yes') }}>
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+        Yes
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-previous-proceedings-yes">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="yes">
+    Case no
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="yes" name="case-no" type="text" value="{{ data['case-no'] }}">
+        </div>
+		  <div class="govuk-form-group">
+          <label class="govuk-label" for="yes">
+    Started
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="yes" name="started" type="text" value="{{ data['started'] }}">
+        </div>
+		  <div class="govuk-form-group">
+          <label class="govuk-label" for="Yes">
+    Ended
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="yes" name="ended" type="text" value="{{ data['ended'] }}">
+        </div>
+		  <div class="govuk-form-group">
+          <label class="govuk-label" for="Yes">
+    Orders made
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="yes" name="orders-made" type="text" value="{{ data['orders-made'] }}">
+        </div>
+		  <div class="govuk-form-group">
+          <label class="govuk-label" for="Yes">
+    Judge
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="yes" name="judge" type="text" value="{{ data['judge'] }}">
+        </div>
+		  <div class="govuk-form-group">
+          <label class="govuk-label" for="Yes">
+    Guardian
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="yes" name="guardian" type="text" value="{{ data['guardian'] }}">
+        </div>
+		  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h3 class="govuk-label">
+        Same guardian needed?
+      </h3>
+    </legend>
+
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="same-guardian-needed" type="radio" value="Yes" {{ checked('same-guardian-needed','Yes') }}>
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+        Yes
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="same-guardian-needed" type="radio" value="No" {{ checked('same-guardian-needed','No') }}>
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        No
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="previous-proceedings" type="radio" value="No" data-aria-controls="conditional-how-contacted-conditional-2" {{ checked('previous-proceedings','No') }}>
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+        No
+      </label>
+      </div>
+
+
+
+    </div>
+  </fieldset>
+</div>
+	  <!--Allocation proposal -->
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h3 class="govuk-label">
+        Applicant’s allocation proposal
+      </h3>
+		<span class="form-hint">Should be filled by solicitor that has good knowledge of the case based on the  <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> 
+    president's guidance on allocation</a></span>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-1" name="allocation-proposal" type="radio" value="Lay justices" {{ checked('allocation-proposal','Lay justices') }}>
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+       Lay justices
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="allocation-proposal" type="radio" value="District Judge level" {{ checked('allocation-proposal','District Judge level') }}>
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        District Judge level
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="allocation-proposal" type="radio" value="Circuit Judge level" {{ checked('allocation-proposal','Circuit Judge level') }}>
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        Circuit Judge level
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="allocation-proposal" type="radio" value="DFJ/Section 9 sitting as a Judge of the High Court" {{ checked('allocation-proposal','DFJ/Section 9 sitting as a Judge of the High Court') }}>
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+        DFJ/Section 9 sitting as a Judge of the High Court
+      </label>
+      </div>
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="allocation-proposal" type="radio" value="High Court Judge level" {{ checked('allocation-proposal','High Court Judge level') }}>
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+        High Court Judge level
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+	  <!--reason -->
+	  <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Set out the rationale behind allocation proposal. 
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">Use applicable
+paragraphs from the
+    <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> president’s guidance on allocation</a>
+  </span>
+
+  <textarea class="govuk-textarea" id="more-detail" name="allocation-reason" rows="5" aria-describedby="more-detail-hint">{{ data['allocation-reason'] }}</textarea>
+</div>
+
+
+
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

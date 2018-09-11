@@ -1,0 +1,111 @@
+{% extends "layout-jui.html" %}
+
+{% block page_title %}
+  Cases
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="g-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Cases
+    </li>
+
+  </ol>
+
+
+</div>
+<br/> 
+		
+		<div class="jui-width-container">
+
+  <main role="main" class="govuk-main-wrapper">
+
+    
+
+    <h1 class="govuk-heading-l">Cases</h1>
+
+    <table class="govuk-table">
+  
+<!--  <caption class="govuk-table__caption govuk-heading-m">View cases</caption>-->
+  
+  
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    
+      <th class="govuk-table__header" scope="col" style="width: 350px" >Case number</th>
+      
+    
+      <th class="govuk-table__header numeric" scope="col">Parties</th>
+    
+      <th class="govuk-table__header numeric" scope="col">Type</th>
+    
+      <th class="govuk-table__header numeric" scope="col">Status</th>
+    
+      <th class="govuk-table__header numeric" scope="col">Start date</th>
+    
+     
+    
+    </tr>
+  </thead>
+  
+  <tbody class="govuk-table__body">
+    
+    <tr class="govuk-table__row">
+    
+      
+      <th class="govuk-table__header" scope="row"> &nbsp; &nbsp; &nbsp;<a href="g-case-summary.html">#00388</a></th>
+      
+    
+      
+      <td class="govuk-table__cell numeric">London Borough of Southwark versus 	Samantha Smith & Paul Smith </td>
+      
+    
+      
+      <td class="govuk-table__cell numeric">Public Law</td>
+      
+    
+      
+      <td class="govuk-table__cell numeric">CMH scheduled</td>
+      
+    
+      
+      <td class="govuk-table__cell numeric">20 Nov 2017 </td>
+      
+    
+      
+      
+      
+    
+    </tr>
+    
+    
+    
+  </tbody>
+</table>
+
+		
+		
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

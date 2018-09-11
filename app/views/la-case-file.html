@@ -1,0 +1,1512 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+ (C110A) - Apply for a care, supervision or emergency protection order
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>-->
+ <div class="jui-casebar" style="display: none">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+      #0093939983<span class="jui-casebar__title"> London Borough of Southwark  versus 	Samantha Smith  </span>
+    </div>
+
+
+    <div class="jui-casebar__options">
+
+  <!--    <nav class="jui-case-actions">
+  <ul class="jui-case-actions__list">
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/mark-as-prepared">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav>-->
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li >
+      <a class="govuk-link" href="la-case-summary" data-topnav="Case summary"> Case summary</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-parties" data-topnav="Parties">Parties</a>
+    </li>
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="la-case-file" data-topnav="Case file">Case file</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="la-directions" data-topnav="directions">Directions</a>
+    </li>
+	  <li>
+      <a class="govuk-link" href="la-orders" data-topnav="timeline" >Orders</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-timeline" data-topnav="timeline" >Status & timeline</a>
+    </li>	   
+	  <li>
+      <a class="govuk-link" href="la-questions" data-topnav="timeline" >Questions</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-summary" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Case summary</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+       
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-case-summary">Case details </a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="la-case-summary-by-la">Summary by LA</a>
+            </li>
+            
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-parties" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Parties</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+        
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+              <a class="govuk-link" href="la-parties#children">Children</a>
+            </li>
+			  <li>
+          <a class="govuk-link" href="la-parties#respondent">Respondent</a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-parties#applicant">Applicant </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-parties#cafcass">CAFCASS</a>
+            </li>
+            
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-file" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Case file</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+          <a class="govuk-link" href="la-case-file">C110a Application </a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-swet">SWET</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li>
+              <a class="govuk-link" href="la-case-file-documents">Documents</a>
+            </li>
+			   <li>
+              <a class="govuk-link" href="la-case-file-upload">Upload</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+		<li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-directions" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Directions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-directions">View directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+           
+
+          </ul>
+
+      </ul>
+    </li>
+	  <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-orders" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Orders</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-standard-directions">Standard directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+           
+<li>
+          <a class="govuk-link" href="la-cmo">CMO </a>
+        </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-timeline" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">Status/ Timeline</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="la-timeline">Timeline</a>
+        </li>
+
+           
+          <ul class="app-mobile-nav__theme-nav">
+           
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-questions" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">Questions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="la-questions">View questions</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-questions-ask">Ask questions </a>
+            </li>
+            
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+<div class="app-pane__body">
+  <div class="app-pane__subnav app-hide-mobile">
+<nav class="app-subnav">
+	<h4 class="app-subnav__theme">Case file  </h4>
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="la-case-file">C110A application</a>
+            </li>
+           
+			   <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-documents">Documents</a>
+            </li>
+			  
+          </ul>
+</nav>
+  </div>
+ <div class="app-pane__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+       <h1 class="govuk-heading-l">
+        <!--span class="govuk-caption-l">  Case 00388</span>-->
+    C110A application | 10 Jul 2018  <div class="floating-button"> <a href="#" class="button" style="font-size: 80%" onclick="myFunction()"> Print </a></div>
+
+    </h1>
+		  <script>
+function myFunction() {
+    window.print();
+}
+</script>
+      </div>
+      <div class="app-prose-scope-1" style="border: solid 32px #f8f8f8; padding: 0 20px; box-shadow: 1px 1px 1px 1px #f0f0f0 ;">
+ <div style="font-size:70%;" style="background: #fffff; padding: 20px; border: 1px solid #454545" >
+		 
+
+		<!--Children deatils -->
+<h2 class="heading-medium">
+       Children’s details
+      </h2>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Child’s full name
+          </dt>
+          <dd class="cya-answer">
+              {{ data['child-1-full-name'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change <span class="visually-hidden"> Child’s full name</span>
+            </a>
+          </dd>
+        </div>
+
+          <div>
+            <dt class="cya-question">
+            Age
+            </dt>
+            <dd class="cya-answer">
+
+          {{ 2018 - data['child-dob-year'] }} years old        </dd>
+            <dd class="cya-change">
+              <a href="-c110a-children.html">
+                Change <span class="visually-hidden"> Date of birth</span>
+              </a>
+            </dd>
+          </div>
+        <div>
+          <dt class="cya-question">
+            Date of birth
+          </dt>
+          <dd class="cya-answer">
+            {{ data['child-dob-day'] }} {{ data['child-dob-month'] }}
+{{ data['child-dob-year'] }}          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change <span class="visually-hidden"> Date of birth</span>
+            </a>
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+            Gender
+          </dt>
+          <dd class="cya-answer">
+            {{ data['child-1-gender'] }}
+        </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children.html">
+              Change <span class="visually-hidden"> Date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Child's current address
+          </dt>
+          <dd class="cya-answer">
+			   {{ data['child-1-address'] }}
+           
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change <span class="visually-hidden"> Child's current address</span>
+            </a>
+          </dd>
+        </div>
+		   <div>
+          <dt class="cya-question">
+           Key dates for this child
+          </dt>
+          <dd class="cya-answer">
+			    {{ data['key-dates'] }}
+
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change<span class="visually-hidden"> Key dates</span>
+            </a>
+          </dd>
+        </div>
+
+		    <div>
+          <dt class="cya-question">
+           Mother's name
+          </dt>
+          <dd class="cya-answer">
+			   {{ data['child-1-mother-name'] }}
+
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change <span class="visually-hidden"> Mother's name</span>
+            </a>
+          </dd>
+        </div>
+		    <div>
+          <dt class="cya-question">
+           Father's name
+          </dt>
+          <dd class="cya-answer">
+			   {{ data['child-1-father-name'] }}
+
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children.html">
+              Change <span class="visually-hidden"> Father's name</span>
+            </a>
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+           Parental responsibility
+          </dt>
+          <dd class="cya-answer">
+			   {{ data['child-1-parental-responsibility'] }}
+
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change<span class="visually-hidden"> Father's name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Name of social worker
+          </dt>
+          <dd class="cya-answer">
+            {{ data['child-1-social-worker-name'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change<span class="visually-hidden"> Name of Social worker</span>
+            </a>
+          </dd>
+        </div>
+
+  <div>
+		  <dt class="cya-question">
+            Social worker's phone number
+          </dt>
+          <dd class="cya-answer">
+            {{ data['child-1-social-worker-phone-number'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change<span class="visually-hidden"> Name of Social worker</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <!--Respondent details -->
+  <h2 class="heading-medium">
+         Respondent’s details
+        </h2>
+
+        <dl class="govuk-check-your-answers cya-questions-short">
+           <div>
+              <dt class="cya-question">
+                Respondent’s full name
+              </dt>
+              <dd class="cya-answer">
+                  {{ data['respondent-1-full-name'] }}
+              </dd>
+              <dd class="cya-change">
+                <a href="-c110a-respondent?change=true">
+                  Change <span class="visually-hidden"> Respondent’s full name</span>
+                </a>
+              </dd>
+            </div>
+
+          <div>
+            <dt class="cya-question">
+              Date of birth
+            </dt>
+            <dd class="cya-answer">
+              {{ data['respondent-1-dob-day'] }} {{ data['respondent-1-dob-month'] }}
+  {{ data['respondent-1-dob-year'] }}          </dd>
+            <dd class="cya-change">
+              <a href="-c110a-respondent?change=true">
+                Change <span class="visually-hidden"> Date of birth</span>
+              </a>
+            </dd>
+          </div>
+  		  <div>
+            <dt class="cya-question">
+              Gender
+            </dt>
+            <dd class="cya-answer">
+              {{ data['respondent-1-gender'] }}
+          </dd>
+            <dd class="cya-change">
+              <a href="-c110a-respondent?change=true">
+                Change <span class="visually-hidden"> Respondent's date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div>
+              <dt class="cya-question">
+                Place of birth
+              </dt>
+              <dd class="cya-answer">
+                {{ data['respindent-1-place-birth'] }}
+            </dd>
+              <dd class="cya-change">
+                <a href="-c110a-respondent?change=true">
+                  Change <span class="visually-hidden"> Respondent's place of birth</span>
+                </a>
+              </dd>
+            </div>
+
+          <div>
+            <dt class="cya-question">
+              Current address
+            </dt>
+            <dd class="cya-answer">
+  			   {{ data['respondent-1-current-address'] }}
+             
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-respondent?change=true">
+                Change <span class="visually-hidden"> Respondent's current address</span>
+              </a>
+            </dd>
+          </div>
+  		   <div>
+            <dt class="cya-question">
+            Respondent's contact number
+            </dt>
+            <dd class="cya-answer">
+  			    {{ data['respondent-1-contact-number'] }}
+
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-respondent?change=true">
+                Change<span class="visually-hidden"> Respondent's contact number</span>
+              </a>
+            </dd>
+          </div>
+
+  		    <div>
+            <dt class="cya-question">
+             Relationship to the child
+            </dt>
+            <dd class="cya-answer">
+  			 {{ data['respondent-1-child-1-full-name'] }}'s  {{ data['respondent-1-child-1-relationship'] }}
+
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-respondent?change=true">
+                Change <span class="visually-hidden"> Mother's name</span>
+              </a>
+            </dd>
+          </div>
+
+  		  <div>
+            <dt class="cya-question " >
+             Parental responsibility
+            </dt>
+            <dd class="cya-answer">
+  			   {{ data['respondent-1-child-1-parental-responsibility'] }}
+
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-respondent?change=true">
+                Change<span class="visually-hidden"> Parental responsibility</span>
+              </a>
+            </dd>
+          </div>
+          <div>
+              <dt class="cya-question">
+                    Assessments needed for this person?
+                  </dt>
+                  <dd class="cya-answer">
+                    {{ data['respondent-1-assessments'] }}
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="-c110a-respondent?change=true">
+                      Change<span class="visually-hidden"> Assessments</span>
+                    </a>
+                  </dd>
+                </div>
+          <div>
+            <dt class="cya-question">
+            Disabilities - need help or facilities?
+            </dt>
+            <dd class="cya-answer">
+              {{ data['respondent-1-disability'] }}
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-respondent?change=true">
+                Change<span class="visually-hidden">   Disabilities</span>
+              </a>
+            </dd>
+          </div>
+
+
+        </dl>
+        {% if data['other-1-full-name'] and data['other-1-dob-day']  %}
+        <!--Others details -->
+    <h2 class="heading-medium">
+           Other’s who should be given notice
+          </h2>
+
+          <dl class="govuk-check-your-answers cya-questions-short">
+             <div>
+                <dt class="cya-question">
+                  Other 1 full name
+                </dt>
+                <dd class="cya-answer">
+                    {{ data['other-1-full-name'] }}
+                </dd>
+                <dd class="cya-change">
+                  <a href="-c110a-others?change=true">
+                    Change <span class="visually-hidden"> other’s full name</span>
+                  </a>
+                </dd>
+              </div>
+
+            <div>
+              <dt class="cya-question">
+                Date of birth
+              </dt>
+              <dd class="cya-answer">
+                {{ data['other-1-dob-day'] }} {{ data['other-1-dob-month'] }}
+    {{ data['other-1-dob-year'] }}          </dd>
+              <dd class="cya-change">
+                <a href="-c110a-others?change=true">
+                  Change <span class="visually-hidden"> Date of birth</span>
+                </a>
+              </dd>
+            </div>
+          <div>
+              <dt class="cya-question">
+                Gender
+              </dt>
+              <dd class="cya-answer">
+                {{ data['other-1-gender'] }}
+            </dd>
+              <dd class="cya-change">
+                <a href="-c110a-other?change=true">
+                  Change <span class="visually-hidden"> other's date of birth</span>
+                </a>
+              </dd>
+            </div>
+            <div>
+                <dt class="cya-question">
+                  Place of birth
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['other-1-place-birth'] }}
+              </dd>
+                <dd class="cya-change">
+                  <a href="-c110a-respondent?change=true">
+                    Change <span class="visually-hidden"> other's place of birth</span>
+                  </a>
+                </dd>
+              </div>
+
+            <div>
+              <dt class="cya-question">
+                Current address
+              </dt>
+              <dd class="cya-answer">
+             {{ data['other-1-current-address'] }}
+
+              </dd>
+              <dd class="cya-change">
+                <a href="-c110a-respondent?change=true">
+                  Change <span class="visually-hidden"> Other's current address</span>
+                </a>
+              </dd>
+            </div>
+           <div>
+              <dt class="cya-question">
+           contact number
+              </dt>
+              <dd class="cya-answer">
+              {{ data['other-1-contact-number'] }}
+
+              </dd>
+              <dd class="cya-change">
+                <a href="-c110a-respondent?change=true">
+                  Change<span class="visually-hidden"> other's contact number</span>
+                </a>
+              </dd>
+            </div>
+
+            <div>
+              <dt class="cya-question">
+               Relationship to the child
+              </dt>
+              <dd class="cya-answer">
+           {{ data['other-1-child-1-full-name'] }}'s  {{ data['other-1-child-1-relationship'] }}
+
+              </dd>
+              <dd class="cya-change">
+                <a href="-c110a-respondent?change=true">
+                  Change <span class="visually-hidden"> Mother's name</span>
+                </a>
+              </dd>
+            </div>
+
+          <div>
+              <dt class="cya-question " >
+               Parental responsibility
+              </dt>
+              <dd class="cya-answer">
+             {{ data['other-1-child-1-parental-responsibility'] }}
+
+              </dd>
+              <dd class="cya-change">
+                <a href="-c110a-respondent?change=true">
+                  Change<span class="visually-hidden"> Parental responsibility</span>
+                </a>
+              </dd>
+            </div>
+            <div>
+                <dt class="cya-question">
+                      Assessments needed for this person?
+                    </dt>
+                    <dd class="cya-answer">
+                      {{ data['other-1-assessments'] }}
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="-c110a-respondent?change=true">
+                        Change<span class="visually-hidden"> Assessments</span>
+                      </a>
+                    </dd>
+                  </div>
+            <div>
+              <dt class="cya-question">
+              Disabilities - need help or facilities?
+              </dt>
+              <dd class="cya-answer">
+                {{ data['other-1-disability'] }}
+              </dd>
+              <dd class="cya-change">
+                <a href="-c110a-respondent?change=true">
+                  Change<span class="visually-hidden">   Disabilities</span>
+                </a>
+              </dd>
+            </div>
+
+
+          </dl>
+        {% else %}
+        <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+        {% endif %}
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        Applicant's details
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Name of applicant
+          </dt>
+          <dd class="cya-answer">
+            {{ data['applicant-full-name'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Name of Applicant</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Name of contact
+          </dt>
+          <dd class="cya-answer">
+             {{ data['applicant-contact-name'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Applicant contact name</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Job title
+          </dt>
+          <dd class="cya-answer">
+             {{ data['applicant-job-title'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Job title</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Applicant address
+          </dt>
+          <dd class="cya-answer">
+             {{ data['applicant-address'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Applicant address</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Mobile number
+          </dt>
+          <dd class="cya-answer">
+             {{ data['applicant-mobile-number'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Applicant mobile number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Telephone number
+          </dt>
+          <dd class="cya-answer">
+             {{ data['applicant-telephone-number'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Applicant telephone number</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Email
+          </dt>
+          <dd class="cya-answer">
+             {{ data['applicant-email'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Applicant email</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+          Solicitor's name
+          </dt>
+          <dd class="cya-answer">
+             {{ data['la-solicitor-full-name'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Solicitor's name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+        Solicitor's mobile number
+          </dt>
+          <dd class="cya-answer">
+             {{ data['la-solicitor-mobile-number'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Solicitor's mobile number</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+        Solicitor's telephone number
+          </dt>
+          <dd class="cya-answer">
+             {{ data['la-solicitor-telephone-number'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Solicitor's telephone number</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+        Solicitor's email
+          </dt>
+          <dd class="cya-answer">
+             {{ data['la-solicitor-email'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Solicitor's email</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+        DX number
+          </dt>
+          <dd class="cya-answer">
+             {{ data['la-dx-number'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-applicant?change=true">
+              Change<span class="visually-hidden">  DX number</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+
+      </dl>
+
+      <h2 class="heading-medium">
+      Orders
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Orders applied for
+
+
+          </dt>
+          <dd class="cya-answer">
+            {{ data['order-type'] }}
+
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-orders?change=true">
+              Change<span class="visually-hidden">   Order type</span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+          Order details
+          </dt>
+          <dd class="cya-answer">
+            {{ data['order-type-detail'] }} {{ data['order-emergency-protection-order-others'] }} {{ data['orders-care-supervision-others'] }}
+
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-orders?change=true">
+              Change<span class="visually-hidden">   Order type</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+
+      </dl>
+
+      <h2 class="heading-medium">
+
+Hearings needed
+
+
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Do you need an urgent hearing?
+          </dt>
+          <dd class="cya-answer">
+              {{ data['urgent-type'] }} <br/> {{ data['urgency-date'] }}  {{ data['urgency-reason'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-urgency?change=true">
+              Change<span class="visually-hidden"> hearing urgency</span>
+            </a>
+          </dd>
+        </div>
+
+          <div>
+            <dt class="cya-question">
+              Without notice?
+            </dt>
+            <dd class="cya-answer">
+              {{ data['without-notice'] }}<br/>{{ data['without-notice-reason'] }}
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-urgency?change=true">
+                Change<span class="visually-hidden">  without notice</span>
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt class="cya-question">
+              Reduced notice
+            </dt>
+            <dd class="cya-answer">
+              {{ data['reduced-notice'] }}<br/>{{ data['reduced-notice-reason'] }}
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-urgency?change=true">
+                Change<span class="visually-hidden"> reduced notice</span>
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt class="cya-question">
+              Are respondents aware of proceedings?
+            </dt>
+            <dd class="cya-answer">
+              {{ data['respondents-notified'] }}<br/>
+            </dd>
+            <dd class="cya-change">
+              <a href="-c110a-urgency?change=true">
+                Change<span class="visually-hidden"> reduced notice</span>
+              </a>
+            </dd>
+          </div>
+          <div> <dt class="cya-question">
+            Respondents’ views on proceedings
+          </dt>
+          <dd class="cya-answer">
+            {{ data['respondents-notified-reason'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-urgency?change=true">
+              Change<span class="visually-hidden"> respondents’ views on proceedings</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+
+
+
+      </dl>
+
+            <h2 class="heading-medium">
+              Grounds for the application
+
+
+            </h2>
+
+            <dl class="govuk-check-your-answers cya-questions-short">
+              <div>
+                <dt class="cya-question">
+                  Child is
+
+
+
+
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['grounds-for-application'] }}
+
+                </dd>
+                <dd class="cya-change">
+                  <a href="-c110a-grounds?change=true">
+                    Change<span class="visually-hidden">   grounds for application</span>
+                  </a>
+                </dd>
+              </div>
+
+
+
+
+            </dl>
+
+            <h2 class="heading-medium">
+            Risks and harm to children
+
+
+            </h2>
+
+            <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+            <!--   * `cya-questions-short` for short questions -->
+            <!--   * `cya-questions-long` for long questions -->
+            <!--   * none for single group of q&a -->
+            <dl class="govuk-check-your-answers cya-questions-short">
+              <div>
+                <dt class="cya-question">
+                  Physical harm through neglect
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['physical-harm'] }}
+                </dd>
+                <dd class="cya-change">
+                  <a href="-c110a-risk-harm?change=true">
+                    Change<span class="visually-hidden">   Physical harm</span>
+                  </a>
+                </dd>
+              </div>
+				 <div>
+                <dt class="cya-question">
+                  Non-accidental injury
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['non-accidental-injury'] }}
+                </dd>
+                <dd class="cya-change">
+                  <a href="-c110a-risk-harm?change=true">
+                    Change<span class="visually-hidden">   Non-accidental injury</span>
+                  </a>
+                </dd>
+              </div>
+
+                <div>
+                  <dt class="cya-question">
+                    Emotional harm
+                  </dt>
+                  <dd class="cya-answer">
+                    {{ data['emotional-harm'] }}
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="-c110a-risk-harm??change=true">
+                      Change<span class="visually-hidden">  Emotional harm</span>
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="cya-question">
+                    Sexual abuse
+                  </dt>
+                  <dd class="cya-answer">
+                    {{ data['sexual-abuse'] }}
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="-c110a-risk-harm?change=true">
+                      Change<span class="visually-hidden"> Sexual abuse</span>
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="cya-question">
+                    Neglect
+                  </dt>
+                  <dd class="cya-answer">
+                    {{ data['neglect'] }}
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="-c110a-risk-harm?change=true">
+                      Change<span class="visually-hidden"> Neglect</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+
+
+
+            </dl>
+                        <h2 class="heading-medium">
+
+  Factors affecting parenting
+
+
+                        </h2>
+
+                        <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+                        <!--   * `cya-questions-short` for short questions -->
+                        <!--   * `cya-questions-long` for long questions -->
+                        <!--   * none for single group of q&a -->
+                        <dl class="govuk-check-your-answers cya-questions-short">
+                          <div>
+                            <dt class="cya-question">
+                              Alcohol & drugs
+                            </dt>
+                            <dd class="cya-answer">
+                              {{ data['alcohol-and-drugs'] }} <br/>{{ data['alcohol-and-drugs-details'] }}
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="-c110a-parenting?change=true">
+                                Change<span class="visually-hidden">   alcohol & drugs</span>
+                              </a>
+                            </dd>
+                          </div>
+
+                            <div>
+                              <dt class="cya-question">
+                                Mental health issues
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['mental-health-issues'] }}<br/>{{ data['mental-health-issues-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-parenting?change=true">
+                                  Change<span class="visually-hidden">  Mental health issues</span>
+                                </a>
+                              </dd>
+                            </div>
+                            <div>
+                              <dt class="cya-question">
+                                Domestic violence
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['domestic-violence'] }}<br/>{{ data['domestic-violence-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-parenting?change=true">
+                                  Change<span class="visually-hidden"> domestic violence</span>
+                                </a>
+                              </dd>
+                            </div>
+
+
+
+
+
+
+                        </dl>
+
+
+                        <h2 class="heading-medium">
+                          Threshold evidence
+
+
+                        </h2>
+
+
+                        <dl class="govuk-check-your-answers cya-questions-short">
+
+                          <div>
+                            <dt class="cya-question">
+                              Threshold is met because:
+                            </dt>
+                            <dd class="cya-answer">
+                            <!--  {{ data['Threshold-evidence'] }} -->
+            <textarea class="form-control" type="text" id="Threshold-evidence" name="threshold-evidence" rows="4 " cols="180" style="width: 90%; border:1px #f1f1f1 solid; font-size:95%;"> {{ data['Threshold-evidence'] }} </textarea>
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="-c110a-grounds?change=true">
+                                Change<span class="visually-hidden">   Order type</span>
+                              </a>
+                            </dd>
+                          </div>
+
+
+
+
+                        </dl>
+                        <h2 class="heading-medium">
+
+  International element
+
+
+                        </h2>
+
+                        <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+                        <!--   * `cya-questions-short` for short questions -->
+                        <!--   * `cya-questions-long` for long questions -->
+                        <!--   * none for single group of q&a -->
+                        <dl class="govuk-check-your-answers cya-questions-short">
+                          <div>
+                            <dt class="cya-question">
+                              Aware of international element?
+                            </dt>
+                            <dd class="cya-answer">
+                              {{ data['international-element'] }} <br/>{{ data['international-element-details'] }}
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="-c110a-international?change=true">
+                                Change<span class="visually-hidden">   international element</span>
+                              </a>
+                            </dd>
+                          </div>
+
+                            <div>
+                              <dt class="cya-question">
+                              Is there anyone in genogram who lives outside UK and has been assessed a possible carer?
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['genogram-outside-uk'] }}<br/>{{ data['genogram-outside-uk-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-international?change=true">
+                                  Change<span class="visually-hidden">  genogram outside UK</span>
+                                </a>
+                              </dd>
+                            </div>
+                            <div>
+                              <dt class="cya-question">
+                              Aware of any significant events outside UK?
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['outside-uk'] }}<br/>{{ data['outside-uk-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-international?change=true">
+                                  Change<span class="visually-hidden"> significant events outside UK</span>
+                                </a>
+                              </dd>
+                            </div>
+                            <div>
+                              <dt class="cya-question">
+                              Aware of proceedings outside UK?
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['proceedings-outside-uk'] }}<br/>{{ data['proceedings-outside-uk-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-international?change=true">
+                                  Change<span class="visually-hidden"> proceedings outside UK</span>
+                                </a>
+                              </dd>
+                            </div>
+
+
+
+
+
+
+                        </dl>
+                        <h2 class="heading-medium">
+
+                      Attending the court
+
+
+                        </h2>
+
+                        <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+                        <!--   * `cya-questions-short` for short questions -->
+                        <!--   * `cya-questions-long` for long questions -->
+                        <!--   * none for single group of q&a -->
+                        <dl class="govuk-check-your-answers cya-questions-short">
+                          <div>
+                            <dt class="cya-question">
+                              Interpreter required?
+                            </dt>
+                            <dd class="cya-answer">
+                              {{ data['interpreter'] }} <br/>{{ data['interpreter-details'] }}
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="-c110a-attending?change=true">
+                                Change<span class="visually-hidden">   interpreter </span>
+                              </a>
+                            </dd>
+                          </div>
+
+                            <div>
+                              <dt class="cya-question">
+                            Intermediary required ?
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['intermediary'] }}<br/>{{ data['intermediary-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-attending?change=true">
+                                  Change<span class="visually-hidden">  intermediary</span>
+                                </a>
+                              </dd>
+                            </div>
+                            <div>
+                              <dt class="cya-question">
+                            Litigation capacity issues
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['litigation-capacity-issues'] }}<br/>{{ data['litigation-capacity-issues-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-attending?change=true">
+                                  Change<span class="visually-hidden"> litigation capacity issues</span>
+                                </a>
+                              </dd>
+                            </div>
+                            <div>
+                              <dt class="cya-question">
+                          Learning disability referrals
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['learning-disability'] }}<br/>{{ data['learning-disability-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-attending?change=true">
+                                  Change<span class="visually-hidden">  learning disability</span>
+                                </a>
+                              </dd>
+                            </div>
+
+                            <div>
+                              <dt class="cya-question">
+                              Welsh proceedings?
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['welsh'] }}<br/>{{ data['welsh-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-attending?change=true">
+                                  Change<span class="visually-hidden"> Welsh proceedings</span>
+                                </a>
+                              </dd>
+                            </div>
+                            <div>
+                              <dt class="cya-question">
+                              Any security needed?
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['security'] }}<br/>{{ data['security-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="-c110a-attending?change=true">
+                                  Change<span class="visually-hidden"> security</span>
+                                </a>
+                              </dd>
+                            </div>
+
+
+
+
+
+
+                        </dl>
+                        <h2 class="heading-medium">
+                          Documents
+
+
+                        </h2>
+
+                        <dl class="govuk-check-your-answers cya-questions-short">
+                          <div>
+                            <dt class="cya-question">
+                              Evidence documents
+
+
+
+
+                            </dt>
+                            <dd class="cya-answer">
+                            <a href="#" target="_blank" >SWET</a>
+
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="-c110a-upload?change=true">
+                                Change<span class="visually-hidden">   evidence documents</span>
+                              </a>
+                            </dd>
+                          </div>
+
+
+
+
+                        </dl>
+
+
+
+
+
+		  </div>
+<!--application end-->
+      </div>
+    </main>
+    
+    <div class="app-pane__subnav-mobile-overview app-hide-desktop">
+<nav class="app-subnav">
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file"> C110a Application</a>
+            </li>
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="la-case-file-swet">SWET</a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-documents">Documents/a>
+            </li>
+				  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-upload">Upload new document/a>
+            </li>
+          </ul>
+</nav>
+    </div>
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row-">
+    <div class="column-full column-minimum" style="">
+
+	<!--Breadscrumbs
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "-la-dashboard"
+    },
+    {
+      text: "Cases",
+      href: "la-cases"
+    },
+    {
+      text: "#0093939983"
+    }
+,		{
+      text: "Case summary"
+    }
+  ]
+}) }}-->
+
+	
+		
+		
+		
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+     
+	  
+		
+	  
+  </div>
+  
+</div>
+		  
+	 
+	  
+	  
+	
+	  
+	  
+		
+		
+		
+
+      
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

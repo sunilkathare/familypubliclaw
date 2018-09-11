@@ -1,0 +1,542 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+ (C110A) - Apply for a care, supervision or emergency protection order
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>-->
+ <div class="jui-casebar" style="display: none">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+     00388<span class="jui-casebar__title"> London Borough of Southwark  versus 	Samantha Smith  </span>
+    </div>
+
+
+    <div class="jui-casebar__options">
+
+  <!--    <nav class="jui-case-actions">
+  <ul class="jui-case-actions__list">
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/mark-as-prepared">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="https://jui-prototype.herokuapp.com/app/cases/BV18D00150/reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav>-->
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li >
+      <a class="govuk-link" href="la-case-summary" data-topnav="Case summary"> Case summary</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-parties" data-topnav="Parties">Parties</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="la-case-file" data-topnav="Case file">Case file</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="la-directions" data-topnav="directions">Directions</a>
+    </li>
+	  <li class="app-navigation--current-page">
+      <a class="govuk-link" href="la-orders" data-topnav="timeline" >Orders</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="la-timeline" data-topnav="timeline" >Status & timeline</a>
+    </li>	   
+	  <li>
+      <a class="govuk-link" href="la-questions" data-topnav="timeline" >Questions</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-summary" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Case summary</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+       
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-case-summary">Case details </a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="la-case-summary-by-la">Summary by LA</a>
+            </li>
+            
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-parties" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Parties</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+        
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+              <a class="govuk-link" href="la-parties#children">Children</a>
+            </li>
+			  <li>
+          <a class="govuk-link" href="la-parties#respondent">Respondent</a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-parties#applicant">Applicant </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-parties#cafcass">CAFCASS</a>
+            </li>
+            
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-file" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Case file</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+          <a class="govuk-link" href="la-case-file">C110a Application </a>
+        </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-swet">SWET</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="la-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li>
+              <a class="govuk-link" href="la-case-file-documents">Documents</a>
+            </li>
+			   <li>
+              <a class="govuk-link" href="la-case-file-upload">Upload</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+		<li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-directions" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Directions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-directions">View directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+           
+
+          </ul>
+
+      </ul>
+    </li>
+	  <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-orders" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Orders</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="la-standard-directions">Standard directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+           
+<li>
+          <a class="govuk-link" href="la-cmo">CMO </a>
+        </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-timeline" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">Status/ Timeline</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="la-timeline">Timeline</a>
+        </li>
+
+           
+          <ul class="app-mobile-nav__theme-nav">
+           
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-questions" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">Questions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="la-questions">View questions</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="la-questions-ask">Ask questions </a>
+            </li>
+            
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+<div class="app-pane__body">
+  <div class="app-pane__subnav app-hide-mobile">
+<nav class="app-subnav">
+	<h4 class="app-subnav__theme">Orders </h4>
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item ">
+              <a class="govuk-link" href="la-standard-directions">Standard directions</a>
+            </li>
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="la-cmo">CMO</a>
+            </li>
+           
+			   
+          </ul>
+</nav>
+  </div>
+ <div class="app-pane__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+       <h1 class="govuk-heading-l">
+     <!--   <span class="govuk-caption-l">  Case 00388</span>-->
+    Orders
+
+    </h1>
+      </div>
+      <div class="app-prose-scope-1" style="border: solid 32px #f8f8f8; padding: 0 20px; box-shadow: 1px 1px 1px 1px #f0f0f0 ;">
+ <div style="font-size:" style="background: #fffff; padding: 20px; border: 1px solid #454545" >
+		 
+
+ <h3 class="heading-medium">Case Management Order </h3><div style="float:right; "> <a class="button"> Edit </a></div>
+    <p class="grey-text" >Issued on 2nd March 2018 </p> 
+	  
+	 <p> In the Family Court sitting at <strong class="bold-small" > East London Courts </strong></p> 
+	  
+	  <table>
+  <thead>
+    <tr>
+      <th scope="col">Child(ren)</th>
+      <th class="numeric" scope="col">Gender</th>
+      <th class="numeric" scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Bobby Reeves </th>
+      <td class="numeric">Boy</td>
+      <td class="numeric">6</td>
+    </tr>
+    <tr>
+      <th scope="row">Emily Reeves</th>
+      <td class="numeric">Girl</td>
+      <td class="numeric">8</td>
+    </tr>
+    
+  </tbody>
+</table>
+	  
+	  
+	  <h3 class="heading-medium"> Case Management Order no <span class="numberCircle">3</span><span class="grey-text">  20th March 2018</span></h3>
+	  
+	  
+	  
+	  <table>
+  <caption class="heading-small">1. THE PARTIES</caption>
+  <tbody>
+    <tr>
+      <td>The applicant local authority is </td>
+		<td class="bold">{{ data['full-name-applicant'] }}</td>
+    </tr>
+    <tr>
+      <td>The first respondent (mother) is </td>
+      <td class="bold">Mother's Name</td>
+    </tr>
+    <tr>
+      <td>The second respondent(father) </td>
+		<td class="bold">Ben Brown</td>
+    </tr>
+    <tr>
+      <td>The third respondent(s) is/are (the children) by their children’s guardian </td>
+		<td class="bold">Guardian's name </td>
+    </tr>
+	  <tr>
+      <td>[The first intervenor is[state relationship to child(ren) or other party] </td>
+      <td class="bold"> Children’s Grandmother</td>
+    </tr>
+  </tbody>
+</table>
+	  
+	  <h3 class="heading-small">2 THE CHILD(REN) ARE LIVING WITH  </h3>
+	  
+	  <p>[Name(s)       ] [**Placement]
+[use appropriate code for each placement] 
+[list children separately if different placements]
+</p>
+	  
+	  
+	  	  <h3 class="heading-small">3. THE REPRESENTATIVES AT THIS HEARING </h3>
+	  
+	  <p>The parties are represented as follows<br/>
+<strong class="bold-small"> a) </strong>  The applicant is represented by [name of counsel/solicitor/advocate], their contact details being [telephone and email address].
+<br/><strong class="bold-small"> b) </strong>  The 1st respondent is represented by [name of counsel/solicitor/advocate], their contact details being [telephone and email address].
+<br/> <strong class="bold-small"> c) </strong>  The 2nd respondent is represented by [name of counsel/solicitor/advocate], their contact details being [telephone and email address].
+<br/><strong class="bold-small"> d) </strong>  The 3rd respondent is represented by [name of counsel/solicitor/advocate], their contact details being [telephone and email address].
+<br/><strong class="bold-small"> e) </strong>  Other [specify] is represented by [name of counsel/solicitor/advocate], their contact details being [telephone and email address].
+ </p>
+	  <p>And the following parties are in person
+[name], their contact details being [contact details].</p>
+
+<div class="panel panel-border-wide"><p>The identity of the children and those named in paragraphs 1 and 2 are not to be disclosed in public without the permission of the court.</p></div>
+
+	  
+	   <h3 class="heading-small">4.  ALLOCATION</h3>
+	  <p>The proceedings are today/continue to be allocated to Mr(s) Justice [name]/HHJ [sitting as a s.9 judge][name]/District Judge [name] /AJC [name]</p>
+	  
+	  <h3 class="heading-small">5.  THE APPLICATION(S)</h3>
+	  
+	  <p>
+	 <br/>
+<strong class="bold-small"> a) </strong> 	The local authority has applied for a care order/supervision order/other Part 4 order [specify] today/on date]
+<br/>
+<strong class="bold-small"> b) </strong> 	[other applications]
+<br/>
+<strong class="bold-small"> c) </strong> 	The [state party] has applied for [                  ] [today/on date]
+</p>
+	  
+	 <h3 class="heading-small"> 6. JURISDICTION:- </h3>
+	  
+	 <ul> <ol type="a" class="grey-text small-text">
+  <li>(a)		The court is satisfied that it has jurisdiction in relation to the child/ren [give reasons, eg. based on habitual residence] [and/or] <br /><br /></li>
+  <li>(b)	There is an issue as to jurisdiction in respect of the children and consideration needs to be given to this issue [and the application of Council Regulation (EC) No 2201/2003 (Brussels 2 Revised)] to these proceedings by the parties as a matter of urgency; and </li>
+		 <l>(c)	The local authority shall liaise with the [identify country] consular authority in England and Wales or other competent authority in [name of foreign state] in relation to the proceedings or make a request to the Central Authority of [identify country] for such information as may be relevant to determine issues of jurisdiction.</l>
+  
+</ol>
+	  </ul>
+	  
+	  <h3 class="heading-small"> 7. TODAY’S HEARING</h3>
+	  
+	   <p>The parties are represented as follows<br/>
+<strong class="bold-small"> a) </strong>  The applicant is represented by [name of counsel/solicitor/advocate], their contact details being [telephone and email address].
+<br/><strong class="bold-small"> b) </strong>  The 1st respondent is represented by [name of counsel/solicitor/advocate], their contact details being [telephone and email address].</p>
+	  
+	  <h3 class="heading-small"> 8.   THE TIMETABLE FOR THE PROCEEDINGS</h3>
+	  
+	  <p>[see in the matter of Re S a Child 16th April 2014]
+The timetable for the proceedings is 26 weeks [or]
+</p>
+	  <p>a)	The proceedings cannot be completed within 26 weeks, but are to be completed within [    ] weeks or by [date]] for the following reason – [complete (i) or (ii) or (iii) and delete the others] 
+(i)	It is necessary to extend the timetable for the proceedings beyond 26 weeks in order to resolve the proceedings justly because: [specify reason, eg. very heavy cases involving the most complex medical evidence where a separate fact-finding hearing is directed, FDAC type case, cases with an international element where investigations or assessments have to be carried out abroad, cases where the parent’s disabilities require recourse to special assessments or measures.]
+(ii)	Despite robust and vigorous case management, the nature of the proceedings has changed and it is necessary to extend the timetable for the proceedings for one or more of the children in order to resolve the proceedings justly because: [specify reason, eg.	cases proceeding on allegations of neglect or emotional harm where allegations of sexual abuse subsequently surface, cases which are unexpectedly ‘derailed’ because of the death, serious illness or imprisonment of the proposed carer, cases where a realistic alternative family carer emerges late in the day]
+(iii)	The progress of the case has been delayed because of the litigation failure on behalf of one or more of the parties and it is necessary to extend the timetable for the proceedings in order to resolve the proceedings justly because:[specify reason: ] 
+</p>
+	  
+	  <p>b)	AND in each of the above cases, the impact on the welfare of the children of extending the proceedings is [state impact		]
+
+</p>
+	  <p>The next hearing is a [  **] on [date and time	] at [ place			] with a time estimate of [		]</p>
+	  
+	  
+	    <h3 class="heading-small"> 9.   TIMETABLE FOR THE CHILD(REN)</h3>
+	  <p>The key dates and events in the Timetable for the Child(ren) are:
+Child [name]; Event/Permanent placement [specify]; Date [specify]
+Child [name]; Event/Permanent placement [specify]; Date [specify]
+Child [name]; Event/Permanent placement [specify]; Date [specify]
+</p>
+	  
+	  <h3 class="heading-small"> 10. THRESHOLD</h3>
+	  
+	  <p> The s.31 threshold for the making of orders is agreed/in dispute/in dispute subject to concessions which have been made. [the threshold agreement/the threshold concessions is/are annexed to this order].</p>
+	  
+	    <h3 class="heading-small"> 11.  THE KEY ISSUES IN THE CASE ARE:</h3>
+	  <p>a) [e.g. What significant harm has the child suffered or been at risk of suffering?]
+b) [e.g. What are the identified welfare needs of the child?]
+c) [e.g. Does either the mother or the father have the capability to meet the child’s needs?]
+d) [	Other		]
+ </p>
+	   <h3 class="heading-small"> 12. THE PARTIES’ POSITIONS:</h3>
+	  
+	  <p>a) [e.g. The local authority has concluded ………….]
+b) [e.g. The mother disputes…………..]
+c) [e.g. The father has now…………]
+d) [e.g. The children's guardian supports the ……..]
+</p>
+	  <h3 class="heading-small"> 13. IDENTIFICATION OF PERSON(S) TO BE ASSESSED AS POTENTIAL ALTERNATIVE CARER(S)</h3>
+	  <p>a) The parents have identified all family members they wish to be assessed and the court has explained to them that any persons identified by them in the future may not be assessed due to the delay not being consistent with the timetable for the child.
+b) The person(s) identified by the mother are [name(s)]
+c) The person(s) identified by the father are [name(s)]
+d) [Other]	[name(s)]
+</p>  
+	  
+	  <h3 class="heading-small"> 14. EVIDENCE </h3>
+	  <p>After reading the materials filed, which are described in an index/record of hearing</p>
+	  <hr/>
+	  <h2 class="heading-medium"> THE COURT ORDERS</h2>
+	  	  <h3 class="heading-small"> 15. INTERIM CARE/SUPERVISION ORDER(S)  </h3>
+	  <p>In the interim, [Name of child/ren] is/are placed in the care of /under the supervision of [name of local authority] until the finalisation of the proceedings or further order.</p>
+	  
+	  
+	   <h3 class="heading-small"> 16. EXPERTS </h3>
+	  
+	  <p>a) An application [was][was not] today made for the instruction of an expert. and the application [was][was not] granted.
+b) The type of expert whose instruction was [allowed][refused] by the court [is** ] 
+c) The date by which the report is due is:  
+d) The report of an expert is necessary to assist the court to resolve the proceedings because [specify reason] and the impact on the welfare of the child is [describe impact]			]
+ [Repeat if more than one expert]
+</p>
+	   <h3 class="heading-small"> 17.   OTHER ORDERS</h3>
+	  
+	  <p>[for example:]
+Reallocation
+Joinder of additional party/ies
+Assessment of others
+Consideration of how the child(ren)’s views should be communicated to the court
+Special measures/interpreters/intermediaries
+Disclosure
+Paternity/drug/alcohol testing
+Timetable for evidence to be filed including the care plan
+Further case analysis
+Directions for proposed concurrent placement order proceedings
+Disclosure to the Independent Reviewing Officer
+Making Interim Care Orders and their duration
+Contact
+Advocates’ meetings and preparation for the next hearing
+Bundles
+[use standard clauses where available locally and put directions in chronological order]
+</p>
+	  
+	     <h3 class="heading-small"> 18. COMPLIANCE </h3>
+	  
+	  <p>No document other than a document specified in this order or filed in accordance with the Rules or any Practice Direction shall be filed by any party without the court’s permission.</p>
+	  
+	 
+	  
+	  <p><strong class="bold-small"> 19. </strong>Any application to vary this order or for any other order is to be made to the allocated judge on notice to all parties. </p>
+	  
+	  <p><strong class="bold-small"> 20. </strong>All parties must immediately inform the allocated judge and the court if any party or person fails to comply with any part of this order. </p>
+	  
+	  <p><strong class="bold-small"> 21. CASE OUTCOME  </strong>[to be completed only if proceedings are finally disposed of at a Case Management/Issues Resolution Hearing]
+A [set out type of order] was made today in respect of [name of child	] 
+ </p>
+	  
+
+		  </div>
+<!--application end-->
+      </div>
+    </main>
+    
+    <div class="app-pane__subnav-mobile-overview app-hide-desktop">
+<nav class="app-subnav">
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file"> C110a Application</a>
+            </li>
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="la-case-file-swet">SWET</a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-documents">Documents/a>
+            </li>
+				  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-upload">Upload new document/a>
+            </li>
+          </ul>
+</nav>
+    </div>
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row-">
+    <div class="column-full column-minimum" style="">
+
+	<!--Breadscrumbs
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "-la-dashboard"
+    },
+    {
+      text: "Cases",
+      href: "la-cases"
+    },
+    {
+      text: "#0093939983"
+    }
+,		{
+      text: "Case summary"
+    }
+  ]
+}) }}-->
+
+	
+		
+		
+		
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+     
+	  
+		
+	  
+  </div>
+  
+</div>
+		  
+	 
+	  
+	  
+	
+	  
+	  
+		
+		
+		
+
+      
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

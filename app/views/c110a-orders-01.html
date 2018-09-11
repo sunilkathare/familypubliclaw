@@ -1,0 +1,170 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+
+C110a - Orders
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+{% if data['change'] == "true" %}
+  <form action="c110a-review#orders">
+
+{% else %}
+
+  <form action="c110a">
+{% endif %}
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Which orders do you want to apply for?<!--What order(s) are you applying for?-->
+      </h1>
+    </legend>
+    <span id="orders-hint" class="govuk-hint">
+  Select all that apply
+</span>
+
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="Care and supervision or other Part 4" data-aria-controls="conditional-order-type-1" {{ checked('order-type','Care and supervision or other Part 4') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-1">
+      Care and supervision or other Part 4
+      </label>
+      </div>
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-1">
+
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-1" name="order-type-detail" type="checkbox" value="Care" {{ checked('order-type-detail','Care') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+        Care
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-2" name="order-type-detail" type="checkbox" value="Supervision" {{ checked('order-type-detail','Supervision') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+      Supervision
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-3" name="order-type-detail" type="checkbox" value="Interim care order" {{ checked('order-type-detail','Interim care order') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+      Interim care order
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-3" name="order-type-detail" type="checkbox" value="Interim supervision order" {{ checked('order-type-detail','Interim supervision order') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+    Interim supervision order
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="order-type-conditional-others-1" name="order-type-detail" type="checkbox" value="Other" data-aria-controls="conditional-order-type-others-1" {{ checked('order-type-detail','Other') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
+        Other
+      </label>
+      </div>
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-others-1">
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="contact-by-phone">
+Please specify
+</label>
+  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="order-type-detail-others-1" type="text" value="{{ data['order-type-detail-others-1'] }}">
+</div>
+    </div>
+    </div>
+
+        </div>
+
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type" type="checkbox" value="Emergency protection order" data-aria-controls="conditional-order-type-2" {{ checked('order-type','Emergency protection order') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
+        Emergency protection order
+      </label>
+      </div>
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-2">
+
+        <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="order-type-3" name="order-type-detail" type="checkbox" value="Information on the whereabouts of the children" {{ checked('order-type-detail','Information on the whereabouts of the children') }}>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+                Information on the whereabouts of the children
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-2" name="order-type-detail" type="checkbox" value="Authorisation for entry of premises" {{ checked('order-type-detail','Authorisation for entry of premises') }}>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                Authorisation for entry of premises
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="order-type-detail" type="checkbox" value="Authorisation to search for another child on the premises" {{ checked('order-type-detail','Authorisation to search for another child on the premises') }}>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                Authorisation to search for another child on the premises
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type-detail" type="checkbox" value="Other" data-aria-controls="conditional-order-type-others-2" {{ checked('order-type-detail','Other') }}>
+                <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
+                Other
+              </label>
+              </div>
+              <div class="govuk-checkboxes__conditional" id="conditional-order-type-others-2">
+                <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+  Please specify
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="order-type-detail-others" type="text" value="{{ data['order-type-detail-others'] }}">
+        </div>
+            </div>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+  {% if data['change'] == "true" %}
+    <input class="button" type="submit" value="Save and continue">
+
+  {% else %}
+
+  <input class="button" type="submit" value="Save">
+  {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

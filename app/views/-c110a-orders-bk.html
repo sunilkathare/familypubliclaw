@@ -1,0 +1,243 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Orders
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Which orders do you want to apply for?
+      </h1>
+    </legend>
+    <span id="nationality-hint" class="govuk-hint">
+  If you want more than one order, select all options that need.
+</span>
+
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="email" data-aria-controls="conditional-order-type-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+      Care and supervision or other Part 4
+      </label>
+      </div>
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-1">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+        British
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+        Irish
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+        Citizen of another country
+      </label>
+      </div>
+    </div>
+
+        </div>
+
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="order-type" type="checkbox" value="phone" data-aria-controls="conditional-order-type-2">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+        Phone
+      </label>
+      </div>
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-2">
+
+        <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+                British
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                Irish
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                Citizen of another country
+              </label>
+              </div>
+            </div>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+		<div class="form-group">
+    <fieldset>
+
+      <legend>
+        <h1 class="govuk-heading-xl">
+      Which orders do you want to apply for?<span class="form-hint">Tick all which apply</span>
+        </h1>
+
+      </legend>
+
+      <div class="multiple-choice" data-target="care-and-supervision">
+        <input id="radio-home-address" type="checkbox" name="order-type" value="Care and Supervision" {{ checked('order-type','Care and Supervision') }}>
+        <label for="radio-home-address">Care and supervision or other Part 4</label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="care-and-supervision">
+
+        <h2 class="heading-medium">
+          Care and supervision or other Part 4
+        </h2>
+
+        <div class="multiple-choice">
+          <input id="care" name="order-type-detail" type="checkbox" value="Care" {{ checked('order-type-detail','Care') }}>
+          <label for="care">Care</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="Supervision" name="order-type-detail" type="checkbox" value="Supervision" {{ checked('order-type-detail','Supervision') }}>
+          <label for="Supervision">Supervision</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="Interim-care-order" name="order-type-detail" type="checkbox" value="Interim care order" {{ checked('order-type-detail','Interim care order') }}>
+          <label for="Interim-care-order">Interim care order</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="Interim-supervision-order" name="order-type-detail" type="checkbox" value="Interim supervision order" {{ checked('order-type-detail','Interim supervision order') }}>
+          <label for="Interim-supervision-order">Interim supervision order</label>
+        </div>
+
+
+        <div class="multiple-choice" data-target="others-2">
+          <input id="nationalities-other" name="order-type-detail" type="checkbox" value="Others" {{ checked('order-type-detail','Others') }}>
+          <label for="Others">Other</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="others-2">
+          <label class="form-label" for="other-2">Please specify</label>
+          <textarea class="form-control" type="text" id="other-2y" name="orders-care-supervision-others">{{ data['orders-care-supervision-others'] }}</textarea>
+        </div>
+
+<!--<div class="panel panel-border-narrow multiple-choice">
+<hr/>
+        <legend>
+          <h1 class="heading-small">
+
+          </h1>
+          <span class="body-text">Is the Local Authority considering adoption?</span>
+        </legend>
+
+        <div class="multiple-choice">
+          <input id="radio-adoption" type="radio" name="radio-indent-group-1" value="yes">
+          <label for="radio-adoption">Yes</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-adoption" type="radio" name="radio-indent-group-1" value="No">
+          <label for="radio-adoption">No</label>
+        </div>
+</div>-->
+
+
+</div>
+      <div class="multiple-choice" data-target="emergency-protection-order">
+       <input id="radio-other-address" type="checkbox" name="order-type" value="Emergency Protection" {{ checked('order-type','Emergency Protection') }}>
+        <label for="radio-other-address">Emergency protection order</label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="emergency-protection-order">
+
+        <div class="multiple-choice">
+          <input id="emg-1" name="order-type-detail" type="checkbox" value="information on the whereabouts of the child[ren]" {{ checked('order-type-detail','information on the whereabouts of the children') }}>
+          <label for="emg-1">information on the whereabouts of the children</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="emg-2" name="order-type-detail" type="checkbox" value="authorisation for entry of premises" {{ checked('order-type-detail','authorisation for entry of premises') }}>
+          <label for="emg2">authorisation for entry of premises</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="emg-3" name="order-type-detail" type="checkbox" value="authorisation to search for another child on the
+premises" {{ checked('order-type-detail','authorisation to search for another child on the
+premises') }}>
+          <label for="emg-3">authorisation to search for another child on the
+premises </label>
+        </div>
+
+        <div class="multiple-choice" data-target="others-3">
+          <input id="nationalities-other" name="order-type-detail" type="checkbox" value="Others" {{ checked('order-type-detail','
+          Others') }}>
+          <label for="Others">Other</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="others-3">
+          <label class="form-label" for="other-3">Please specify</label>
+          <textarea class="form-control" type="textarea" id="order-e-p-o-others" name="order-emergency-protection-order-others"> {{ data['order-emergency-protection-order-others'] }}</textarea>
+        </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+  {% if data['change'] == "true" %}
+    <input class="button" type="submit" value="Save and continue">
+
+  {% else %}
+
+  <input class="button" type="submit" value="Save">
+  {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

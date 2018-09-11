@@ -1,0 +1,335 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+
+C110a - hearing needed
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="c110a.html" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="c110a-review#hearings">
+
+{% else %}
+
+  <form action="c110a">
+{% endif %}
+
+<h1 class="govuk-heading-xl">
+Hearing needed
+</h1>
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+
+       When do you need a hearing?
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-day" type="radio" value="Same day" {{ checked('hearing-day','Same day') }} data-aria-controls="conditional-hearing-day-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Same day
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-hearing-day-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+  Specify reason 
+  </label>
+  
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-same-day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-same-day-reason'] }}</textarea>
+        </div>
+        
+      </div>
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-day" type="radio" value="With in 3 days" {{ checked('hearing-day','With in 3 days') }} data-aria-controls="conditional-hearing-day-3-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Within 3 days
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-hearing-day-3-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+  Specify reason and dates for consideration
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018
+ </span>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-3-day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-3-day-reason'] }}</textarea>
+        </div>
+        
+      </div>
+		
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-day" type="radio" value="With in 5 days" {{ checked('hearing-day','With in 5 days') }} data-aria-controls="conditional-hearing-day-5-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Within 5 days
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-hearing-day-5-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+  Specify reason and dates for consideration
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018
+ </span>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-5-day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-5-day-reason'] }}</textarea>
+        </div>
+        
+      </div>
+		
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-day" type="radio" value="With in 7 days" {{ checked('hearing-day','With in 7 days') }} data-aria-controls="conditional-hearing-day-7-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Within 7 days
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-hearing-day-7-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+  Specify reason and dates for consideration
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018
+ </span>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing--7day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-7-day-reason'] }}</textarea>
+        </div>
+        
+      </div>
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-day" type="radio" value="With in 7 days" {{ checked('hearing-day','With in 12 days') }} data-aria-controls="conditional-hearing-day-12-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Within 12 days
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-hearing-day-12-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+  Specify reason and dates for consideration
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018
+ </span>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-12-day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-12-day-reason'] }}</textarea>
+        </div>
+        
+      </div>
+		
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-day" type="radio" value="With in 18 days"  {{ checked('hearing-day','With in 18 days') }}>
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+       Within 18 days
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+
+       What type of hearing do you need?
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-type" type="radio" value="Contested ICO" {{ checked('hearing-type','Contested ICO') }} data-aria-controls="conditional-hearing-type-ico-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Contested ICO
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-hearing-type-ico-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+   Specify reason
+  </label>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-type" type="radio" value="Urgent preliminary case management hearing" {{ checked('hearing-type','Urgent preliminary case management hearing') }} data-aria-controls="conditional-hearing-type-urgent-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+        Urgent preliminary case management hearing
+      </label>
+      </div>
+		<div class="govuk-radios__conditional" id="conditional-hearing-type-urgent-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+   Specify reason
+  </label>
+    <textarea class="govuk-textarea" id="hearing-type-reason-urgent" name="hearing-type-urgent-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-urgent-reason'] }}</textarea>
+        </div>
+      </div>
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-type" type="radio" value="Standard case management hearing" {{ checked('hearing-type','Standard case management hearing') }} data-aria-controls="conditional-hearing-type-others-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+        Standard case management hearing
+      </label>
+      </div>
+		<div class="govuk-radios__conditional" id="conditional-hearing-type-others-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+   Specify reason
+  </label>
+    <textarea class="govuk-textarea" id="hearing-type-cmh-reason" name="hearing-type-cmh-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-cmh-reason'] }}</textarea>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+<!--end field-->
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Do you need a without notice hearing? 
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="without-notice-conditional-1" name="without-notice" type="radio" value="Yes" {{ checked('without-notice','Yes') }} data-aria-controls="conditional-without-notice-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="without-notice-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-without-notice-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="without-notice">
+            Specify reason
+          </label>
+         <textarea class="govuk-textarea" type="text" id="without-notice" name="without-notice-reason" rows="3" >{{ data['without-notice-reason'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="with-notice-conditional-2" name="without-notice" type="radio" value="No" {{ checked('without-notice','No') }}>
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  <!-- end field-->
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Do you need a hearing with reduced notice?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="reduced-notice-conditional-1" name="reduced-notice" type="radio" value="Yes" {{ checked('reduced-notice','Yes') }} data-aria-controls="conditional-reduced-notice-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="reduced-notice-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reduced-notice-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="reduced-notice">
+            Specify reason
+          </label>
+         <textarea class="govuk-textarea" type="text" id="without-notice" name="reduced-notice-reason" rows="3" >{{ data['reduced-notice-reason'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="reduced-notice-conditional-2" name="reduced-notice" type="radio" value="No" {{ checked('reduced-notice','No') }}>
+        <label class="govuk-label govuk-radios__label" for="reduced-notice-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+	   <!-- end field-->
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Are respondents aware of proceedings? 
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondents-notified-conditional-1" name="respondents-notified" type="radio" value="Yes" {{ checked('respondents-notified','Yes') }} data-aria-controls="conditional-respondents-notified-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="respondents-notified-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-respondents-notified-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="respondents-notified">
+            Specify respondents’ views on proceedings
+          </label>
+         <textarea class="govuk-textarea" type="text" id="without-notice" name="respondents-notified-reason" rows="3" >{{ data['respondents-notified-reason'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondents-notified-conditional-2" name="respondents-notified" type="radio" value="No" {{ checked('respondents-notified','No') }}>
+        <label class="govuk-label govuk-radios__label" for="reduced-notice-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+
+
+
+{% if data['change'] == "true" %}
+  <input class="button" type="submit" value="Save and continue">
+
+{% else %}
+
+<input class="button" type="submit" value="Save">
+{% endif %}
+
+</form>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

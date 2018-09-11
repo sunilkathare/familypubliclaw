@@ -1,0 +1,383 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Others who should be given notice
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+      <h1 class="govuk-heading-xl">
+      Others who should be given notice
+      </h1>
+
+
+
+          {% if data['change'] == "true" %}
+      		  <form action="-c110a-review#others">
+
+          {% else %}
+
+          	<form action="-c110a">
+          {% endif %}
+
+
+<h2 class="heading-medium">
+      Other 1
+      </h2>
+<!-- Respondent(s) Full name -->
+<div class="form-group">
+  <label class="form-label" for="other-1-full-name">
+   Full name
+
+  </label>
+  <input type="text" class="form-control" id="other-1-full-name" name="other-1-full-name" value="{{ data['other-1-full-name'] }}">
+</div>
+
+
+<!-- Date of birth -->
+<div class="form-group">
+  <fieldset>
+    <legend>
+      <span class="form-label">
+        Date of birth
+      </span>
+      <span class="form-hint">For example, 31 3 1980</span>
+    </legend>
+    <div class="form-date">
+      <div class="form-group form-group-day">
+        <label class="form-label" for="dob-day">Day</label>
+        <input class="form-control" id="dob-day" name="other-1-dob-day" type="number" pattern="[0-9]*" min="0" max="31" value="{{ data['other-1-dob-day'] }}">
+      </div>
+      <div class="form-group form-group-month">
+        <label class="form-label" for="dob-month">Month</label>
+        <input class="form-control" id="dob-month" name="other-1-dob-month" type="number" pattern="[0-9]*" min="0" max="12" value="{{ data['other-1-dob-month'] }}">
+      </div>
+      <div class="form-group form-group-year">
+        <label class="form-label" for="dob-year">Year</label>
+        <input class="form-control" id="dob-year" name="other-1-dob-year" type="number" pattern="[0-9]*" min="0" max="2016" value="{{ data['other-1-dob-year'] }}">
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<!-- Gender  -->
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+      <!--  What is the child's gender?-->
+      Gender
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondent-1-gender-conditional-1" name="other-1-gender" type="radio" value="Male" {{ checked('other-1-gender','Male') }} data-aria-controls="conditional-other-1-gender-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="other-1-gender-conditional-1">
+       Male
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="other-1-gender-conditional-2" name="other-1-gender" type="radio" value="Female" {{ checked('other-1-gender','Female') }} data-aria-controls="conditional-other-1-gender-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="other-1-gender-conditional-2">
+       Female
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondent-1-gender-conditional-3" name="other-1-gender" type="radio" value="They identify in another way" {{ checked('other-1-gender','They identify in another way') }} data-aria-controls="conditional-other-1-gender-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="other-1-gender-conditional-3">
+        They identify in another way
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-other-1-gender-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-1-gender-text">
+    What gender do they identify with?
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="other-1-gender-other" type="text" value="{{ data['other-1-gender-other'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+		<!-- Social worker detials-->
+
+<!-- Place of birth -->
+<div class="form-group">
+  <label class="form-label" for="other-1-full-name">
+  Place of birth
+    <span class="form-hint">(town/county/country, if known)</span>
+  </label>
+  <input type="text" class="form-control" id="others-1-place-birth" name="other-1-place-birth" value="{{ data['other-1-place-birth'] }}">
+</div>
+
+			<!-- Current Address -->
+		<label class="form-label" for="textarea">
+  Current address
+</label>
+<textarea class="form-control form-control-3-4" name="other-1-current-address" id="textarea" rows="5">{{ data['other-1-current-address'] }}</textarea>
+
+			<!-- Telephone number -->
+			<br />
+			<div class="form-group">
+  <div class="">
+    <label class="form-label" for="example-phone-number">Telephone phone number <span class="form-hint">Mobile or landline</span></label>
+    <input class="form-control" id="example-phone-number" name="other-1-contact-number" type="text" value="{{ data['other-1-contact-number'] }}">
+  </div>
+</div>
+			<hr />
+
+		<h2 class="heading-small"> Relationship to the child</h2>
+
+
+<!-- Child's Full name -->
+<div class="form-group">
+  <label class="form-label" for="child-1-full-name">
+  Child's full Name
+
+  </label>
+  <input type="text" class="form-control" id="other-1-child-1-full-name" name="other-1-child-1-full-name" type="text" value="{{ data['others-1-child-1-full-name'] }}">
+</div>
+
+			<!-- Relationship -->
+<div class="form-group">
+  <label class="form-label" for="child-1-full-name">
+  Relationship to the Child
+    <span class="form-hint">Mother or father</span>
+  </label>
+  <input type="text" class="form-control" id="Mother-1-full-name" name="other-1-child-1-relationship" type="text" value="{{ data['other-1-child-1-relationship'] }}">
+</div>
+
+<div class="panel-border-narrow panel ">
+        <legend>
+          <h3 class="form-label">
+Parental responsibility
+          </h3>
+          <span class="body-text"> </span>
+        </legend>
+
+        <div class="multiple-choice" >
+          <input id="radio-parental-res-4" type="radio" name="other-1-child-1-parental-responsibility" value="Yes" {{ checked('other-1-child-1-parental-responsibility','Yes') }}>
+          <label for="radio-parental-res-4">Yes</label>
+        </div>
+        <div class="multiple-choice" >
+          <input id="radio-parental-res-4" type="radio" name="other-1-child-1-parental-responsibility" value="No" {{ checked('other-1-child-1-parental-responsibility','No') }}>
+          <label for="radio-parental-res-4">No</label>
+        </div>
+	<div class="multiple-choice" >
+          <input id="radio-parental-res-4" type="radio" name="other-1-child-1-parental-responsibility" value="Do not know" {{ checked('other-1-child-1-parental-responsibility','Do not know') }}>
+          <label for="radio-parental-res-4">Don't know</label>
+        </div>
+      </div>
+
+
+
+
+
+<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<h2 class='govuk-heading-m'> Please note that in the real online application you will be able to add more children. This prototype is for demo purpose only. </h2> <h2 class='heading-medium'> Child 2 </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name <span class='form-hint'>As shown on the birth certificate or passport</span></label> <input type='text' class='form-control' id='child-2-full-name'>";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add Child" onClick="addInput('dynamicInput');">
+
+
+
+<br/><br/>
+
+			<div class="form-group inline" style="display: none;">
+
+			<legend>
+
+Do you expect that assessments will be needed in this case?
+
+          <span class="form-hint">For example, Medical assessment</span>
+        </legend>
+
+        <div class="multiple-choice" data-target="assessment-yes">
+          <input id="parent-1-assesment" type="radio" name="other-1-assessments" value="Yes" {{ checked('other-1-assessments','Yes') }}>
+          <label for="radio-parental-res-4">Yes</label>
+        </div>
+      <div class="multiple-choice" >
+          <input id="parent-1-assesment" type="radio" name="other-1-assessments" value="No" {{ checked('other-1-assessments','No') }}>
+          <label for="radio-parental-res-4">No</label>
+        </div>
+
+
+			<div class="panel panel-border-narrow js-hidden" id="assessment-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="other-1-assessments-details" rows="4" cols="80">{{ data['other-1-assessments-details'] }}</textarea>
+
+
+
+
+</div>
+
+			</div>
+			<div class="form-group inline" style="display: none;">
+
+			<legend>
+
+Do they have a disability for
+which special assistance or special
+facilities would be required?
+
+          <span class="form-hint">For example, Wheel chair required</span>
+        </legend>
+
+        <div class="multiple-choice" data-target="disability-yes">
+          <input id="parent-1-assesment" type="radio" name="other-1-disability" value="Yes" {{ checked('other-1-disability','Yes') }}>
+          <label for="radio-parental-res-4">Yes</label>
+        </div>
+      <div class="multiple-choice" >
+          <input id="parent-1-assesment" type="radio" name="other-1-disability" value="No" {{ checked('other-1-disability','No') }}>
+          <label for="radio-parental-res-4">No</label>
+        </div>
+
+
+			<div class="panel panel-border-narrow js-hidden" id="disability-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="other-1-disability-details" rows="4" cols="80">{{ data['others-1-disability-details'] }}</textarea>
+
+
+
+
+</div>
+
+
+  </div>
+
+
+<hr/>
+
+
+<script>
+
+
+var counterb = 1;
+
+var limitb = 5;
+
+function addInputb(divNameb){
+
+     if (counterb == limitb)  {
+          alert("You have reached the limit of adding " + counterb + " inputs");
+
+     }
+
+     else {
+
+          var newdivb = document.createElement('div');
+
+          newdivb.innerHTML =  "<h2 class='govuk-heading-m'> Please note that in the real online application you will be able to add more people. This prototype is for demo purpose only. </h2> <h2 class='heading-medium'>Other 2 </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Full name </label> <input type='text' class='form-control' id='child-2-full-name'>";
+
+          document.getElementById(divNameb).appendChild(newdivb);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInputb">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add more " onClick="addInputb('dynamicInputb');">
+
+
+
+<br/><br/>
+
+
+
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <input class="button" type="submit" value="Save and continue">
+
+{% else %}
+
+<input class="button" type="submit" value="Save">
+{% endif %}
+
+</form>
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

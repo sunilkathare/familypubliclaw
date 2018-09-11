@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Accounts
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="la-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Accounts
+    </li>
+
+  </ol>
+</div>
+
+      <h1 class="govuk-heading-l">
+         Accounts <div class="floating-button"> <a href="la-accounts-new-account" class="button">Invite a new user</a></div>
+      </h1>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption"></caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Users</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Role</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Permission</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Allocated cases</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row"><a href="la-accounts-manage-account.html"> Joe Bloggs</a></th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Legal advisor</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Level 1</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href"">  #0005361</a> <a href""> #0005362</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row"><a href="la-accounts-manage-account.html"> Ryan Adams</a></th>
+<td class="govuk-table__cell govuk-table__cell--numeric">La solicitor</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Level 2</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href"">  #0005361</a> <a href""> #0005362</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row"><a href="la-accounts-manage-account.html"> John Green</a></th>
+<td class="govuk-table__cell govuk-table__cell--numeric">Social worker</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Level 3</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href"">  #0005361</a> <a href""> #0005362</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row"><a href="la-accounts-manage-account.html"> Louise Wood</a></th>
+<td class="govuk-table__cell govuk-table__cell--numeric">Parent's solicitor</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Level 4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href""> #0005362</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

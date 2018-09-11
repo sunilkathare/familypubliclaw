@@ -1,0 +1,214 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+
+C110a - Parenting 
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="c110a-review#parenting">
+
+{% else %}
+
+  <form action="c110a">
+{% endif %}
+
+			 <h1 class="govuk-heading-xl">
+        Factors affecting parenting
+        </h1>
+<h2 class="govuk-heading-m"> Is there evidence of any of the following affecting ability to parent?</h2>
+
+			
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+  Alcohol or drugs abuse
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="alcohol-and-drugs-conditional-1" name="alcohol-and-drugs" type="radio" value="Yes" {{ checked('alcohol-and-drugs','Yes') }} data-aria-controls="conditional-alcohol-and-drugs-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="alcohol-and-drugs-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-alcohol-and-drugs-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="alcohol-and-drugs">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="alcohol-and-drugs" name="alcohol-and-drugs-details" rows="3" >{{ data['alcohol-and-drugs-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="alcohol-and-drugs-conditional-2" name="alcohol-and-drugs" type="radio" value="No" {{ checked('alcohol-and-drugs','No') }}>
+        <label class="govuk-label govuk-radios__label" for="alcohol-and-drugs-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+	  
+	  		
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+  Mental health issues
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="mental-health-issues-conditional-1" name="mental-health-issues" type="radio" value="Yes" {{ checked('mental-health-issues','Yes') }} data-aria-controls="conditional-mental-health-issues-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="mental-health-issues-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mental-health-issues-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="mental-health-issues">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="mental-health-issues" name="mental-health-issues-details" rows="3" >{{ data['mental-health-issues-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="mental-health-issues-conditional-2" name="mental-health-issues" type="radio" value="No" {{ checked('mental-health-issues','No') }}>
+        <label class="govuk-label govuk-radios__label" for="mental-health-issues-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+	  
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Domestic violence
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="domestic-violence-conditional-1" name="domestic-violence" type="radio" value="Yes" {{ checked('domestic-violence','Yes') }} data-aria-controls="conditional-domestic-violence-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="domestic-violence-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-domestic-violence-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="mental-health-issues">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="domestic-violence" name="domestic-violence-details" rows="3" >{{ data['domestic-violence-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="domestic-violence-conditional-2" name="domestic-violence" type="radio" value="No" {{ checked('domestic-violence','No') }}>
+        <label class="govuk-label govuk-radios__label" for="domestic-violence-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+			<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Any other
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="domestic-violence-conditional-1" name="any-other" type="radio" value="Yes" {{ checked('any-other','Yes') }} data-aria-controls="conditional-any-other-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="any-other-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-any-other-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="any-other-issues">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="any-other" name="any-other-details" rows="3" >{{ data['any-other-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="any-other-conditional-2" name="any-other" type="radio" value="No" {{ checked('any-other','No') }}>
+        <label class="govuk-label govuk-radios__label" for="any-other-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

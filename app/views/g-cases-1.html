@@ -1,0 +1,128 @@
+{% extends "layout-jui.html" %}
+
+{% block page_title %}
+  View Applications
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+ <!--     <a href="la-dashboard.html" class="link-back">Back</a>-->
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="g-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Cases
+    </li>
+
+  </ol>
+</div>
+
+      <h1 class="govuk-heading-l">
+         Cases 
+      </h1>
+
+
+
+     
+
+      
+      <dl class="govuk-check-your-answers cya-questions-short" style="font-size: 90%">
+		  <div class="app-mobile-hide">
+          <dt class="cya-question ">
+            Case number
+          </dt>
+			<dd class="cya-answer">
+           <strong style="font-weight: bold;"> Parties </strong>
+          </dd>
+          <dd class="cya-answer ">
+          <strong style="font-weight: bold;"> Type </strong>
+          </dd>
+			  <dd class="cya-answer ">
+          <strong style="font-weight: bold;"> Status </strong>
+          </dd>
+          <dd class="cya-change">
+            
+         <strong style="font-weight: bold;"> Date</strong>
+         
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+          <a href="g-case-summary.html"> 00388</a> <span class="task-new"> urgent</span>
+          </dt>
+			<dd class="cya-answer">
+            Borough of Southwark vs Isbella Reeves
+          </dd>
+			<dd class="cya-answer">
+             Public Law
+          </dd>
+          <dd class="cya-answer">
+           CMH scheduled
+          </dd>
+          <dd class="cya-change">
+            10 Jul 2018
+              
+           
+          </dd>
+        </div>
+		
+		  
+		  <div>
+          <dt class="cya-question">
+          <a href="g-case-summary.html">  00388</a>  
+          </dt>
+			<dd class="cya-answer">
+             Borough of Fulham vs Isabella Green
+          </dd>
+			<dd class="cya-answer">
+             Public Law
+          </dd>
+          <dd class="cya-answer">
+           CMH scheduled
+          </dd>
+          <dd class="cya-change">
+            10 Jul 2018
+              
+           
+          </dd>
+        </div>
+		  
+
+
+
+
+
+      </dl>
+
+
+
+
+<br> <br><br> <br>
+<br> <br>
+
+
+  
+
+
+
+
+
+		
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Grounds for application
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review#grounds">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+
+			 <h1 class="govuk-heading-xl">
+       Grounds for application
+        </h1>
+
+		<!--	<div class="form-group">
+  <fieldset>
+
+    <legend>
+      <h3 class="heading-small-">What are the grounds for this application?</h3>
+
+
+    </legend>
+
+
+    <div class="multiple-choice">
+      <input id="waste-type-2" name="grounds-for-application" type="checkbox" value="waste-mines">
+      <label for="waste-type-2">Not receiving care that would be reasonably expected from a parent</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-3" name="grounds-for-application" type="checkbox" value="waste-farm-agricultural">
+      <label for="waste-type-3">Beyond parental control</label>
+    </div>
+
+  </fieldset>
+</div>-->
+	  
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h2 class="govuk-fieldset__heading">
+        What are the grounds for this application?
+      </h2>
+    </legend>
+   <!-- <span id="changed-name-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently.
+    </span>-->
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="grounds-for-application-1" name="grounds-for-application" type="radio" value="Not receiving care that would be reasonably expected from a parent" {{ checked('grounds-for-application','Not receiving care that would be reasonably expected from a parent') }}>
+        <label class="govuk-label govuk-radios__label" for="grounds-for-application-1">
+        Not receiving care that would be reasonably expected from a parent
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="grounds-for-application-2" name="grounds-for-application" type="radio" value="Beyond parental control" {{ checked('grounds-for-application','Beyond parental control') }}>
+        <label class="govuk-label govuk-radios__label" for="grounds-for-application-2">
+          Beyond parental control
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+			
+
+
+			<div class="form-group">
+  <label class="form-label" for="textarea">
+  <!--What is the threshold
+criteria relied upon?-->Explain how the threshold criteria has been met
+  </label>
+  <textarea class="form-control" type="text" id="Threshold-evidence" name="threshold-evidence" rows="25" cols="180" style="width: 90%;"> {{ data['threshold-evidence'] }} </textarea>
+</div>
+
+
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

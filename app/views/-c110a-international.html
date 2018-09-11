@@ -1,0 +1,185 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110A - Cases with International element
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+
+			 <h1 class="govuk-heading-xl">
+        International element
+        </h1>
+
+
+		<div class="form-group">
+    <fieldset >
+
+      <legend>
+        <span class="form-label">
+          Does this case have an international element?
+        </span>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="radio-inline-1" type="radio" name="international-element" value="Yes"  {{ checked('international-element','Yes') }}>
+        <label for="radio-inline-1">Yes</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="international-element" value="No" {{ checked('international-element','No') }}>
+        <label for="radio-inline-2">No</label>
+      </div>
+
+
+    </fieldset>
+  </div>
+			<fieldset>
+
+      <legend>
+
+        <span class="body-text">Is there anyone in the genogram outside the UK who has been assessed as a possible carer?</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="genogram-outside-uk-yes">
+        <input id="radio-home-address" type="radio" name="genogram-outside-uk" value="Yes" {{ checked('genogram-outside-uk','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="genogram-outside-uk-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="genogram-outside-uk-details" rows="4" cols="80">{{ data['genogram-outside-uk-details'] }}</textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="genogram-outside-uk" value="No" {{ checked('genogram-outside-uk','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+
+
+			<br/>
+
+			<fieldset>
+
+      <legend>
+
+        <span class="body-text">Are you aware of any significant events that have happened outside the UK?</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="outside-uk-yes">
+        <input id="radio-home-address" type="radio" name="outside-uk" value="Yes" {{ checked('outside-uk','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="outside-uk-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="outside-uk-details" rows="4" cols="80">{{ data['proceedings-outside-uk-details'] }}</textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="outside-uk" value="No" {{ checked('outside-uk','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset><br/>
+				<fieldset>
+
+      <legend>
+
+        <span class="body-text">Are you aware of any proceedings outside the UK?</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="proceedings-outside-uk-yes">
+        <input id="radio-home-address" type="radio" name="proceedings-outside-uk" value="Yes" {{ checked('proceedings-outside-uk','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="proceedings-outside-uk-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="proceedings-outside-uk-details" rows="4" cols="80"></textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="proceedings-outside-uk" value="No" {{ checked('proceedings-outside-uk','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+
+
+			<br/>
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

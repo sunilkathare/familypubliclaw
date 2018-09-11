@@ -1,0 +1,78 @@
+{% extends "layout-sign-out.html" %}
+
+{% block page_title %}
+ HM Courts and Tribunals services - Sign in / Create account
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	<div class="grid-row">
+  <div class="column-full column-minimum">
+
+    <div class="grid-row">
+		<div class="column-full">
+		<h1 class="heading-large"> HM Courts and Tribunals services </h1></div>
+      <div class="column-half col1- ">
+
+		  <h2 class="heading-medium"> Sign in </h2>
+
+		  <form action="c-dashboard">
+
+		  <div class="form-group">
+  <label class="form-label" for="first-name-2">Email</label>
+
+			  <input class="optional form-control form-control-3-4" type="email">
+</div>
+<div class="form-group">
+  <label class="form-label" for="last-name-2">Password</label>
+
+
+	<div class="password-show-hide"><input autocomplete="off" type="password" value="" name="password" id="pwd0" />
+<a href="#" onclick="toggle_password('pwd0');" id="showhide" class="show-hide-link">Show</a>
+<script >function swapInput(tag, type) {
+  var el = document.createElement('input');
+  el.id = tag.id;
+  el.type = type;
+  el.name = tag.name;
+  el.class = tag.class;
+  el.value = tag.value;
+  tag.parentNode.insertBefore(el, tag);
+  tag.parentNode.removeChild(tag);
+}
+
+function toggle_password(target){
+    var d = document;
+    var tag = d.getElementById(target);
+    var tag2 = d.getElementById("showhide");
+
+    if (tag2.innerHTML == 'Show'){
+
+        swapInput(tag, 'text');
+        tag2.innerHTML = 'Hide';
+
+    } else {
+        swapInput(tag, 'password');
+        tag2.innerHTML = 'Show';
+    }
+}</script>
+
+			  </div>
+
+</div><input class="button" type="submit" value="Sign in">
+        </form><br /><p>	<a href=""> Forgotten password</a></p>
+
+      </div>
+      <div class="column-half" style="display:none;">
+
+          <h2 class="heading-medium">Not got an account? </h2>
+You need to <a href="g-create-account"> create an account </a> to use this service.
+
+		  <!--<a href="02-la-register.html" class="button">Create an account</a> <br/><br/>to start using HM Courts and Tribunals services.
+-->
+
+      </div>
+    </div>
+  </div>
+		 </div>
+</main>
+{% endblock %}

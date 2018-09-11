@@ -1,0 +1,49 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">
+          Application complete
+        </h1>
+        <p class="font-large" style="color: #fff !important">
+          Your reference number is <br>
+          <strong class="bold">HDJ2123F</strong>
+        </p>
+      </div>
+
+      <p>
+        We have sent you a confirmation email. Return to <a href="la-dashboard-v3.html">Dashboard</a>
+      </p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>We’ve sent your application to West London Family Court and Cafcass. Payment for the application will be processed through the accounts team.</p>
+      <p>They will contact you either to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li> schedule a hearing for the case and send out standard directions
+        </li>
+        <li> ask you for more information</li>
+
+      </ul>
+
+		 <p></p>
+      <p><a href="feedback">What did you think of this service?</a> (takes 30 seconds)</p>
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

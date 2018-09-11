@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Urgency
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="-c110a.html" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review#hearings">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+<h1 class="govuk-heading-xl">
+When do you need a hearing?
+</h1>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+
+        Do you need a hearing in the next 24 hours?
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-24-hours" type="radio" value="Yes" {{ checked('hearing-24-hours','Yes') }} data-aria-controls="conditional-how-contacted-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Yes
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+    Reason
+  </label>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-24-hours-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-24-hours-reason'] }}</textarea>
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-24-hours" type="radio" value="No" {{ checked('hearing-24-hours','No') }} data-aria-controls="conditional-how-contacted-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+        No
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+
+        Do you need a hearing between days 1 to 12 of the public law outline?
+
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-12-days" type="radio" value="Yes" {{ checked('hearing-12-days','Yes') }} data-aria-controls="conditional-12-days-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      Yes
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-12-days-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+  Specify reason and dates for consideration
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018.
+ </span>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-12-days-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-12-days-'] }}</textarea>
+        </div>
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+    <legend class="govuk-fieldset__legend ">
+
+        Type of hearing?
+
+    </legend>
+
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-1" name="hearing-type" type="checkbox" value="Contested ICO" {{ checked('hearing-type','Contested ICO') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+        Contested ICO
+      </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality-2" name="hearing-type" type="checkbox" value="Urgent preliminary case management hearing" {{ checked('hearing-type','Urgent preliminary case management hearing') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+        Urgent preliminary case management hearing
+      </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-12-days" type="radio" value="No"  {{ checked('hearing-12-days','No') }}>
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+        No
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="form-group">
+  <fieldset>
+
+    <legend>
+      <span class="body-text"> Do you need a hearing ‘without notice’? </span>
+    </legend>
+
+    <div class="multiple-choice" data-target="without-notice-yes">
+      <input id="radio-home-address" type="radio" name="without-notice" value="Yes" {{ checked('without-notice','Yes') }}>
+      <label for="radio-home-address">Yes </label>
+    </div>
+
+    <div class="panel panel-border-narrow js-hidden" id="without-notice-yes">
+
+      <!-- reason-->
+      <div class="form-group">
+
+
+
+      <legend>
+
+        <span class="body-text">Reason</span>
+      </legend>
+<textarea class="form-control" type="text" id="without-notice" name="without-notice-reason" rows="4" cols="80">{{ data['without-notice-reason'] }}</textarea>
+
+</div>
+
+
+</div>
+    <div class="multiple-choice" >
+     <input id="radio-other-address" type="radio" name="without-notice" value="No" {{ checked('without-notice','No') }}>
+      <label for="radio-other-address">No  </label>
+    </div>
+
+
+  </fieldset>
+</div>
+<div class="form-group">
+<fieldset>
+
+  <legend>
+    <span class="body-text"> Do you need a hearing with reduced notice? </span>
+  </legend>
+
+  <div class="multiple-choice" data-target="reduced-notice-yes">
+    <input id="radio-home-address" type="radio" name="reduced-notice" value="Yes" {{ checked('reduced-notice','Yes') }}>
+    <label for="radio-home-address">Yes </label>
+  </div>
+
+  <div class="panel panel-border-narrow js-hidden" id="reduced-notice-yes">
+
+    <!-- reason-->
+    <div class="form-group">
+
+
+
+    <legend>
+
+      <span class="body-text">Reason </span>
+    </legend>
+<textarea class="form-control" type="text" id="reduced-notice" name="reduced-notice-reason" rows="4" cols="80">{{ data['reduced-notice-reason'] }}</textarea>
+
+</div>
+
+
+</div>
+  <div class="multiple-choice" >
+   <input id="radio-other-address" type="radio" name="reduced-notice" value="No" {{ checked('reduced-notice','No') }}>
+    <label for="radio-other-address">No  </label>
+  </div>
+
+
+</fieldset>
+</div>
+<div class="form-group">
+<fieldset>
+
+  <legend>
+    <span class="body-text"> Are respondents aware of proceedings? </span>
+  </legend>
+
+  <div class="multiple-choice" data-target="respondents-notified-yes">
+    <input id="radio-home-address" type="radio" name="respondents-notified" value="Yes" {{ checked('respondents-notified','Yes') }}>
+    <label for="radio-home-address">Yes </label>
+  </div>
+
+  <div class="panel panel-border-narrow js-hidden" id="respondents-notified-yes">
+
+    <!-- reason-->
+    <div class="form-group">
+
+
+
+    <legend>
+
+      <span class="body-text">Specify respondents’ views on proceedings</span>
+    </legend>
+<textarea class="form-control" type="text" id="reduced-notice" name="respondents-notified-reason" rows="4" cols="80">{{ data['respondents-notified-reason'] }}</textarea>
+
+</div>
+
+
+</div>
+  <div class="multiple-choice" >
+   <input id="radio-other-address" type="radio" name="respondents-notified" value="No" {{ checked('respondents-notified','No') }}>
+    <label for="radio-other-address">No  </label>
+  </div>
+
+
+</fieldset>
+</div>
+
+{% if data['change'] == "true" %}
+  <input class="button" type="submit" value="Save and continue">
+
+{% else %}
+
+<input class="button" type="submit" value="Save">
+{% endif %}
+
+</form>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+			
+			var inlineEditRowContents = {};
+
+function inlineEdit(rowName, options) {
+	var tableRow = document.getElementById(rowName);
+	inlineEditRowContents[rowName] = {};
+	for (var i=0; i<tableRow.childElementCount; i++) {
+		var cell = tableRow.children[i];
+		inlineEditRowContents[rowName][i] = cell.innerHTML;
+		if (options.hasOwnProperty("updateCell"))
+			options.updateCell(cell, i, rowName, options);
+		else
+			inlineDefaultUpdateCell(cell, i, rowName, options);
+	}
+}
+
+function inlineDefaultUpdateCell(cell, i, rowName, options) {
+	var attributesFilter = ["inlineoptionsvalue", "inlineoptionstitle"];
+	var cellContent = "";
+	var key;
+	if (i === 0) {
+		cellContent += `<form id='${rowName}Form'></form>`;
+	}
+	switch (cell.dataset.inlinetype) {
+		case "plain":
+			cellContent += inlineEditRowContents[rowName][i];
+			break;
+		case "doneButton":
+			cellContent += `<input type='submit' value='Finish' form='${rowName}Form'/>`;
+			break;
+		case "button":
+			cellContent += inlineEditRowContents[rowName][i];
+			break;
+		case "link":
+			cellContent += `<input type='text' value='${cell.innerText}' form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += "/>";
+			break;
+		case "text":
+			cellContent += `<input type='text' value='${inlineEditRowContents[rowName][i]}' form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += "/>";
+			break;
+		case "date":
+			cellContent += `<input type='date' value='${inlineEditRowContents[rowName][i]}' form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += "/>";
+			break;
+		case "select":
+			cellContent += "<select";
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += ">";
+			var optionsTitle = JSON.parse(cell.dataset.inlineoptionstitle);
+			var optionsValue = cell.dataset.hasOwnProperty("inlineoptionsvalue") ? JSON.parse(cell.dataset.inlineoptionsvalue) : [];
+			for (var j=0; j<optionsTitle.length; j++) {
+				cellContent += "<option ";
+				cellContent += ((optionsValue.length<=j) ? "" : `value='${optionsValue[j]}'`);
+				cellContent += ((inlineEditRowContents[rowName][i] == optionsTitle[j]) ? " selected='selected'" : "");
+				cellContent += ">";
+				cellContent += optionsTitle[j];
+				cellContent += "</option>";
+			}
+			cellContent += "</select>";
+			break;
+		case "textarea":
+			cellContent += `<textarea form='${rowName}Form'`;
+			for (key in cell.dataset) {
+				if (cell.dataset.hasOwnProperty(key) && key.substr(0, 6) == "inline" && attributesFilter.indexOf(key) == -1) {
+					cellContent += ` ${key.substr(6)}='${cell.dataset[key]}'`;
+				}
+			}
+			cellContent += ">";
+			cellContent += inlineEditRowContents[rowName][i];
+			cellContent += "</textarea>";
+			break;
+		default:
+			cellContent += inlineEditRowContents[rowName][i];
+			break;
+	}
+	cell.innerHTML = cellContent;
+	if (i === 0) {
+		// set the onsubmit function of the form of this row
+		document.getElementById(rowName+"Form").onsubmit = function () {
+			event.preventDefault();
+			if (this.reportValidity()) {
+				if (options.hasOwnProperty("finish"))
+					options.finish(rowName, options);
+				else
+					inlineDefaultFinish(rowName, options);
+			}
+		};
+	}
+}
+
+function inlineDefaultFinish(rowName, options) {
+	var tableRow = document.getElementById(rowName);
+	var rowData = {};
+	for (var i=0; i<tableRow.childElementCount; i++) {
+		var cell = tableRow.children[i];
+		var getFromChildren = (i === 0) ? 1 : 0;
+		switch (cell.dataset.inlinetype) {
+			case "plain":
+				break;
+			case "doneButton":
+				break;
+			case "button":
+				break;
+			case "link":
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].value;
+				inlineEditRowContents[rowName][i] = "<a href='"+cell.dataset.inlinelinkformat.replace("%link%", cell.children[getFromChildren].value)+"'>"+cell.children[getFromChildren].value+"</a>";
+				break;
+			case "text":
+			case "date":
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].value;
+				inlineEditRowContents[rowName][i] = cell.children[getFromChildren].value;
+				break;
+			case "select":
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].selectedIndex;
+				rowData["_"+cell.dataset.inlinename+"Title"] = JSON.parse(cell.dataset.inlineoptionstitle)[cell.children[getFromChildren].selectedIndex];
+				rowData["_"+cell.dataset.inlinename+"Value"] = JSON.parse(cell.dataset.inlineoptionsvalue)[cell.children[getFromChildren].selectedIndex];
+				inlineEditRowContents[rowName][i] = JSON.parse(cell.dataset.inlineoptionstitle)[cell.children[getFromChildren].selectedIndex];
+				break;
+			case "textarea":
+				// TODO textarea value is \n not <br/>
+				rowData[cell.dataset.inlinename] = cell.children[getFromChildren].value;
+				inlineEditRowContents[rowName][i] = cell.children[getFromChildren].value;
+				break;
+			default:
+				break;
+		}
+	}
+
+	// do whatever ajax magic
+	if (options.hasOwnProperty("finishCallback"))
+		options.finishCallback(rowData, rowName);
+
+	for (i=0; i<tableRow.childElementCount; i++) {
+		var cell = tableRow.children[i];
+		if (options.hasOwnProperty("finishCell")) {
+			// return true invokes the default finishCell function
+			if (options.finishCell(cell, i, rowName, inlineEditRowContents[rowName][i]) === true) {
+				inlineDefaultFinishCell(cell, i, rowName);
+			}
+		} else
+			inlineDefaultFinishCell(cell, i, rowName);
+	}
+}
+
+function inlineDefaultFinishCell(cell, i, rowName) {
+	var cellContent = "";
+	cellContent += inlineEditRowContents[rowName][i];
+	cell.innerHTML = cellContent;
+}
+
+			
+			function simpleRowDataParser(rowData) {
+				var str = "";
+				for (var key in rowData) {
+ 					if (rowData.hasOwnProperty(key))
+    					str += key + ":" + rowData[key] + "\n";
+				}
+				return str;
+			}
+			function defaultSampleCallback(rowData, rowName) {
+				alert(rowName+"\n"+simpleRowDataParser(rowData));
+			}
+			function selectCallback(rowData, rowName) {
+				var colors = ["FF","CC","99","66","33","00"];
+				document.getElementById(rowName).children[3].style.backgroundColor = "#"+colors[rowData.red]+colors[rowData.green]+colors[rowData.blue];
+			}
+			
+			var defaultSampleOptions = {"finishCallback": defaultSampleCallback};
+			var customFunctionsOptions = {"updateCell": inlineDefaultUpdateCell,
+										"finish": inlineDefaultFinish,
+										"finishCallback": defaultSampleCallback,
+										"finishCell": inlineDefaultFinishCell};
+			var sampleOptions = {"finishCallback": selectCallback};
+		</script>
+<style>
+	body{ width: 750px: 
+		margin: 0 auto;
+	}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	font-size: 16px;
+}
+input, textarea, select {
+	border: none;
+	background-color: transparent;
+	font-size: 1rem;
+	outline: none;
+}
+input, textarea {
+	appearance: none;
+	-webkit-appearance: none;
+}
+textarea {
+	width: 90%;
+}
+select {
+	border: 1px solid #f9f9f9;
+	background-color: transparent;
+	font-size: 1.1em;
+	outline: none;
+	padding: 10px;
+	font-weight: bold;
+}
+	
+	
+	input[type="text"], textarea, select {
+	padding: 10px;
+	border: 1px solid #ffa726;
+	margin: 5px;
+}
+input[type="button"], input[type="submit"] {
+	padding: 0.4rem 1.5rem;
+	background-color: #00823b;
+	border-radius: 1px;
+	color: white;
+	text-transform: uppercase;
+	box-shadow: 0 2px 2px #ccc;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	float: right;
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+	background-color: #006435;
+	box-shadow: 0 3px 3px #ccc;
+}
+input[type="button"]:active, input[type="submit"]:active {
+	background-color: #00823b;
+}
+section {
+	padding: 1rem 3rem;
+	background-color: #f0f0f0;
+}
+section > h1 {
+	padding: 0.5rem 0;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #000;
+}
+section > table {
+	margin: 0 auto;
+	border-spacing: 0;
+}
+section > table td, section > table th {
+	border: none;
+	padding: 0.5rem 1rem;
+}
+section > table th {
+	text-align: left;
+	border-bottom: 1px solid #444;
+}
+.clearfix {
+	clear: both;
+}
+.row-number {
+	float: left;
+	width: 30px;
+}
+.row-text {
+	float: left;
+	width: 80%;
+}
+.row-edit {
+	float: right;
+	width: 10%;
+}
+.row-3-col {
+	margin-bottom: 20px;
+	display: block;
+	clear: both;
+}
+</style>
+
+<!--[if gt IE 8]><!-->
+<link href="/public/stylesheets/govuk-template.css?0.22.3" media="screen" rel="stylesheet" />
+<!--<![endif]-->
+<!--[if IE 6]><link href="/public/stylesheets/govuk-template-ie6.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+<!--[if IE 7]><link href="/public/stylesheets/govuk-template-ie7.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+<!--[if IE 8]><link href="/public/stylesheets/govuk-template-ie8.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+<link href="/public/stylesheets/govuk-template-print.css?0.22.3" media="print" rel="stylesheet" />
+
+<!--[if IE 8]><link href="/public/stylesheets/fonts-ie8.css?0.22.3" media="all" rel="stylesheet" /><![endif]-->
+<!--[if gte IE 9]><!-->
+<link href="/public/stylesheets/fonts.css?0.22.3" media="all" rel="stylesheet" />
+<!--<![endif]-->
+<!--[if lt IE 9]><script src="/public/javascripts/ie.js?0.22.3"></script><![endif]-->
+
+<link rel="shortcut icon" href="/public/images/favicon.ico?0.22.3" type="image/x-icon" />
+<link rel="mask-icon" href="/public/images/gov.uk_logotype_crown.svg?0.22.3" color="#0b0c0c">
+<link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon-180x180.png?0.22.3">
+<link rel="apple-touch-icon" sizes="167x167" href="/public/images/apple-touch-icon-167x167.png?0.22.3">
+<link rel="apple-touch-icon" sizes="152x152" href="/public/images/apple-touch-icon-152x152.png?0.22.3">
+<link rel="apple-touch-icon" href="/public/images/apple-touch-icon.png?0.22.3">
+<meta name="theme-color" content="#0b0c0c" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="/public/images/opengraph-image.png?0.22.3">
+
+<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!-->
+<link href="/public/stylesheets/application-.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/public/stylesheets/application_old.css" media="screen" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+</head>
+<body  style="background: #f8f8f8;">
+<main id="content" role="main" >
+<div class="grid-row" >
+<div class="column-full column-minimum" style="background:#fff; border: 1px solid #ccc; margin-top: 20px; box-shadow: 0 4px 6px 0 rgba(11, 12, 12, 0.1);
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 50px; ">
+<div class="grid-row">
+  <div class="column-one-third">
+    <p><img class="sticky" src="/public/images/moj-logo.jpg" alt="Logo" width="150px" height="120px" style="margin: 25px;"></p>
+  </div>
+  <div class="column-two-thirds">
+    <h1 class="heading-large"> Standard Directions </h1>
+    <p class="grey-text" >Issued on 2nd March 2018 </p>
+    <p> In the Family Court sitting at <strong class="bold-small" > East London Courts </strong></p>
+  </div>
+</div>
+<div id="selectRow1-act" >
+  <div style="float: left; font-size: 1.2em; font-weight: bold; "  data-inlineType="select" data-inlineName="act"
+						data-inlineOptionsTitle='["The Children Act 1989","The Family Law Act 1996","The Family Law Act 1996"]'
+						data-inlineOptionsValue='["The Children Act 1989","The Family Law Act 1996","The Family Law Act 1996"]'>The Children Act 1989 <br/>
+    [Select as appropriate] </div>
+  <div style="display: none"data-inlineType="select" data-inlineName="act-2"
+						data-inlineOptionsTitle='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'
+						data-inlineOptionsValue='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'>The Children Act 1989
+    
+    The Family Law Act 1996<br/>
+    [Select as appropriate] </div>
+  <div style="display: none"data-inlineType="select" data-inlineName="act-3"
+						data-inlineOptionsTitle='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'
+						data-inlineOptionsValue='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'>The Children Act 1989
+    
+    The Family Law Act 1996<br/>
+    [delete as appropriate] </div>
+  <div data-inlineType="doneButton" >
+    <input type="button" value="edit" onclick="inlineEdit('selectRow1-act', sampleOptions)"/>
+  </div>
+  <div class="clearfix"> </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Child(ren)</th>
+      <th class="numeric" scope="col">Gender</th>
+      <th class="numeric" scope="col">Age</th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="Child-1">
+      <th scope="row" data-inlineType="text" data-inlineName="Name">Bobby Reeves </th>
+      <td class="numeric" data-inlineType="text" data-inlineName="Gender">Boy</td>
+      <td class="numeric" data-inlineType="text" data-inlineName="Age">6</td>
+      <td data-inlineType="doneButton"><input type="button" value="Edit" onclick="inlineEdit('Child-1', defaultSampleOptions)"/></td>
+    </tr>
+    <tr id="Child-2">
+      <th scope="row" data-inlineType="text" data-inlineName="Name">Emily Reeves </th>
+      <td class="numeric" data-inlineType="text" data-inlineName="Gender">Girl</td>
+      <td class="numeric" data-inlineType="text" data-inlineName="Age">8</td>
+      <td data-inlineType="doneButton"><input type="button" value="Edit" onclick="inlineEdit('Child-2', defaultSampleOptions)"/></td>
+    </tr>
+  </tbody>
+</table>
+<h3 class="heading-medium">DIRECTIONS ON ISSUE AND ALLOCATION OF PROCEEDINGS (SDO) <span class="grey-text" > 2nd March 2018</span></h3>
+<strong class="bold-small"> 1. </strong> <span class="blue-bold-text"> {{ data['full-name-applicant'] }} </span> has made an application on <span class="grey-text bold-small" > 1st March 2018</span> for <span class="blue-bold-text"> {{ data['order-type'] }} </span> supported by the following Annex documents:
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Documents</th>
+      <th class="numeric" scope="col"></th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Chronology</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Statement and genogram</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> The current assessments to which the Social Work Statement refers and on which the LA relies</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Care Plan</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Index of Checklist Documents</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+  </tbody>
+</table>
+<br />
+
+	
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-2">
+    <div  class="row-number"><strong class="bold-small"> 2.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="2"> The application form and Annex documents have been considered by the court which has given  directions upon issue and allocation. The court has considered the papers in the absence of the parties or their legal representatives </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-2', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-3">
+    <div  class="row-number"><strong class="bold-small"> 3.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="3"> 
+		<ul>
+  <ol type="a" class="grey-text small-text"><strong class="bold-small">  JURISDICTION:- </strong>	
+    <li>(a)	The court considers that there may be an issue as to jurisdiction in respect of the children and consideration needs to be given to this issue [and the application of Council regulation (EC) No 2201/2003 (Brussels 2 revised)] to these proceedings by the parties as a matter of urgency; and <br />
+      <br />
+    </li>
+    <li>(b)	The local authority shall liaise with the [identify country] Consular authority in England and Wales or other competent authority in [name of foreign state] in relation to the proceedings or make a request to the Central Authority of [identify country] for such information as may be relevant to determine issues of jurisdiction.</li>
+  </ol>
+</ul>
+	  
+	  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-3', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+
+<h3 class="heading-medium">THE COURT ORDERS:- </h3>
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-4">
+    <div  class="row-number"><strong class="bold-small"> 4.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="4"> The proceedings are allocated for case management to<span class="blue-bold-text">  {{ data['judge'] }} </span> </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-4', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-5">
+    <div  class="row-number"><strong class="bold-small"> 5.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="5"> A children’s guardian <span class="blue-bold-text"> {{ data['child-guardian'] }} </span>{{ data['children-guardian'] }} [name if available ] shall be appointed for the child[ren]. 
+      [or]A children’s guardian will not be allocated in time to appoint a solicitor and [solicitor’s name of firm ] is appointed as solicitor for the child[ren][delete as appropriate] </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-5', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+	<div class="row-3-col">
+  <div  id="Standard-direction-6">
+    <div  class="row-number"><strong class="bold-small"> 6.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="6"> [The local authority having indicated it wishes to apply for an urgent Case Management Hearing/ interim care order [and to remove the child(ren)], the parties are directed to discuss in respect of any order or direction applied for, the purpose of the hearing, any directions that will be applied for, whether any part of the hearing will be contested and the length of the hearing, and the local authority shall inform the court in writing by [time/date                       of the agreed or different positions of the parties.]  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-6', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-7">
+    <div  class="row-number"><strong class="bold-small"> 7.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="7"> [If appropriate] The time for service of Notice of the Proceedings is reduced to [insert time and date (or in exceptional case number of hours)] because [Insert brief explanation]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-7', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-8">
+    <div  class="row-number"><strong class="bold-small"> 8.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="8">  [If appropriate] The proceedings are listed for a [contested/uncontested] interim care order hearing/urgent Case Management Hearing [delete as appropriate] on [date] at [time] before [the magistrates/any District Judge or Circuit Judge in the county court who is available (identify legal adviser/judge if known)]. (ELH 2 hour(s) [or as appropriate]) The parties and their representatives are directed to attend court by [time] for pre-hearing discussions. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-8', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-9">
+    <div  class="row-number"><strong class="bold-small"> 9.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="9">  The local authority shall serve on all parties [and name of any other person] by [time and date to be on day 2 unless the court considers it appropriate to direct otherwise]<br/><br/>
+	  <ol type="A">
+  <li>(a)	The Application Form and Annex Documents filed with the court; and</li>
+  <li>(b)	[any other document(s) specified by the court]</li>
+</ol></div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-9', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	<div class="row-3-col">
+  <div  id="Standard-direction-10">
+    <div  class="row-number"><strong class="bold-small"> 10.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="10">  The local authority shall file and serve on all parties [and name of any other person] the following Annex Document(s) which have not been filed with the application<br/><br/>
+	 
+	  <table>
+  <thead>
+    <tr>
+      <th scope="col">Documents</th>
+      <th class="numeric" scope="col"></th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Chronology</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Statement and genogram</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> The current assessments to which the Social Work Statement refers and on which the LA relies</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Care Plan</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Index of Checklist Documents</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+  </tbody>
+</table>
+	
+	  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-10', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+
+	
+	
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-11">
+    <div  class="row-number"><strong class="bold-small"> 11.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="11">  The proceedings are listed for a Case Management Hearing at [place] on [date] at [time], before [identify legal advisor/judge if appropriate] ELH 1 or 1.5 or 2 hour(s) [delete as appropriate]. The parties and their representatives are directed to attend court by [time] for pre-hearing discussions. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-11', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+		<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-12">
+    <div  class="row-number"><strong class="bold-small"> 12.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="12">  The solicitor for the child(ren) shall arrange an Advocates’ Meeting no later than 2 business days before the Case Management Hearing. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-12', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+		<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-13">
+    <div  class="row-number"><strong class="bold-small"> 13.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="13">  The local authority shall draft the Case Management Order in the prescribed form and file it with the court by 10AM, 25th June 2018.  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-13', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-14">
+    <div  class="row-number"><strong class="bold-small"> 14.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="14">  The local authority shall file and serve its Case Summary in the form directed by the Designated Family Judge by [time and date].   </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-14', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+		<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-15">
+    <div  class="row-number"><strong class="bold-small"> 15.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="sd-15">  The child(ren)’s solicitor shall file and serve by [time and date] a Case Analysis document prepared by the children's guardian for use at the Case Management Hearing 
+  [or]
+  [The children's guardian shall be in a position to present orally a Case Analysis at the First Case Management Hearing]
+  [delete as appropriate]  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-15', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+			<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-16">
+    <div  class="row-number"><strong class="bold-small"> 16.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="sd-16">  On the basis that there is evidence of incapacity, the Official Solicitor is invited to act in these proceedings as the litigation friend on behalf of [name] and the local authority is directed to complete, file and serve upon the parties and the Official Solicitor the Official Solicitor’s checklist by [time and date]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-16', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-17">
+    <div  class="row-number"><strong class="bold-small"> 17.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="sd-17"> The parents shall each file and serve a Parents’ Response document by [time and date prior to the Advocates’ Meeting for the Case Management Hearing]. If the parents are jointly represented, they shall instead file and serve a joint response by this time. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-17', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-18">
+    <div  class="row-number"><strong class="bold-small"> 18.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="18">The representative of any party seeking disclosure from any agency shall inform the other parties and shall obtain any available consent to such disclosure and if necessary shall file and serve an application for disclosure by [time and date prior to the Hearing]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-18', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-19">
+    <div  class="row-number"><strong class="bold-small"> 19.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="19">The representative of any party who intends to make an application for permission to rely on expert evidence under Part 25 shall file and serve an application by [time and date prior to the Advocates’ Meeting for the Case Management Hearing]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-19', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-20">
+    <div  class="row-number"><strong class="bold-small"> 20.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="20">No document other than a document specified in these directions or in accordance with the Rules or Practice Directions shall be filed by any party without the court’s permission. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-20', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	
+	<div class='row-3-col'><div id='Standard-direction-21'><div class='row-number'><strong class='bold-small'>21.</strong></div><div class='row-text' data-inlineType='textarea' data-inlineName='21'>New direction.</div><div class='row-edit' data-inlineType='doneButton'><input type='button' value='Edit' onclick="inlineEdit('Standard-direction-21', defaultSampleOptions)"/></div></div><div class="clearfix"></div></div>
+	
+	<hr/>
+
+
+
+<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "New Direction...";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+          
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add direction" onClick="addInput('dynamicInput');">
+
+
+<br/><br/><br/>
+
+</div>
+</div>
+</div>
+</body>
+</html>

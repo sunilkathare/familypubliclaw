@@ -1,0 +1,809 @@
+{% extends "layout-jui-orders.html" %}
+
+{% block page_title %}
+ Review and edit standard directions 
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>-->
+ <div class="jui-casebar" style="padding:10px 16px 20px 20px; display: none;">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+      #0093939983<span class="jui-casebar__title"> London Borough of Southwark  versus 	Samantha Smith & Paul Smith </span>
+    </div>
+
+
+    <div class="jui-casebar__options">
+
+     <nav class="jui-case-actions" style="display: none;">
+  <ul class="jui-case-actions__list">
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-list-for-hearing">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav><!-- -->
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav" style="display: none;">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li >
+      <a class="govuk-link" href="g-case-summary" data-topnav="Case summary"> Case summary</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-parties" data-topnav="Parties">Parties</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-case-file" data-topnav="Case file">Case file</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="g-directions" data-topnav="directions">Directions</a>
+    </li>
+	  <li >
+      <a class="govuk-link" href="g-orders" data-topnav="directions">Orders</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-timeline" data-topnav="timeline" >Status & timeline</a>
+    </li>
+	  <li>
+      <a class="govuk-link" href="g-questions" data-topnav="Question" >Questions</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler" style="
+display: none;">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-case-summary" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Case summary</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="g-case-summary">Case details </a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="g-case-summary-by-la">Summary by LA</a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-parties" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Parties</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+              <a class="govuk-link" href="g-parties#children">Children</a>
+            </li>
+			  <li>
+          <a class="govuk-link" href="g-parties#respondents">Respondents</a>
+        </li>
+            <li>
+              <a class="govuk-link" href="g-parties#applicant">Applicant </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="g-parties#cafcass">CAFCASS</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-file" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Case file</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+          <a class="govuk-link" href="g-case-file">C110a Application </a>
+        </li>
+            <li>
+              <a class="govuk-link" href="g-case-file-swet">SWET</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="g-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li>
+              <a class="govuk-link" href="g-case-file-documents">Documents</a>
+            </li>
+			   <li>
+              <a class="govuk-link" href="g-case-file-upload">Upload</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+		<li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-directions" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Directions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="g-directions">View directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+	  <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-orders" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Orders</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="g-standard-directions">Standard directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+<li>
+          <a class="govuk-link" href="g-cmo">CMO </a>
+        </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-timeline" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">Status/ Timeline</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="g-timeline">Timeline</a>
+        </li>
+
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-questions" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">Questions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="g-questions">View questions</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="g-questions-ask">Ask questions </a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row-">
+    <div class="column-full column-minimum" style="">
+
+	<!--Breadscrumbs
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "-la-dashboard"
+    },
+    {
+      text: "Cases",
+      href: "la-cases"
+    },
+    {
+      text: "#0093939983"
+    }
+,		{
+      text: "Case summary"
+    }
+  ]
+}) }}-->
+
+	<div class="govuk-grid-row column-minimum govuk-clearfix">
+	<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+    <h1 class="govuk-heading-l">
+        <!--<span class="govuk-caption-l"> Case #0093939983</span>-->
+     Review and edit standard directions <div class="floating-button"> <a href="g-confirm-b" class="button">Send out standard directions</a></div>
+
+    </h1>
+		
+		<h2 class="govuk-heading-m">
+
+      <!--  Application for a care, supervision or emergency protection order
+      Please note that in the real system the standard directions will be pre-filled with information in the application form and information that you have added. You can review, edit or add new standard directions before sending out directions to local authority and CAFCASS. This prototype is for demo purpose only.-->
+      </h2>
+
+
+		
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+	  <!-- JUI case file start -->
+	<div class="jui-casefile-page" style="margin: 0px;  width: 960px;">
+
+        <!-- page 1 -->
+        <div class="jui-casefile-page-content" >
+
+
+          <div class="jui-casefile-page-body" >
+			  <!-- page start -->
+			  
+			  
+			  <div class="grid-row">
+  <div class="column-one-third" style="width: 250px;">
+    <p><img class="sticky" src="/public/images/moj-logo.jpg" alt="Logo" width="150px" height="120px" style="margin-top: 0px;"></p>
+  </div>
+  <div class="column-two-thirds">
+    <h1 class="heading-large" style="margin-top: 5px"> Standard Directions </h1>
+    <p class="grey-text govuk-heading-s" >Issued on 6th July 2018 </p>
+    <p> In the Family Court sitting at 
+		
+		{% if data['hearing-location']  %}
+               <span class="blue-bold-text"> {{ data['hearing-location'] }} </span>
+              {% else %}
+            <strong class="bold-small" >  East London Courts</strong>
+              {% endif %}
+		
+		</p>
+  </div>
+</div>
+<div id="selectRow1-act" >
+  <div style="float: left; font-size: 1.2em; font-weight: bold; "  data-inlineType="select" data-inlineName="act"
+						data-inlineOptionsTitle='["The Children Act 1989","The Family Law Act 1996","The Family Law Act 1996"]'
+						data-inlineOptionsValue='["The Children Act 1989","The Family Law Act 1996","The Family Law Act 1996"]'>The Children Act 1989 <br/>
+    [Select as appropriate] </div>
+  <div style="display: none"data-inlineType="select" data-inlineName="act-2"
+						data-inlineOptionsTitle='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'
+						data-inlineOptionsValue='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'>The Children Act 1989
+
+    The Family Law Act 1996<br/>
+    [Select as appropriate] </div>
+  <div style="display: none"data-inlineType="select" data-inlineName="act-3"
+						data-inlineOptionsTitle='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'
+						data-inlineOptionsValue='["The Adoption and Children Act 2002","The Family Law Act 1996","The Family Law Act 1996"]'>The Children Act 1989
+
+    The Family Law Act 1996<br/>
+    [delete as appropriate] </div>
+  <div data-inlineType="doneButton" >
+    <input type="button" value="edit" onclick="inlineEdit('selectRow1-act', sampleOptions)"/>
+  </div>
+  <div class="clearfix"> </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Child</th>
+      <th class="numeric" scope="col">Gender</th>
+      <th class="numeric" scope="col">Age</th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="Child-1">
+      <th scope="row" data-inlineType="text" data-inlineName="Name">Adam Smith </th>
+      <td class="numeric" data-inlineType="text" data-inlineName="Gender">Boy</td>
+      <td class="numeric" data-inlineType="text" data-inlineName="Age">2 days old</td>
+      <td data-inlineType="doneButton"><input type="button" value="Edit" onclick="inlineEdit('Child-1', defaultSampleOptions)"/></td>
+    </tr>
+    <!--<tr id="Child-2">
+      <th scope="row" data-inlineType="text" data-inlineName="Name">Emily Reeves </th>
+      <td class="numeric" data-inlineType="text" data-inlineName="Gender">Girl</td>
+      <td class="numeric" data-inlineType="text" data-inlineName="Age">8</td>
+      <td data-inlineType="doneButton"><input type="button" value="Edit" onclick="inlineEdit('Child-2', defaultSampleOptions)"/></td>
+    </tr>-->
+  </tbody>
+</table>
+<h2 class="heading-small">DIRECTIONS ON ISSUE AND ALLOCATION OF PROCEEDINGS (SDO) <span class="grey-text" > 6th July 2018</span></h2>
+	<br>
+<strong class="bold-small"> 1. </strong> <span class="blue-bold-text"> {{ data['full-name-applicant'] }} London Borough of Southwark</span> has made an application on <span class="grey-text bold-small" > 6th July 2018</span> for <span class="blue-bold-text">	Interim care order {{ data['order-type'] }} </span> supported by the following Annex documents:
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Documents</th>
+      <th class="numeric" scope="col"></th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Chronology</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Statement and genogram</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> The current assessments to which the Social Work Statement refers and on which the LA relies</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Care Plan</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Index of Checklist Documents</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+  </tbody>
+</table>
+<br />
+
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-2">
+    <div  class="row-number"><strong class="bold-small"> 2.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="2"> The application form and Annex documents have been considered by the court which has given  directions upon issue and allocation. The court has considered the papers in the absence of the parties or their legal representatives </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-2', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-3">
+    <div  class="row-number"><strong class="bold-small"> 3.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="3">
+		<ul>
+  <ol type="a" class="grey-text small-text"><strong class="bold-small">  JURISDICTION:- </strong>
+    <li>(a)	The court considers that there may be an issue as to jurisdiction in respect of the children and consideration needs to be given to this issue [and the application of Council regulation (EC) No 2201/2003 (Brussels 2 revised)] to these proceedings by the parties as a matter of urgency; and <br />
+      <br />
+    </li>
+    <li>(b)	The local authority shall liaise with the [identify country] Consular authority in England and Wales or other competent authority in [name of foreign state] in relation to the proceedings or make a request to the Central Authority of [identify country] for such information as may be relevant to determine issues of jurisdiction.</li>
+  </ol>
+</ul>
+
+	  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-3', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+
+<h3 class="heading-medium">THE COURT ORDERS:- </h3>
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-4">
+    <div  class="row-number"><strong class="bold-small"> 4.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="4"> The proceedings are allocated for case management to<span class="blue-bold-text">  {{ data['judge'] }} </span> </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-4', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-5">
+    <div  class="row-number"><strong class="bold-small"> 5.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="5"> A children’s guardian
+		
+		{% if data['cafcass-guardian']  %}
+          <span class="blue-bold-text"> {{ data['cafcass-guardian'] }} </span>
+              {% else %}
+            <strong class="bold-small" >  [name if available ]</strong>
+              {% endif %}
+		 shall be appointed for the child[ren].
+      [or]A children’s guardian will not be allocated in time to appoint a solicitor and [solicitor’s name of firm ] is appointed as solicitor for the child[ren][delete as appropriate] </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-5', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<div class="row-3-col">
+  <div  id="Standard-direction-6">
+    <div  class="row-number"><strong class="bold-small"> 6.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="6"> [The local authority having indicated it wishes to apply for an urgent Case Management Hearing/ interim care order [and to remove the child(ren)], the parties are directed to discuss in respect of any order or direction applied for, the purpose of the hearing, any directions that will be applied for, whether any part of the hearing will be contested and the length of the hearing, and the local authority shall inform the court in writing by [time/date                       of the agreed or different positions of the parties.]  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-6', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-7">
+    <div  class="row-number"><strong class="bold-small"> 7.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="7"> [If appropriate] The time for service of Notice of the Proceedings is reduced to [insert time and date (or in exceptional case number of hours)] because [Insert brief explanation]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-7', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-8">
+    <div  class="row-number"><strong class="bold-small"> 8.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="8">  [If appropriate] The proceedings are listed for a [contested/uncontested] interim care order hearing/urgent Case Management Hearing [delete as appropriate] on [date] at [time] before [the magistrates/any District Judge or Circuit Judge in the county court who is available (identify legal adviser/judge if known)]. (ELH 2 hour(s) [or as appropriate]) The parties and their representatives are directed to attend court by [time] for pre-hearing discussions. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-8', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-9">
+    <div  class="row-number"><strong class="bold-small"> 9.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="9">  The local authority shall serve on all parties [and name of any other person] by [time and date to be on day 2 unless the court considers it appropriate to direct otherwise]<br/><br/>
+	  <ol type="A">
+  <li>(a)	The Application Form and Annex Documents filed with the court; and</li>
+  <li>(b)	[any other document(s) specified by the court]</li>
+</ol></div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-9', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+	<div class="row-3-col">
+  <div  id="Standard-direction-10">
+    <div  class="row-number"><strong class="bold-small"> 10.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="10">  The local authority shall file and serve on all parties [and name of any other person] the following Annex Document(s) which have not been filed with the application<br/><br/>
+
+	  <table>
+  <thead>
+    <tr>
+      <th scope="col">Documents</th>
+      <th class="numeric" scope="col"></th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Chronology</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Social Work Statement and genogram</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> The current assessments to which the Social Work Statement refers and on which the LA relies</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Care Plan</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="" title="Social Work Chronology"> Index of Checklist Documents</a></th>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+    </tr>
+  </tbody>
+</table>
+
+	  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-10', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+
+
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-11">
+    <div  class="row-number"><strong class="bold-small"> 11.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="11">  The proceedings are listed for a Case Management Hearing at [place] on [date] at [time], before [identify legal advisor/judge if appropriate] ELH 1 or 1.5 or 2 hour(s) [delete as appropriate]. The parties and their representatives are directed to attend court by [time] for pre-hearing discussions. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-11', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+		<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-12">
+    <div  class="row-number"><strong class="bold-small"> 12.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="12">  The solicitor for the child(ren) shall arrange an Advocates’ Meeting no later than 2 business days before the Case Management Hearing. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-12', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+		<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-13">
+    <div  class="row-number"><strong class="bold-small"> 13.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="13">  The local authority shall draft the Case Management Order in the prescribed form and file it with the court by 10AM, 25th June 2018.  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-13', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-14">
+    <div  class="row-number"><strong class="bold-small"> 14.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="14">  The local authority shall file and serve its Case Summary in the form directed by the Designated Family Judge by [time and date].   </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-14', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+		<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-15">
+    <div  class="row-number"><strong class="bold-small"> 15.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="sd-15">  The child(ren)’s solicitor shall file and serve by [time and date] a Case Analysis document prepared by the children's guardian for use at the Case Management Hearing
+  [or]
+  [The children's guardian shall be in a position to present orally a Case Analysis at the First Case Management Hearing]
+  [delete as appropriate]  </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-15', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+			<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-16">
+    <div  class="row-number"><strong class="bold-small"> 16.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="sd-16">  On the basis that there is evidence of incapacity, the Official Solicitor is invited to act in these proceedings as the litigation friend on behalf of [name] and the local authority is directed to complete, file and serve upon the parties and the Official Solicitor the Official Solicitor’s checklist by [time and date]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-16', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-17">
+    <div  class="row-number"><strong class="bold-small"> 17.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="sd-17"> The parents shall each file and serve a Parents’ Response document by [time and date prior to the Advocates’ Meeting for the Case Management Hearing]. If the parents are jointly represented, they shall instead file and serve a joint response by this time. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-17', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-18">
+    <div  class="row-number"><strong class="bold-small"> 18.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="18">The representative of any party seeking disclosure from any agency shall inform the other parties and shall obtain any available consent to such disclosure and if necessary shall file and serve an application for disclosure by [time and date prior to the Hearing]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-18', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-19">
+    <div  class="row-number"><strong class="bold-small"> 19.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="19">The representative of any party who intends to make an application for permission to rely on expert evidence under Part 25 shall file and serve an application by [time and date prior to the Advocates’ Meeting for the Case Management Hearing]. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-19', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end-->
+
+	<!-- standard direction start -->
+
+<div class="row-3-col">
+  <div  id="Standard-direction-20">
+    <div  class="row-number"><strong class="bold-small"> 20.</strong> </div>
+    <div class="row-text" data-inlineType="textarea" data-inlineName="20">No document other than a document specified in these directions or in accordance with the Rules or Practice Directions shall be filed by any party without the court’s permission. </div>
+    <div class="row-edit" data-inlineType="doneButton">
+      <input type="button" value="Edit" onclick="inlineEdit('Standard-direction-20', defaultSampleOptions)"/>
+    </div>
+  </div>
+  <div class="clearfix"> </div >
+</div>
+
+<!-- standard direction end
+
+	<div class='row-3-col'><div id='Standard-direction-21'><div class='row-number'><strong class='bold-small'>21.</strong></div><div class='row-text' data-inlineType='textarea' data-inlineName='21'>New direction.</div><div class='row-edit' data-inlineType='doneButton'><input type='button' value='Edit' onclick="inlineEdit('Standard-direction-21', defaultSampleOptions)"/></div></div><div class="clearfix"></div></div>
+-->
+	
+
+
+
+<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "You will be able to add and edit new directions here...";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add direction" onClick="addInput('dynamicInput');">
+
+
+<br/><br/><br/>
+
+</div><hr/>
+			<a href="g-confirm-b" class="button">Send out standard directions</a>
+			  
+ <!-- page end -->
+	  
+	</div>
+
+</div></div>
+	  <!-- JUI case file end -->
+		
+		
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

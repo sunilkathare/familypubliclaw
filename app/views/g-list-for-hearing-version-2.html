@@ -1,0 +1,512 @@
+{% extends "layout-jui.html" %}
+
+{% block page_title %}
+ Issue new direction - Case #9393939
+{% endblock %}
+
+{% block content %}
+
+
+<!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+   Alpha
+ </strong>
+ <span class="govuk-phase-banner__text">
+     This is a new service – your <a class="govuk-link" href="https://design-system.service.gov.uk/get-in-touch">feedback</a> will help us to improve it.
+   </span>
+   </p>
+ </div>-->
+ <div class="jui-casebar" style="padding:10px 16px 20px 20px;">
+
+  <div class="jui-width-container">
+
+    <div class="jui-casebar__details">
+      #0093939983<span class="jui-casebar__title"> London Borough of Southwark  versus 	Samantha Smith & Paul Smith </span>
+    </div>
+
+
+    <div class="jui-casebar__options">
+
+     <nav class="jui-case-actions" style="display: none;">
+  <ul class="jui-case-actions__list">
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-make-decision">Make decision</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-list-for-hearing">List for hearing</a>
+      </li>
+
+      <li class="jui-case-actions__item">
+        <a class="jui-case-actions__link" href="g-reassign">Reassign</a>
+      </li>
+
+  </ul>
+</nav><!-- -->
+
+    </div>
+
+
+  </div>
+
+</div>
+
+ <div > </div >
+  <div class="app-pane__nav">
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list">
+    <li >
+      <a class="govuk-link" href="g-case-summary" data-topnav="Case summary"> Case summary</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-parties" data-topnav="Parties">Parties</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-case-file" data-topnav="Case file">Case file</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="g-directions" data-topnav="directions">Directions</a>
+    </li>
+	  <li >
+      <a class="govuk-link" href="g-orders" data-topnav="directions">Orders</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="g-timeline" data-topnav="timeline" >Status & timeline</a>
+    </li>
+	  <li>
+      <a class="govuk-link" href="g-questions" data-topnav="Question" >Questions</a>
+    </li>
+  </ul>
+</nav>
+<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__list">
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-case-summary" id="js-mobile-nav-subnav-toggler-0" aria-label="Toggle subnavigation for Get started" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">Case summary</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav " id="js-mobile-nav__subnav-0" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-0">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="g-case-summary">Case details </a>
+            </li>
+            <li class="current-page">
+              <a class="govuk-link" href="g-case-summary-by-la">Summary by LA</a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-parties" id="js-mobile-nav-subnav-toggler-1" aria-label="Toggle subnavigation for Styles" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">Parties</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-1" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-1">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+              <a class="govuk-link" href="g-parties#children">Children</a>
+            </li>
+			  <li>
+          <a class="govuk-link" href="g-parties#respondents">Respondents</a>
+        </li>
+            <li>
+              <a class="govuk-link" href="g-parties#applicant">Applicant </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="g-parties#cafcass">CAFCASS</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="la-case-file" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Case file</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+
+
+          <ul class="app-mobile-nav__theme-nav">
+			  <li>
+          <a class="govuk-link" href="g-case-file">C110a Application </a>
+        </li>
+            <li>
+              <a class="govuk-link" href="g-case-file-swet">SWET</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="g-case-file-e-bundle">E-bundle</a>
+            </li>
+			  <li>
+              <a class="govuk-link" href="g-case-file-documents">Documents</a>
+            </li>
+			   <li>
+              <a class="govuk-link" href="g-case-file-upload">Upload</a>
+            </li>
+
+
+          </ul>
+
+      </ul>
+		<li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-directions" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Directions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="g-directions">View directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+	  <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-orders" id="js-mobile-nav-subnav-toggler-2" aria-label="Toggle subnavigation for Components" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">Orders</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-2" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-2">
+        <li>
+          <a class="govuk-link" href="g-standard-directions">Standard directions </a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+
+<li>
+          <a class="govuk-link" href="g-cmo">CMO </a>
+        </li>
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-timeline" id="js-mobile-nav-subnav-toggler-3" aria-label="Toggle subnavigation for Patterns" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">Status/ Timeline</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-3" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-3">
+        <li>
+          <a class="govuk-link" href="g-timeline">Timeline</a>
+        </li>
+
+
+          <ul class="app-mobile-nav__theme-nav">
+
+
+          </ul>
+
+      </ul>
+    </li>
+    <li>
+      <a class="govuk-link js-mobile-nav-subnav-toggler" href="g-questions" id="js-mobile-nav-subnav-toggler-4" aria-label="Toggle subnavigation for Community" aria-expanded="false" aria-controls="js-mobile-nav__subnav-4">Questions</a>
+      <ul class="app-mobile-nav__subnav js-app-mobile-nav-subnav app-mobile-nav__subnav--hidden" id="js-mobile-nav__subnav-4" aria-hidden="true" aria-labelledby="js-mobile-nav-subnav-toggler-4">
+        <li>
+          <a class="govuk-link" href="g-questions">View questions</a>
+        </li>
+
+          <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="g-questions-ask">Ask questions </a>
+            </li>
+
+          </ul>
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+<main id="content" role="main"  class="govuk-clearfix" >
+  <div class="grid-row-">
+    <div class="column-full column-minimum" style="">
+
+	<!--Breadscrumbs
+
+  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Dashboard",
+      href: "-la-dashboard"
+    },
+    {
+      text: "Cases",
+      href: "la-cases"
+    },
+    {
+      text: "#0093939983"
+    }
+,		{
+      text: "Case summary"
+    }
+  ]
+}) }}-->
+
+	<div class="govuk-grid-row column-minimum govuk-clearfix">
+    <a href="javascript: history.go(-1)" class="link-back">Back</a>
+	
+
+    <h1 class="govuk-heading-l">
+        <!--<span class="govuk-caption-l"> Case #0093939983</span>-->
+     List for hearing
+
+    </h1>
+
+
+		<form action="g-standard-directions">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+	   <!-- Judge level -->
+
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+
+		<span class="govuk-label--s">    Allocate Judge level</span>
+
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+        Lay juitices
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        District Judge level
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Circuit  Judge level
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+        DFJ/Section 9 sitting as a Judge of the High Court
+      </label>
+      </div>
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+       High Court
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+	  <!-- Judge name --><div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="cafcass">
+    <span class="govuk-label--s"> The proceedings are allocated for case management to  </span>
+  </label><span id="more-detail-hint" class="govuk-hint">
+    Enter full name of Judge</span>
+
+  <input class="govuk-input govuk-!-width-two-thirds" id="new-direction-1-title" name="judge" type="text" value="{{ data['judge'] }}">
+</div>
+ 
+ 
+
+
+
+<!--
+	  <div class="form-group">
+  <label class="form-label" for="select-box"> <span class="govuk-label--s"> Select Judge </span></label>
+  <select class="form-control" id="select-box" name="judge"  value="{{ data['judge'] }}">
+    <option>Judge Jeremy Bennett</option>
+    <option>Judge Arpitha Gowda </option>
+    <option>Judge Olivia Green</option>
+	  <option>Judge Sophia Blue</option>
+  </select>
+</div>
+		<a href=""><h3 class="heading-small" style="text-decoration: underline"> View Judge's calendar</h3></a>
+		<span class="grey-text"> (Calendar opens in a new window)</span><br><br>-->
+
+
+	  <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+	  <span class="govuk-label--s">  Reason for allocation</span>
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+    Explain the rationale for allocation decision   </span>
+  <textarea class="govuk-textarea govuk-!-width-two-thirds" id="more-detail" name="new-direction-1" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+
+<!-- Date  -->
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+    <legend class="govuk-fieldset__legend-">
+      <span class="govuk-label--s">
+        Hearing date
+      </span>
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+    For example, 31 8 2018
+  </span>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item govuk-date-input__item--day">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+          Day
+        </label>
+          <input class="govuk-input govuk-date-input__input" id="dob-day" name="hearing-day" value="{{ data['hearing-day'] }}" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item govuk-date-input__item--month">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+          Month
+        </label>
+          <input class="govuk-input govuk-date-input__input" id="dob-month" name="hearing-month" value="{{ data['hearing-month'] }}" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item govuk-date-input__item--year">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+          Year
+        </label>
+          <input class="govuk-input govuk-date-input__input" id="dob-year" name="hearing-year" value="{{ data['hearing-year'] }}" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+	    <!-- Time -->
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+          <legend class="govuk-fieldset__legend-">
+            <span class="govuk-label--s"> 
+              Hearing time
+            </span>
+          </legend>
+          <span id="dob-hint" class="govuk-hint">
+          For example, 11 00
+        </span>
+          <div class="govuk-date-input" id="dob">
+            <div class="govuk-date-input__item govuk-date-input__item--day">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="dob-day">
+                Hour
+              </label>
+                <input class="govuk-input govuk-date-input__input" id="dob-day" name="hearing-hour" value="{{ data['hearing-hour'] }}" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item govuk-date-input__item--month">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="dob-month">
+                Minutes
+              </label>
+                <input class="govuk-input govuk-date-input__input" id="dob-month" name="hearing-min" value="{{ data['hearing-min'] }}" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+	    <!-- Location -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
+    <span class="govuk-label--s"> Hearing location </span>
+  </label>
+	<span id="more-detail-hint" class="govuk-hint">
+    For example, Fox courts
+  </span>
+  <input class="govuk-input govuk-!-width-two-thirds" id="new-direction-1-title" name="hearing-location" type="text" value="{{ data['hearing-location'] }}">
+</div>
+	     <!-- Cafcass -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="cafcass">
+    <span class="govuk-label--s"> Children's guardian appointed by CAFCASS </span>
+  </label>
+
+  <input class="govuk-input govuk-!-width-two-thirds" id="new-direction-1-title" name="cafcass" type="text" value="{{ data['cafcass'] }}">
+</div>
+
+
+
+
+<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<h2 class='heading-medium'>More details </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Addtional info  </label>  <textarea type='textarea' class='form-control' id='child-2-full-name'> </textarea><br/> <br/> ";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add more details" onClick="addInput('dynamicInput');">
+
+
+
+<br/><br/>
+
+	  <button type="submit" class="govuk-button">
+  List hearing and issue standard directions
+</button>
+	  </form>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

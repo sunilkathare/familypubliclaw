@@ -1,0 +1,143 @@
+{% extends "layout-jui.html" %}
+
+{% block page_title %}
+  View Applications
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+ <!--     <a href="la-dashboard.html" class="link-back">Back</a>-->
+
+		<!--Breadscrumbs-->
+
+		<div class="govuk-c-breadcrumbs">
+  <ol class="govuk-c-breadcrumbs__list">
+    <li class="govuk-c-breadcrumbs__list-item">
+      <a class="govuk-c-breadcrumbs__link" href="g-dashboard">Dashboard</a>
+    </li>
+    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
+      Applications
+    </li>
+
+  </ol>
+</div>
+
+      <h1 class="govuk-heading-l">
+         Applications  
+      </h1>
+<!--<div class="column-full" style="border-bottom: 1px solid #ccc; display: block; padding: 0px;"> <nav class="app-c-navigation govuk-h-clearfix">
+  <ul class="app-c-navigation__list">
+    <li class="app-c-navigation--current-page">
+      <a class="govuk-link" href="la-view-applications.html">C110a application</a>
+    </li>
+    <li >
+      <a class="govuk-link" href="-la-c2-applications"> C2 application</a>
+    </li>
+
+
+
+  </ul>
+		</nav></div>-->
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        New applications   </h2>
+<p class="form-hint">Make your allocation on the applications maked as   <span class="task-in-progress">needs allocation</span>. After you have made your allocation, an email is sent to judge for approval. After judge approves your allocation, you can issue standard directions. </p>
+      
+      <dl class="govuk-check-your-answers cya-questions-short">
+		  <div>
+          <dt class="cya-question">
+            Application number
+          </dt>
+			<dd class="cya-answer-">
+           <strong class="govuk-heading-s"> From </strong>
+          </dd>
+          <dd class="cya-answer ">
+          <strong style="font-weight: bold;"> Date </strong>
+          </dd>
+          <dd class="cya-change">
+            
+         <strong class="govuk-heading-s"> Status</strong>
+         
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+          <a href="g-process-application.html">  C110A #00388 </a> 
+          </dt>
+			<dd class="cya-answer-">
+            Borough of Southwark
+          </dd>
+          <dd class="cya-answer">
+            10 Jul 2018
+          </dd>
+          <dd class="cya-change">
+			<a href="g-process-application.html">   <span class="task-in-progress">needs allocation</span></a> 
+            
+              
+           
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+			  <a href="g-process-application"> C110A #00387</a> <!--<span class="task-new"> urgent</span>-->
+          </dt>
+			  <dd class="cya-answer-">
+           Borough of Fulham
+			  </dd>
+          <dd class="cya-answer">
+            10 Jul 2018
+          </dd>
+          <dd class="cya-change">
+           
+           <a href="g-process-application.html">   <span class="task-in-progress">needs allocation</span></a> 
+            </a>
+          </dd>
+        </div>
+		  <div>
+          <dt class="cya-question">
+			  <a href="g-allocation-waiting" > C110A #00386</a>
+          </dt>
+			  <dd class="cya-answer-">
+             Borough of Ealing
+			  </dd>
+          <dd class="cya-answer">
+             10 Jul 2018
+          </dd>
+          <dd class="cya-change">
+           
+             <a href="g-process-application.html">   <span class="task-in-progress">needs allocation</span></a> 
+            
+          </dd>
+        </div>
+		 
+		  
+
+
+
+
+
+
+
+
+     <br/>  <br/>
+
+
+
+
+
+		
+<br/>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

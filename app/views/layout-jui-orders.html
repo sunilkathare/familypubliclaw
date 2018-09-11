@@ -1,0 +1,127 @@
+{% extends "template.njk" %}
+
+{% from "back-link/macro.njk"     import govukBackLink %}
+{% from "breadcrumbs/macro.njk"   import govukBreadcrumbs %}
+{% from "button/macro.njk"        import govukButton %}
+{% from "checkboxes/macro.njk"    import govukCheckboxes %}
+{% from "date-input/macro.njk"    import govukDateInput %}
+{% from "details/macro.njk"       import govukDetails %}
+{% from "error-message/macro.njk" import govukErrorMessage %}
+{% from "error-summary/macro.njk" import govukErrorSummary %}
+{% from "fieldset/macro.njk"      import govukFieldset %}
+{% from "file-upload/macro.njk"   import govukFileUpload %}
+{% from "input/macro.njk"         import govukInput %}
+{% from "label/macro.njk"         import govukLabel %}
+{% from "panel/macro.njk"         import govukPanel %}
+{% from "phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "radios/macro.njk"        import govukRadios %}
+{% from "select/macro.njk"        import govukSelect %}
+{% from "skip-link/macro.njk"     import govukSkipLink %}
+{% from "table/macro.njk"         import govukTable %}
+{% from "tag/macro.njk"           import govukTag %}
+{% from "textarea/macro.njk"      import govukTextarea %}
+{% from "warning-text/macro.njk"  import govukWarningText %}
+
+{% block head %}
+  {% include "includes/head-jui-orders.html" %}
+
+{% endblock %}
+
+{% block main %}
+  {{ super() }}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+
+<div class="app-pan app-pane--enabled clear-fix govuk-clearfix">
+
+
+  <div class="app-pane__header">
+<header class="app-header" role="banner" style="margin-bottom:0px;">
+  <a href="/index" class="govuk-link app-header__link">
+    <span class="app-header__logotype">
+
+      
+      <span class="app-header__logotype-text" style="font-size: 70%">
+        
+Judicial case manager 
+      </span>
+    </span>
+    <span class="app-header__title">
+      <!--Public Law-->
+    </span>
+  </a>	<div style="float:right; margin: 5px 15px 5px 5px;" class="app-mobile-hide">
+
+
+	<a href="index" style="color:#fff; text-decoration: none; font-family:arial; font-weight:bold;">Signout</a></div><div style="float:right; margin: 5px 15px;" class="app-mobile-hide">   <a href="g-dashboard-v3.html" style="color:#fff; text-decoration: none; font-family:arial; font-weight:bold;">Dashboard</a></div>
+  <!--<div style="float:right;"><ul class="gn-tools" role="menubar" style="background: #000000 ; padding:  4px 8px 2px 2px ;">
+		<li role="menuitem">
+						<div class="view notifications-menu-view" id="yui_3_16_0_1_1529615275985_276"><a class="gn-title c-notifications-menu" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Notifications" data-rapid_p="182" href="la-notifications">
+	<span class="c-notification-icon" aria-hidden="true">
+		<span class="c-notification-unseencount" style="background: #df3034;box-sizing:border-box;height:18px;min-width:16px;text-align:center;line-height:17px;border-radius:8px;font-size:12px;font-family:inherit;border:none;right:-10px;top:-11px; padding-top:1px">16</span>
+	</span>
+</a></div>
+					</li>
+
+			</ul></div >
+
+  <div class="app-header-mobile-nav-toggler-wrapper">
+    <button id="app-mobile-nav-toggler" class="govuk-button app-header-mobile-nav-toggler js-app-mobile-nav-toggler" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="app-mobile-nav">
+      Menu
+    </button>
+
+</div>--><div class="app-header-mobile-nav-toggler-wrapper" style="float:right; margin: -14px 0px 0px 5px;">
+    <button id="app-mobile-nav-toggler" class="govuk-button app-header-mobile-nav-toggler js-app-mobile-nav-toggler" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="app-mobile-nav">
+      Menu
+    </button>
+
+</div>
+	
+	
+	<nav id="app-mobile-nav" class="app-mobile-nav js-app-mobile-nav" role="navigation" aria-hidden="true" aria-labelledby="app-header-mobile-nav-toggler">
+  <ul class="app-mobile-nav__theme-nav">
+            <li>
+              <a class="govuk-link" href="g-dashboard-v3.html">Dashboard </a>
+            </li>
+            <li >
+              <a class="govuk-link" href="index">Signout</a>
+            </li>
+            
+          </ul>
+	</nav>
+</header>
+  </div>
+  <!--<div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3">
+<p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+Alpha
+</strong>
+<span class="govuk-phase-banner__text">
+    This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.
+  </span>
+</p>
+</div>-->
+{% endblock %}
+
+{% block footer %}
+  {{ govukFooter({
+  "meta": {
+    "items": [
+      {
+        "href": "/prototype-admin/clear-data",
+        "text": "Clear data"
+      }
+    ]
+  }
+}) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block page_scripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}

@@ -1,0 +1,452 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a form - Children
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+      <h1 class="govuk-heading-xl">
+        Children
+      </h1>
+
+    {% if data['change'] == "true" %}
+		  <form action="-c110a-review">
+
+    {% else %}
+
+    	<form action="-c110a">
+    {% endif %}
+
+<h2 class="govuk-heading-l">
+        Child 1
+      </h2>
+
+<!-- Child's full name -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
+    <span class="govuk-label--s">  Child’s full name</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="full-name" name="child-1-full-name" type="text" value="{{ data['child-1-full-name'] }}">
+</div>
+
+<!-- Date of birth -->
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+    <legend class="govuk-fieldset__legend-">
+      <span class="govuk-label--s">
+        Date of birth
+      </span>
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+    For example, 31 3 1980
+  </span>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item govuk-date-input__item--day">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+          Day
+        </label>
+          <input class="govuk-input govuk-date-input__input" id="dob-day" name="child-1-dob-day" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item govuk-date-input__item--month">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+          Month
+        </label>
+          <input class="govuk-input govuk-date-input__input" id="dob-month" name="child-1-dob-month" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item govuk-date-input__item--year">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+          Year
+        </label>
+          <input class="govuk-input govuk-date-input__input" id="dob-year" name="child-1-dob-year" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+<!-- Gender class="inline" -->
+		<div class="form-group">
+    <fieldset >
+
+      <legend>
+        <span class="govuk-heading-s">
+           Gender
+        </span>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="radio-inline-1" type="radio" name="child-1-gender" value="Boy"  {{ checked('child-1-gender','Boy') }}>
+        <label for="radio-inline-1">Boy</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="child-1-gender" value="Girl'" {{ checked('child-1-gender','Girl') }}>
+        <label for="radio-inline-2">Girl</label>
+      </div>
+		<div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="child-1-gender" value="Non-binary" {{ checked('child-1-gender','Non-binary') }}>
+        <label for="radio-inline-2">Non-binary</label>
+      </div>
+
+    </fieldset>
+  </div>
+
+
+<!-- Child's situation -->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-label--s">
+        Describe child’s situation
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="child-situation-conditional-1" name="child-situation" type="radio" value="Living with respondents" {{ checked('child-situation','Living with respondents') }} data-aria-controls="conditional-child-situation-conditional-1">
+            <label class="govuk-label govuk-radios__label" for="child-situation-1">
+        Living with respondents
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-1">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+            Address where child is staying
+            </label>
+
+            <textarea class="govuk-textarea" id="child-situation-1-address" name="child-situation-1-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-1-address'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="child-situation-conditional-2" name="child-situation" type="radio" value="Living with other family or friends" {{ checked('child-situation','Living with other family or friends') }} data-aria-controls="conditional-child-situation-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="child-situation-2">
+        Living with other family or friends
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+    Address where child is staying
+  </label>
+            <textarea class="govuk-textarea" id="child-situation-2-address" name="child-situation-2-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-2-address'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="child-situation-3" name="child-situation" type="radio" value="Removed under police powers which are expiring soon" {{ checked('child-situation','Removed under police powers which are expiring soon') }} data-aria-controls="conditional-child-situation-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="child-situation-conditional-3">
+        Removed under police powers which are expiring soon
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+    Expiry date
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="child-situation-3-expiry-date" name="child-situation-3-expiry-date" type="text" value="{{ data['child-situation-3-expiry-date'] }}">
+        </div>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+            Address where child is staying
+            </label>
+
+            <textarea class="govuk-textarea" id="child-situation-3-address" name="child-situation-3-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-3-address'] }}</textarea>
+        </div>
+
+      </div>
+
+      <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="child-situation-conditional-4" name="child-situation" type="radio" value="In care under a voluntary section 20 agreement" {{ checked('child-situation','In care under a voluntary section 20 agreement') }} data-aria-controls="conditional-child-situation-conditional-4">
+            <label class="govuk-label govuk-radios__label" for="child-situation-4">
+      In care under a voluntary section 20 agreement
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-4">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+          Address where child is staying
+            </label>
+
+            <textarea class="govuk-textarea" id="child-situation-4-address" name="child-situation-4-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-4-address'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="child-situation-conditional-5" name="child-situation" type="radio" value="In hospital and ready to be discharged soon" {{ checked('child-situation','In hospital and ready to be discharged soon') }} data-aria-controls="conditional-child-situation-conditional-5">
+            <label class="govuk-label govuk-radios__label" for="child-situation-1">
+        In hospital and ready to be discharged soon
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-5">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+    Discharge date
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="child-situation-5-discharge-date" name="child-situation-5-discharge-date" type="text" value="{{ data['child-situation-5-discharge-date'] }}">
+        </div>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+            Address where child is staying
+            </label>
+
+            <textarea class="govuk-textarea" id="child-situation-5-address" name="child-situation-5-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-5-address'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="child-situation-conditional-6" name="child-situation" type="radio" value="Others" {{ checked('child-situation','Others') }} data-aria-controls="conditional-child-situation-conditional-6">
+            <label class="govuk-label govuk-radios__label" for="child-situation-1">
+        Other
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-6">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+    Details
+  </label>
+            <textarea class="govuk-textarea" id="child-situation-others" name="child-situation-others" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-others'] }}</textarea>
+        </div>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">
+            Address where child is staying
+            </label>
+
+            <textarea class="govuk-textarea" id="child-situation-6-address" name="child-situation-6-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-6-address'] }}</textarea>
+        </div>
+
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+
+		<!-- Key dates child timeline -->
+
+    <div class="govuk-form-group">
+  <label class="govuk-label--s" for="more-detail">
+    Key dates for this child
+  </label>
+  <span id="key-dates-hint" class="govuk-hint">
+      List any events we'll need to take into account when scheduling hearings.
+      <br>
+      For example, child starting primary school or taking GCSEs
+  </span>
+  <textarea class="govuk-textarea" id="key-dates" name="key-dates" rows="5" aria-describedby="key-dates-hint">{{ data['key-dates'] }} </textarea>
+</div>
+
+<!-- Care plam for child -->
+
+<div class="govuk-form-group">
+<label class="govuk-label--s" for="more-detail">
+Care plan
+</label>
+<span id="key-dates-hint" class="govuk-hint">
+  For example,
+  <br>
+  Place baby in local authority foster care until further assessments are completed.
+</span>
+<textarea class="govuk-textarea" id="key-dates" name="care-plan" rows="5" aria-describedby="care-plan-hint">{{ data['care-plan'] }} </textarea>
+</div>
+
+
+<!-- Mother's full name -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-mother-name">
+    <span class="govuk-label--s"> Mother's full name</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="child-1-mother-name" name="child-1-mother-name" type="text" value="{{ data['child-1-mother-name'] }}">
+</div>
+
+<!-- Father's full name -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-father-name">
+    <span class="govuk-label--s">  Father's full name</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="child-1-father-name" name="child-1-father-name" type="text" value="{{ data['child-1-father-name'] }}">
+</div>
+
+
+<div class="govuk-inset-text">
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-label">
+        Does the father have parental responsibility?
+      </h1>
+    </legend>
+    <span id="changed-name-hint" class="govuk-hint">
+
+  </span>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="child-1-father-parental-responsibility" type="radio" value="Yes" {{ checked('child-1-father-parental-responsibility','Yes') }}>
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+        Yes
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="child-1-father-parental-responsibility" type="radio" value="No" {{ checked('child-1-father-parental-responsibility','No') }}>
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        No
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="child-1-father-parental-responsibility" type="radio" value="Do not know" {{ checked('child-1-father-parental-responsibility','Do not know') }}>
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        Don't know
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</div>
+
+
+<!-- Social worker's full name -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-social-worker-name">
+    <span class="govuk-label--s">   Name of social worker</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="child-1-social-worker-name" name="child-1-social-worker-name" type="text" value="{{ data['child-1-social-worker-name'] }}">
+</div>
+
+<!-- Social worker's contact number -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-social-worker-phone-number">
+    <span class="govuk-label--s">   Social worker's telephone phone number</span><span class="form-hint">Mobile or landline</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="child-1-social-worker-phone-number" name="child-1-social-worker-phone-number" type="text" value="{{ data['child-1-social-worker-phone-number'] }}">
+</div>
+
+
+
+
+
+
+<div class="form-group inline">
+
+			<legend class="govuk-label--s">
+
+Does the child have any additional needs?
+
+          <span class="form-hint">For example, child needs a interpreter</span>
+        </legend>
+
+        <div class="multiple-choice" data-target="child-1-addtional-needs-yes">
+          <input id="parent-1-assesment" type="radio" name="child-1-addtional-needs" value="Yes" {{ checked('child-1-addtional-needs','Yes') }}>
+          <label for="radio-parental-res-4">Yes</label>
+        </div>
+      <div class="multiple-choice" >
+          <input id="parent-1-assesment" type="radio" name="child-1-addtional-needs" value="No" {{ checked('child-1-addtional-needs','No') }}>
+          <label for="radio-parental-res-4">No</label>
+        </div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="child-1-addtional-needs-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="child-1-addtional-needs-details" rows="4" cols="80"> {{ data['child-1-addtional-needs-details'] }}</textarea>
+
+
+
+
+</div>
+
+
+
+  </div>
+
+
+
+<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<h2 class='heading-medium'>Child 2</h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name </label> <input type='text' class='form-control' id='child-2-full-name'>";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add child" onClick="addInput('dynamicInput');">
+
+
+
+<br/><br/>
+
+
+{% if data['change'] == "true" %}
+  <input class="button" type="submit" value="Save and continue">
+
+{% else %}
+
+<input class="button" type="submit" value="Save">
+{% endif %}
+
+
+</form>
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

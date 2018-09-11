@@ -1,0 +1,336 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+
+C110A - Risk and Harm
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="c110a-review#risk-harm">
+
+{% else %}
+
+  <form action="c110a">
+{% endif %}
+
+
+			 <h1 class="govuk-heading-xl">
+          Risks and harm to children
+        </h1>
+
+<h2 class="govuk-heading-m"> Is there evidence of any of the following?</h2>
+			
+				
+		
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+  Physical harm including non-accidental injury
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="physical-harm-conditional-1" name="physical-harm" type="radio" value="Yes" {{ checked('physical-harm','Yes') }} data-aria-controls="conditional-physical-harm-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="physical-harm-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-physical-harm-conditional-1">
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="physical-harm">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      
+    </legend>
+    
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="physical-harm" name="physical-harm" type="checkbox" value="Past harm" {{ checked('physical-harm','Past harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Past harm
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="Future risk of harm" name="physical-harm" type="checkbox" value="Future risk of harm" {{ checked('physical-harm','Future risk of harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Future risk of harm
+        </label>
+      </div>
+     
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="physical-harm-conditional-2" name="physical-harm" type="radio" value="No" {{ checked('physical-harm','No') }}>
+        <label class="govuk-label govuk-radios__label" for="physical-harm-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+	  		
+				
+	<!--	
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+Non-accidental injury
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-accidental-injury-conditional-1" name="non-accidental-injury" type="radio" value="Yes" {{ checked('non-accidental-injury','Yes') }} data-aria-controls="conditional-non-accidental-injury-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="non-accidental-injury-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-non-accidental-injury-conditional-1">
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="physical-harm">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      
+    </legend>
+    
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="non-accidental-injury" name="non-accidental-injury" type="checkbox" value="Past harm" {{ checked('non-accidental-injury','Past harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Past harm
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="Future risk of harm" name="non-accidental-injury" type="checkbox" value="Future risk of harm" {{ checked('non-accidental-injury','Future risk of harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Future risk of harm
+        </label>
+      </div>
+     
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="physical-harm-conditional-2" name="non-accidental-injury" type="radio" value="No" {{ checked('non-accidental-injury','No') }}>
+        <label class="govuk-label govuk-radios__label" for="physical-harm-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>--><!-- end field-->			
+				
+		
+		
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+Emotional harm
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="emotional-harm-injury-conditional-1" name="emotional-harm" type="radio" value="Yes" {{ checked('emotional-harm','Yes') }} data-aria-controls="conditional-emotional-harm-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="emotional-harm-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-emotional-harm-conditional-1">
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="emotional-harm">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      
+    </legend>
+    
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="non-accidental-injury" name="emotional-harm" type="checkbox" value="Past harm" {{ checked('emotional-harm','Past harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Past harm
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="Future risk of harm" name="emotional-harm" type="checkbox" value="Future risk of harm" {{ checked('emotional-harm','Future risk of harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Future risk of harm
+        </label>
+      </div>
+     
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="emotional-harm-conditional-2" name="emotional-harm" type="radio" value="No" {{ checked('emotional-harm','No') }}>
+        <label class="govuk-label govuk-radios__label" for="physical-harm-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->			
+								
+	 <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Sexual abuse
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-abuse-conditional-1" name="sexual-abuse" type="radio" value="Yes" {{ checked('sexual-abuse','Yes') }} data-aria-controls="conditional-sexual-abuse-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="sexual-abuse-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sexual-abuse-conditional-1">
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sexual-abuse">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      
+    </legend>
+    
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="non-accidental-injury" name="sexual-abuse" type="checkbox" value="Past harm" {{ checked('sexual-abuse','Past harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Past harm
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="sexual-abuse" name="sexual-abuse" type="checkbox" value="Future risk of harm" {{ checked('sexual-abuse','Future risk of harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Future risk of harm
+        </label>
+      </div>
+     
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-abuse-conditional-2" name="sexual-abuse" type="radio" value="No" {{ checked('sexual-abuse','No') }}>
+        <label class="govuk-label govuk-radios__label" for="sexual-abuse-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->			
+						
+  							
+	 <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+   Neglect
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="neglect-conditional-1" name="neglect" type="radio" value="Yes" {{ checked('neglect','Yes') }} data-aria-controls="conditional-neglect-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="neglect-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-neglect-conditional-1">
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="neglect">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      
+    </legend>
+    
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="neglect" name="neglect" type="checkbox" value="Past harm" {{ checked('neglect','Past harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Past harm
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="neglect" name="neglect" type="checkbox" value="Future risk of harm" {{ checked('neglect','Future risk of harm') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Future risk of harm
+        </label>
+      </div>
+     
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="neglect-conditional-2" name="neglect" type="radio" value="No" {{ checked('neglect','No') }}>
+        <label class="govuk-label govuk-radios__label" for="neglect-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->			
+									
+
+
+
+
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
