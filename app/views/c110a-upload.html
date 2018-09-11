@@ -25,8 +25,8 @@ C110a - Documents
   <form action="c110a">
 {% endif %}
    <h1 class="govuk-heading-xl"> Annex documents</h1>
-<p> The documents specified in this annex must be uploaded with the application if available. If any relevant document is not  uploaded with the application, the reason and any expected date of  filing must be stated.<!-- If you are using <a href="http://adcs.org.uk/care/article/SWET" target="_blank">SWET(Social Work Evidence Template) </a>you can upload SWET instead of the below documents by clicking on the "Upload other doucments" button at the bottom.--></p>
-
+<p>You must upload these documents if possible. Give the reason and date you expect to provide it if you don’t have a document yet.</p>
+<p>If you have a Social Work Evidence Template (SWET), add it under ‘Other documents’.</p>
 
 
 			   <h2 class="heading-medium">  1. Social work chronology</h2>
@@ -79,8 +79,11 @@ C110a - Documents
           <textarea class="form-control" type="text" id="other-2y" name="to-follow-02-reason"> {{ data['to-follow-02-reason'] }} </textarea>
         </div>
 			</div>	<hr />
-				   <h2 class="heading-medium">  3. The current assessment relating to the child or the family and friends of the child to which the social work statement refers and on which the local authority relies
+				   <h2 class="heading-medium">  3. Social work assessment
 </h2>
+<span id="social-work-assessment-hint" class="govuk-hint">
+      Relevant core, kinship or family assessments.
+    </span>
 	  <div class="govuk-form-group">
   <label class="govuk-label" for="file-upload-1">
     Upload a file
