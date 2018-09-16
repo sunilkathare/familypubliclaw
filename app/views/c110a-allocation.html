@@ -60,15 +60,15 @@ C110a - International element
     </span>-->
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+        <input class="govuk-radios__input" id="changed-name-1" name="proceeding-type" type="radio" value="Ongoing">
         <label class="govuk-label govuk-radios__label" for="changed-name-1">
           Ongoing 
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <input class="govuk-radios__input" id="changed-name-2" name="proceeding-type" type="radio" value="Previous">
         <label class="govuk-label govuk-radios__label" for="changed-name-2">
-          Pervious
+          Previous
         </label>
       </div>
     </div>
@@ -101,7 +101,9 @@ C110a - International element
 		  <div class="govuk-form-group">
           <label class="govuk-label" for="Yes">
     Judge
-  </label>
+  </label><span id="judge-hint" class="govuk-hint">
+  For example, Dristrict Judge Martin Brown
+</span>
           <input class="govuk-input govuk-!-width-one-third" id="yes" name="judge" type="text" value="{{ data['judge'] }}">
         </div>
 		  
@@ -126,7 +128,7 @@ C110a - International element
       </h3>
     </legend>
 
-    <div class="govuk-radios govuk-radios--inline">
+    <div class="govuk-radios govuk-radios--inline-">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="changed-name-1" name="same-guardian-needed" type="radio" value="Yes" {{ checked('same-guardian-needed','Yes') }}>
         <label class="govuk-label govuk-radios__label" for="changed-name-1">
@@ -134,10 +136,21 @@ C110a - International element
       </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="same-guardian-needed" type="radio" value="No" {{ checked('same-guardian-needed','No') }}>
+        <input class="govuk-radios__input" id="changed-name-2" name="same-guardian-needed" type="radio" value="No" {{ checked('same-guardian-needed','No') }} data-aria-controls="conditional-same-guardian-conditional-1">
         <label class="govuk-label govuk-radios__label" for="changed-name-2">
         No
       </label>
+      </div>
+		
+		 <div class="govuk-radios__conditional" id="conditional-same-guardian-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+  Specify reason 
+  </label>
+  
+    <textarea class="govuk-textarea" id="urgency-reason" name="same-guardian-reason" rows="3" aria-describedby="more-detail-hint">{{ data['same-guardian-reason'] }}</textarea>
+        </div>
+        
       </div>
     </div>
   </fieldset>

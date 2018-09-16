@@ -47,6 +47,17 @@ C110a - Orders
       Care order
       </label>
       </div>
+			<div class="govuk-checkboxes__conditional" id="conditional-order-type-1" >
+<div class="govuk-form-group">
+          <label class="govuk-label" for="direction">
+  Specify direction sought
+  </label>
+  
+    <textarea class="govuk-textarea" id="direction" name="direction" rows="3" aria-describedby="more-detail-hint">{{ data['direction'] }}</textarea>
+        </div>
+       
+
+    </div>
      <!-- <div class="govuk-checkboxes__conditional" id="conditional-order-type-1">
 
         <div class="govuk-form-group">
@@ -101,54 +112,50 @@ Please specify
       Supervision order
       </label>
       </div>
+			<div class="govuk-checkboxes__conditional" id="conditional-order-type-2" >
+<div class="govuk-form-group">
+          <label class="govuk-label" for="direction">
+  Specify direction sought
+  </label>
+  
+    <textarea class="govuk-textarea" id="direction" name="direction" rows="3" aria-describedby="more-detail-hint">{{ data['direction'] }}</textarea>
+        </div>
+       
+
+    </div>
+		
 		 <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="Education supervision order" data-aria-controls="conditional-order-type-3" {{ checked('order-type','Education supervision order') }}>
+        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="Education supervision order" data-aria-controls="conditional-order-type-3" data-aria-controls="conditional-order-type-3" {{ checked('order-type','Education supervision order') }}>
         <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-1">
      Education supervision order
       </label>
       </div>
+		<div class="govuk-checkboxes__conditional" id="conditional-order-type-3" >
+<div class="govuk-form-group">
+          <label class="govuk-label" for="direction">
+  Specify direction sought
+  </label>
+  
+    <textarea class="govuk-textarea" id="direction" name="direction" rows="3" aria-describedby="more-detail-hint">{{ data['direction'] }}</textarea>
+        </div>
+       
+
+    </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type" type="checkbox" value="Emergency protection order" data-aria-controls="conditional-order-type-4" {{ checked('order-type','Emergency protection order') }}>
         <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
         Emergency protection order
       </label>
       </div>
-      <div class="govuk-checkboxes__conditional" id="conditional-order-type-4">
-
-        <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="order-type-3" name="order-type-detail" type="checkbox" value="Information on the whereabouts of the children" {{ checked('order-type-detail','Information on the whereabouts of the children') }}>
-                <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
-                Information on the whereabouts of the children
-              </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="nationality-2" name="order-type-detail" type="checkbox" value="Authorisation for entry of premises" {{ checked('order-type-detail','Authorisation for entry of premises') }}>
-                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-                Authorisation for entry of premises
-              </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="nationality-3" name="order-type-detail" type="checkbox" value="Authorisation to search for another child on the premises" {{ checked('order-type-detail','Authorisation to search for another child on the premises') }}>
-                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
-                Authorisation to search for another child on the premises
-              </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type-detail" type="checkbox" value="Other" data-aria-controls="conditional-order-type-others-2" {{ checked('order-type-detail','Other') }}>
-                <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
-                Other
-              </label>
-              </div>
-              <div class="govuk-checkboxes__conditional" id="conditional-order-type-others-2">
-                <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-phone">
-  Please specify
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-4" >
+<div class="govuk-form-group">
+          <label class="govuk-label" for="direction">
+  Specify direction sought
   </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="order-type-detail-others" type="text" value="{{ data['order-type-detail-others'] }}">
+  
+    <textarea class="govuk-textarea" id="direction" name="direction-epo" rows="3" aria-describedby="more-detail-hint">{{ data['direction-epo'] }}</textarea>
         </div>
-            </div>
-      </div>
+       
 
     </div>
 		  <div class="govuk-checkboxes__item">
@@ -164,6 +171,13 @@ Please specify
 </label>
   <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="order-type-detail-others-1" type="text" value="{{ data['order-type-detail-others-1'] }}">
 </div>
+		  <div class="govuk-form-group">
+          <label class="govuk-label" for="direction">
+  Specify direction sought
+  </label>
+  
+    <textarea class="govuk-textarea" id="direction" name="direction" rows="3" aria-describedby="more-detail-hint">{{ data['direction'] }}</textarea>
+        </div>
     </div>
   </fieldset>
 </div>
