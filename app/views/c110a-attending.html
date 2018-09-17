@@ -34,7 +34,7 @@ C110a - Attending hearing
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h2 class="govuk-fieldset__heading-m">
-              Does anyone in the case need extra support to help them take part in a hearing?
+              Are any of the following needed to help someone take part in a hearing?
       </h2><span id="orders-hint" class="govuk-hint">
   Select all that apply
 </span>
@@ -111,13 +111,13 @@ C110a - Attending hearing
 		<div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="attending-hearing-conditional-3" name="attending-hearing" type="checkbox" value="Security" {{ checked('attending-hearing','Security') }} data-aria-controls="conditional-attending-hearing-conditional-5">
         <label class="govuk-label govuk-checkboxes__label" for="attending-hearing-conditional-5">
-            Security
+           Separate waiting room or other security measures
         </label>
       </div>
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-attending-hearing-conditional-5">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-text">
-            Give details <span class="govuk-hint">For example, domestic violence history meaning a separate waiting room is needed</span>
+            Give details <span class="govuk-hint"><!--For example, domestic violence history meaning a separate waiting room is needed-->For example, mother and father need to be in separate waiting rooms as history of domestic violence</span>
           </label>
          <textarea class="govuk-textarea" type="text" id="another-country" name="security-details" rows="3" >{{ data['security-details'] }}</textarea>
           
