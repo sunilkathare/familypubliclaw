@@ -522,7 +522,73 @@ Brief summary of care and contact plan
 <textarea class="govuk-textarea govuk-!-width-two-thirds" id="key-dates" name="care-plan" rows="5" aria-describedby="care-plan-hint">{{ data['care-plan'] }} </textarea>
 </div>
 
+<!-- Adoption  -->
+			
+	<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+Are you considering adoption at this stage?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="adoption-conditional-1" name="adoption" type="radio" value="Yes" {{ checked('adoption','Yes') }} data-aria-controls="conditional-adoption-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="adoption-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-adoption-conditional-1">
+       <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+Are you submitting an application for a placement order?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="adoption-placement-conditional-1" name="adoption-placement" type="radio" value="Yes" {{ checked('adoption-placement','Yes') }} data-aria-controls="conditional-adoption-placement-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="adoption-placement-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-adoption-placement-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="mental-health-issues">
+          Which court are you applying to?
+			  <span id="changed-name-hint" class="govuk-hint">
+  
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="domestic-violence" name="adoption-details" rows="3" >{{ data['adoption-details'] }}</textarea>
+        </div>
 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="adoption-conditional-2" name="adoption-placement" type="radio" value="No" {{ checked('adoption-placement','No') }}>
+        <label class="govuk-label govuk-radios__label" for="adoption-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="adoption-conditional-2" name="adoption" type="radio" value="No" {{ checked('adoption','No') }}>
+        <label class="govuk-label govuk-radios__label" for="adoption-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
 <!-- Mother's full name -->
 
 <div class="govuk-form-group">
