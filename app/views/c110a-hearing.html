@@ -165,6 +165,20 @@ Hearing needed
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
         </div>
       </div>
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-type" type="radio" value="EPO" {{ checked('hearing-type','EPO') }} data-aria-controls="conditional-hearing-type-epo-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+      EPO
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-hearing-type-epo-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+   Specify reason
+  </label>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
+        </div>
+      </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-type" type="radio" value="Urgent preliminary case management hearing" {{ checked('hearing-type','Urgent preliminary case management hearing') }} data-aria-controls="conditional-hearing-type-urgent-conditional-1">
         <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
