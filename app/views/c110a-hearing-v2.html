@@ -147,17 +147,17 @@ Hearing needed
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
 
-       What type of hearings do you need?
+       What type of hearing do you need?
 
     </legend>
-    <div class="govuk-checkboxes" data-module="checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="how-contacted-conditional-1" name="hearing-type" type="checkbox" value="Contested ICO" {{ checked('hearing-type','Contested ICO') }} data-aria-controls="conditional-hearing-type-ico-conditional-1">
-        <label class="govuk-label govuk-checkboxes__label" for="how-contacted-conditional-1">
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-type" type="radio" value="Contested ICO" {{ checked('hearing-type','Contested ICO') }} data-aria-controls="conditional-hearing-type-ico-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
       Contested ICO
       </label>
       </div>
-      <div class="govuk-checkboxes__conditional" id="conditional-hearing-type-ico-conditional-1">
+      <div class="govuk-radios__conditional" id="conditional-hearing-type-ico-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
    Specify reason
@@ -165,13 +165,13 @@ Hearing needed
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
         </div>
       </div>
-		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="how-contacted-conditional-1" name="hearing-type" type="checkbox" value="EPO" {{ checked('hearing-type','EPO') }} data-aria-controls="conditional-hearing-type-epo-conditional-1">
-        <label class="govuk-label govuk-checkboxes__label" for="how-contacted-conditional-1">
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-type" type="radio" value="EPO" {{ checked('hearing-type','EPO') }} data-aria-controls="conditional-hearing-type-epo-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
       EPO
       </label>
       </div>
-      <div class="govuk-checkboxes__conditional" id="conditional-hearing-type-epo-conditional-1">
+      <div class="govuk-radios__conditional" id="conditional-hearing-type-epo-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
    Specify reason
@@ -179,13 +179,13 @@ Hearing needed
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
         </div>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="how-contacted-conditional-2" name="hearing-type" type="checkbox" value="Urgent preliminary case management hearing" {{ checked('hearing-type','Urgent preliminary case management hearing') }} data-aria-controls="conditional-hearing-type-urgent-conditional-1">
-        <label class="govuk-label govuk-checkboxes__label" for="how-contacted-conditional-2">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-type" type="radio" value="Urgent preliminary case management hearing" {{ checked('hearing-type','Urgent preliminary case management hearing') }} data-aria-controls="conditional-hearing-type-urgent-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
         Urgent preliminary case management hearing
       </label>
       </div>
-		<div class="govuk-checkboxes__conditional" id="conditional-hearing-type-urgent-conditional-1">
+		<div class="govuk-radios__conditional" id="conditional-hearing-type-urgent-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
    Specify reason
@@ -193,13 +193,13 @@ Hearing needed
     <textarea class="govuk-textarea" id="hearing-type-reason-urgent" name="hearing-type-urgent-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-urgent-reason'] }}</textarea>
         </div>
       </div>
-		<div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="how-contacted-conditional-2" name="hearing-type" type="checkbox" value="Standard case management hearing" {{ checked('hearing-type','Standard case management hearing') }} data-aria-controls="conditional-hearing-type-others-conditional-1">
-        <label class="govuk-label govuk-checkboxes__label" for="how-contacted-conditional-2">
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="hearing-type" type="radio" value="Standard case management hearing" {{ checked('hearing-type','Standard case management hearing') }} data-aria-controls="conditional-hearing-type-others-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
         Standard case management hearing
       </label>
       </div>
-		<div class="govuk-checkboxes__conditional" id="conditional-hearing-type-others-conditional-1">
+		<div class="govuk-radios__conditional" id="conditional-hearing-type-others-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
    Specify reason
@@ -219,7 +219,7 @@ Hearing needed
       <h2 class="govuk-fieldset__heading">
       Do you need a without notice hearing? 
 		 
-      </h2><!--<span class="govuk-hint">You can only do this if you're applying for an Emergency Protection Order </span>-->
+      </h2><span class="govuk-hint">You can only do this if you're applying for an Emergency Protection Order </span>
     </legend>
     <div class="govuk-radios" data-module="radios">
       <div class="govuk-radios__item">
