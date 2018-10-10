@@ -36,7 +36,7 @@ C110a form - Children
 
 <div class="govuk-form-group">
   <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Child’s full name</span>
+    <span class="govuk-label---s">  Full name</span>
   </label>
   <input class="govuk-input govuk-!-width-one-half" id="full-name" name="child-1-full-name" type="text" value="{{ data['child-1-full-name'] }}">
 </div>
@@ -645,10 +645,11 @@ Are you submitting an application for a placement order?
 
 
 <!-- Social worker's full name -->
-
+			
+			<h3 class="govuk-heading-m"> Social worker </h3>
 <div class="govuk-form-group">
   <label class="govuk-label govuk-!-width-one-half" for="child-1-social-worker-name">
-    <span class="govuk-label-s">   Name of social worker</span>
+    <span class="govuk-label-s">   Social worker's full name</span>
   </label>
   <input class="govuk-input govuk-!-width-one-half" id="child-1-social-worker-name" name="child-1-social-worker-name" type="text" value="{{ data['child-1-social-worker-name'] }}">
 </div>
@@ -716,7 +717,7 @@ Are you submitting an application for a placement order?
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-c8-child-1-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="c8-child-1">
-            Specify reason
+            Give reason
           </label>
          <textarea class="govuk-textarea" type="text" id="c8-child-1" name="c8-child-1-reason" rows="3" >{{ data['c8-child-1-reason'] }}</textarea>
         </div>
@@ -818,7 +819,7 @@ function addInput(divName){
          <!-- Entry 1<br><input type="text" name="myInputs[]">-->
 
      </div>
-     <input type="button" class="button" value="Add child" onClick="addInput('dynamicInput');">
+     <input type="button" class="button" value="Add another child" onClick="addInput('dynamicInput');">
 
 
 

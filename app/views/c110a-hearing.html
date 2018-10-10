@@ -51,7 +51,7 @@ Hearing needed
       <div class="govuk-radios__conditional" id="conditional-hearing-day-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-  Specify reason 
+  Give reason 
   </label>
   
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-same-day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-same-day-reason'] }}</textarea>
@@ -67,10 +67,11 @@ Hearing needed
       <div class="govuk-radios__conditional" id="conditional-hearing-day-3-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-  Specify reason and dates for consideration
+  Give reason and dates for consideration
   </label>
   <span id="more-detail-hint" class="govuk-hint">
-   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018
+   <!--For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018-->
+	  For example, hearing needed before 30 July as the child is being released from hospital on 31 July
  </span>
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-3-day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-3-day-reason'] }}</textarea>
         </div>
@@ -105,10 +106,10 @@ Hearing needed
       <div class="govuk-radios__conditional" id="conditional-hearing-day-7-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-  Specify reason and dates for consideration
+  Give reason and dates for consideration
   </label>
   <span id="more-detail-hint" class="govuk-hint">
-   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018
+    For example, hearing needed before 30 July as the child is being released from hospital on 31 July
  </span>
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing--7day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-7-day-reason'] }}</textarea>
         </div>
@@ -123,10 +124,10 @@ Hearing needed
       <div class="govuk-radios__conditional" id="conditional-hearing-day-12-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-  Specify reason and dates for consideration
+  Give reason and dates for consideration
   </label>
   <span id="more-detail-hint" class="govuk-hint">
-   For example, need hearing before 30 July 2018 as the child is being released from hospital on 31 July 2018
+    For example, hearing needed before 30 July as the child is being released from hospital on 31 July
  </span>
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-12-day-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-12-day-reason'] }}</textarea>
         </div>
@@ -147,20 +148,20 @@ Hearing needed
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
 
-       What type of hearings do you need?
+       What type of hearing do you need?
 
     </legend>
     <div class="govuk-checkboxes" data-module="checkboxes">
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="how-contacted-conditional-1" name="hearing-type" type="checkbox" value="Contested ICO" {{ checked('hearing-type','Contested ICO') }} data-aria-controls="conditional-hearing-type-ico-conditional-1">
         <label class="govuk-label govuk-checkboxes__label" for="how-contacted-conditional-1">
-      Contested ICO
+      Contested interim care order
       </label>
       </div>
       <div class="govuk-checkboxes__conditional" id="conditional-hearing-type-ico-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-   Specify reason
+   Give reason
   </label>
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
         </div>
@@ -168,13 +169,13 @@ Hearing needed
 		<div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="how-contacted-conditional-1" name="hearing-type" type="checkbox" value="EPO" {{ checked('hearing-type','EPO') }} data-aria-controls="conditional-hearing-type-epo-conditional-1">
         <label class="govuk-label govuk-checkboxes__label" for="how-contacted-conditional-1">
-      EPO
+     Emergency protection order
       </label>
       </div>
       <div class="govuk-checkboxes__conditional" id="conditional-hearing-type-epo-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-   Specify reason
+   Give reason
   </label>
     <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
         </div>
@@ -188,7 +189,7 @@ Hearing needed
 		<div class="govuk-checkboxes__conditional" id="conditional-hearing-type-urgent-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-   Specify reason
+   Give reason
   </label>
     <textarea class="govuk-textarea" id="hearing-type-reason-urgent" name="hearing-type-urgent-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-urgent-reason'] }}</textarea>
         </div>
@@ -202,7 +203,7 @@ Hearing needed
 		<div class="govuk-checkboxes__conditional" id="conditional-hearing-type-others-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-   Specify reason
+   Give reason
   </label>
     <textarea class="govuk-textarea" id="hearing-type-cmh-reason" name="hearing-type-cmh-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-cmh-reason'] }}</textarea>
         </div>
@@ -231,7 +232,7 @@ Hearing needed
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-without-notice-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="without-notice">
-            Specify reason
+            Give reason
           </label>
          <textarea class="govuk-textarea" type="text" id="without-notice" name="without-notice-reason" rows="3" >{{ data['without-notice-reason'] }}</textarea>
         </div>
@@ -269,7 +270,7 @@ Hearing needed
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reduced-notice-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="reduced-notice">
-            Specify reason
+            Give reason
           </label>
          <textarea class="govuk-textarea" type="text" id="without-notice" name="reduced-notice-reason" rows="3" >{{ data['reduced-notice-reason'] }}</textarea>
         </div>
@@ -306,7 +307,7 @@ Hearing needed
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-respondents-notified-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="respondents-notified">
-            Specify respondents’ views on proceedings
+            Give respondents’ views on proceedings
           </label>
          <textarea class="govuk-textarea" type="text" id="without-notice" name="respondents-notified-reason" rows="3" >{{ data['respondents-notified-reason'] }}</textarea>
         </div>
