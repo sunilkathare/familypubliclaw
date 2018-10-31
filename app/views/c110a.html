@@ -379,7 +379,7 @@
                 </li>
 			  <li class="task-list-item">
               <a class="task-name" href="c110a-allocation?change=false">
-               Other proceedings and allocation proposal
+               Other proceedings
               </a>
               {% if data['previous-proceedings'] and data['allocation-proposal'] %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
@@ -387,7 +387,17 @@
               <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
               {% endif %}
             </li>
-            <li class="task-list-item">
+			  <li class="task-list-item">
+              <a class="task-name" href="c110a-allocation?change=false">
+              Allocation proposal
+              </a>
+              {% if data['previous-proceedings'] and data['allocation-proposal'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
+           <!-- <li class="task-list-item">
               <a class="task-name" href="c110a-attending?change=false">
               Attending hearing
               </a>
@@ -396,7 +406,7 @@
               {% else %}
               <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
               {% endif %}
-            </li>
+            </li>-->
 
 
 			  <!--<li class="task-list-item">
