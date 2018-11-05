@@ -316,7 +316,7 @@ function addInput(divName){
 	  
 	  <!-- end field-->
 			 <h2 class="govuk-heading-m">
-    <!--Ability to take part in proceedings-->Attending the court
+    <!--Ability to take part in proceedings-->Taking part in proceedings
       </h2>	
 
 				
@@ -324,7 +324,7 @@ function addInput(divName){
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
       <h2 class="govuk-fieldset__heading">
-      Is an interpreter required ?
+      Does this person need an interpreter?
       </h2>
 		<span id="orders-hint" class="govuk-hint">
  Including British Sign Language
@@ -360,124 +360,12 @@ function addInput(divName){
     </div>
   </fieldset>
 </div><!-- end field-->
-	  
-	  
-	  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-    Is an intermediary required ?
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="intermediary-conditional-1" name="intermediary" type="radio" value="Yes" {{ checked('intermediary','Yes') }} data-aria-controls="conditional-intermediary-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="intermediary-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-intermediary-conditional-1">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="intermediary">
-            Give details
-			  <span id="changed-name-hint" class="govuk-hint">
-    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
-    </span>
-          </label>
-         <textarea class="govuk-textarea" type="text" id="intermediary" name="intermediary-details" rows="3" >{{ data['intermediary-details'] }}</textarea>
-        </div>
-
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="intermediary-conditional-2" name="intermediary" type="radio" value="No" {{ checked('intermediary','No') }}>
-        <label class="govuk-label govuk-radios__label" for="intermediary-conditional-2">
-          No
-        </label>
-      </div>
-      
-      <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-  Do you know if any person has any learning disability issues?
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="learning-disability-issues-conditional-1" name="learning-disability" type="radio" value="Yes" {{ checked('learning-disability','Yes') }} data-aria-controls="conditional-learning-disability-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="learning-disability-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-learning-disability-conditional-1">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="learning-disability">
-            Provide details
-			  <span id="changed-name-hint" class="govuk-hint">
-    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
-    </span>
-          </label>
-         <textarea class="govuk-textarea" type="text" id="learning-disability" name="learning-disability-details" rows="3" >{{ data['learning-disability-details'] }}</textarea>
-        </div>
-
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="learning-disability-issues-conditional-2" name="learning-disability" type="radio" value="No" {{ checked('learning-disability','No') }}>
-        <label class="govuk-label govuk-radios__label" for="learning-disability-conditional-2">
-          No
-        </label>
-      </div>
-      
-      
-    </div>
-  </fieldset>
-</div><!-- end field-->
-    </div>
-  </fieldset>
-</div><!-- end field-->
-				<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-     Does this respondent have any issues with litigation capacity?
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="lc-respondent-1" name="lc-respondent-1" type="radio" value="Yes" {{ checked('lc-respondent-1','Yes') }} data-aria-controls="conditional-lc-respondent-1-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-lc-respondent-1-conditional-1">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="lc-respondent-1">
-           Give details, including referrals to or assessments by the Adult Learning Disability team or other health service, including outcomes
-          </label>
-         <textarea class="govuk-textarea" type="text" id="lc-respondent-1" name="lc-respondent-1-reason" rows="3" >{{ data['lc-respondent-1-reason'] }}</textarea>
-        </div>
-
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="lc-respondent-1-conditional-2" name="lc-respondent-1" type="radio" value="No" {{ checked('lc-respondent-1','No') }}>
-        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-2">
-          No
-        </label>
-      </div>
-      
-      
-    </div>
-  </fieldset>
-</div>
-	  
-	  
-	  <!-- end field-->
-				 
+	  			 
  <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
       <h2 class="govuk-fieldset__heading">
-  Will they need to use spoken or written Welsh during the course of the proceedings?
+  Does this person need spoken or written Welsh?
       </h2>
     </legend>
     <div class="govuk-radios" data-module="radios">
@@ -511,18 +399,93 @@ function addInput(divName){
   </fieldset>
 </div><!-- end field-->
 	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+  Does this person need an intermediary?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="intermediary-conditional-1" name="intermediary" type="radio" value="Yes" {{ checked('intermediary','Yes') }} data-aria-controls="conditional-intermediary-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="intermediary-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-intermediary-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="intermediary">
+            Give details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="intermediary" name="intermediary-details" rows="3" >{{ data['intermediary-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="intermediary-conditional-2" name="intermediary" type="radio" value="No" {{ checked('intermediary','No') }}>
+        <label class="govuk-label govuk-radios__label" for="intermediary-conditional-2">
+          No
+        </label>
+      </div>
+        </div>
+  </fieldset>
+<!-- end field-->
+	  
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+Does this person need facilities or assistance for a disability?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="learning-disability-issues-conditional-1" name="learning-disability" type="radio" value="Yes" {{ checked('learning-disability','Yes') }} data-aria-controls="conditional-learning-disability-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="learning-disability-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-learning-disability-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="learning-disability">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="learning-disability" name="learning-disability-details" rows="3" >{{ data['learning-disability-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="learning-disability-issues-conditional-2" name="learning-disability" type="radio" value="No" {{ checked('learning-disability','No') }}>
+        <label class="govuk-label govuk-radios__label" for="learning-disability-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
+    </div>
+  
 		  
  <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
       <h2 class="govuk-fieldset__heading">
-Do you know whether the court
+<!--Do you know whether the court
 needs to make any special
 arrangements for 
-attending court?
+attending court?-->Does this person need a separate waiting room or other security measures?
 		    <span id="changed-name-hint" class="govuk-hint">
     <!--For example, providing a separate waiting room or other security requirements-->
-				For example, domestic violence history meaning a separate waiting room is needed
+				For example, mother and father need to be in separate waiting rooms as history of domestic violence
     </span>
       </h2>
     </legend>
@@ -556,6 +519,81 @@ attending court?
     </div>
   </fieldset>
 </div><!-- end field-->
+				<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+     Do you believe this person will have problems with litigation capacity (understanding what’s happening in the case)?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="lc-respondent-1" name="lc-respondent-1" type="radio" value="Yes" {{ checked('lc-respondent-1','Yes') }} data-aria-controls="conditional-lc-respondent-1-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-lc-respondent-1-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="lc-respondent-1">
+           Give details, including referrals to or assessments by the Adult Learning Disability team or other health service, including outcomes
+          </label>
+         <textarea class="govuk-textarea" type="text" id="lc-respondent-1" name="lc-respondent-1-reason" rows="3" >{{ data['lc-respondent-1-reason'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="lc-respondent-1-conditional-2" name="lc-respondent-1" type="radio" value="No" {{ checked('lc-respondent-1','No') }}>
+        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  <!-- end field--><div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+     Is there anything else this person will need to help them take part in proceedings?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="lc-respondent-1" name="lc-respondent-1" type="radio" value="Yes" {{ checked('lc-respondent-1','Yes') }} data-aria-controls="conditional-anything-respondent-1-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-anything-respondent-1-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="lc-respondent-1">
+           Give details
+          </label>
+         <textarea class="govuk-textarea" type="text" id="lc-respondent-1" name="lc-respondent-1-reason" rows="3" >{{ data['lc-respondent-1-reason'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="lc-respondent-1-conditional-2" name="lc-respondent-1" type="radio" value="No" {{ checked('lc-respondent-1','No') }}>
+        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  <!-- end field-->
+	
+	
 
 
 			<div class="form-group inline" style="display: none;">
