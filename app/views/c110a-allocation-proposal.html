@@ -29,72 +29,497 @@ C110a - International element
 {% endif %}
 
 
-			 <h1 class="govuk-heading-xl">
-         Allocation proposal 
-        </h1>
-
-	  <!--Allocation proposal -->
+			
 	  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-		
-		<h3>This should be completed by a solicitor with good knowledge of the case. Use the  <a href="https://www.judiciary.uk/wp-content/uploads/2013/03/President%E2%80%99s-Guidance-on-Allocation-and-Gatekeeping.pdf" target="_blank"> 
-    president's guidance </a>  and   <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> schedule</a> on allocation and gatekeeping to make your allocation proposal </h3>
-     <!-- <h2 class="govuk-label">
-        Applicant’s allocation proposal
-      </h3>-->
-		<!--<span class="form-hint"> --> <!--<a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> 
-    president's guidance on allocation</a></span>-->
+  <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+       Allocation proposal 
+      </h1>
     </legend>
-    <div class="govuk-radios">
+    <span id="how-contacted-conditional-hint" class="govuk-hint">
+      This should be completed by a solicitor with good knowledge of the case. <br>Use the    <a href="public/images/presidents-gudiance.pdf" target="_blank"> president's gudiance</a> on allocation and gatekeeping to make your allocation proposal 
+    </span>
+    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-1" name="allocation-proposal" type="radio" value="Lay justices" {{ checked('allocation-proposal','Lay justices') }}>
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-       Lay justices
-      </label>
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-lj">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+        Lay justices 
+        </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="allocation-proposal" type="radio" value="District judge level" {{ checked('allocation-proposal','District judge level') }}>
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-        District judge level
-      </label>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-lj">
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    
+    <span id="waste-hint" class="govuk-hint">
+      Select rationalise for your recommendation
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Case has a low risk of serious harm to child 
+        </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="allocation-proposal" type="radio" value="Circuit judge level" {{ checked('allocation-proposal','Circuit judge level') }}>
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-        Circuit judge level
-      </label>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Staright forward case 
+        </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-4" name="allocation-proposal" type="radio" value="DFJ/Section 9 sitting as a judge of the High Court" {{ checked('allocation-proposal','DFJ/Section 9 sitting as a judge of the High Court') }}>
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-        DFJ/Section 9 sitting as a judge of the High Court
-      </label>
-      </div>
-		<div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-4" name="allocation-proposal" type="radio" value="High Court judge level" {{ checked('allocation-proposal','High Court judge level') }}>
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-        High Court judge level
-      </label>
-      </div>
+      
     </div>
   </fieldset>
 </div>
 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-dlj">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+         District judge level 
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-dlj">
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    
+    <span id="waste-hint" class="govuk-hint">
+      Select rationalise for your recommendation
+    </span>
+	  <h3 class="govuk-heading-s">Risk assessment issues</h3>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Allegations or risk of
+a) serious physical or sexual abuse causing or likely to cause
+significant injury to the relevant children, and/or
+b) serious sexual abuse of the relevant children
 
-
-	  <!--reason --><h3>Use relevant paragraphs from the <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> president’s guidance on allocation</a> to rationalise your recommendation</h3>
-	  <div class="govuk-form-group">
-  <label class="govuk-label" for="more-detail">
-   
-  </label>
-<!--  <span id="more-detail-hint" class="govuk-hint">Use applicable
-paragraphs from the
-    <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> president’s guidance on allocation</a>
-  </span>-->
-
-  <textarea class="govuk-textarea" id="more-detail" name="allocation-reason" rows="5" aria-describedby="more-detail-hint">{{ data['allocation-reason'] }}</textarea>
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Allegations of serious domestic violence eg. causing significant
+injury particularly if witnessed by the child.
+        </label>
+      </div>
+		 <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Significant disputed issues relating to psychiatric illness of a parent and/or a child.
+        </label>
+      </div>
+		 <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        Significant disputed medical issues relating to the relevant child.
+        </label>
+      </div>
+		<h3 class="govuk-heading-s">Non-subject child as a party (particularly if under 16)</h3>
+		 <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        
+Where a child may be required to give evidence.
+        </label>
+      </div><h3 class="govuk-heading-s">Capacity issues</h3>
+		 <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        <!---->Capacity issues:
+Where there is a need for the Official Solicitor or another litigation 
+friend to represent the interests of an incapacitated adult.
+        </label>
+      </div>
+     <h3 class="govuk-heading-s">Real possibility of conflict of expert evidence or difficulty in
+resolving conflict in the evidence of witnesses</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where there is an identified need for no more than two expert
+witnesses to report on the same key issue(s)
+        </label>
+      </div>
+		
+		<h3 class="govuk-heading-s">Existing proceedings relating to the child or a sibling which are
+proceeding before another court or have been recently completed
+before another court</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Consideration must be given to listing the current proceedings
+before the judge who heard or is hearing the proceedings
+relating to the child or sibling in order to provide continuity.
+        </label>
+      </div>
+		<h3 class="govuk-heading-s">International Proceedings</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Cases to which Brussels II revised applies.
+        </label>
+      </div>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Cases in which placement is limited to temporary removal to a
+Hague Convention country.
+        </label>
+      </div>
+		
+		<h3 class="govuk-heading-s">Other case management issues</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where a “split hearing” or finding of fact hearing is necessary
+and judicial continuity cannot otherwise be ensured.
+        </label>
+      </div>
+		
+    </div>
+  </fieldset>
 </div>
+
+      </div>
+		 <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-cjl">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+         Circuit judge level 
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-cjl">
+        <h3 class="govuk-heading-s">Risk assessment issues</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Allegations of physical or sexual abuse which involve any of the following features:
+			<br>
+- Exceptional gravity in relation to the acts alleged or the nature of the harm
+suffered.<br>
+- Where there is, or is likely to be, conflicting expert opinion from more than two
+expert witnesses on any key issue.<br>
+- Shaking injuries involving retinal haemorrhage, brain injury or fractures.<br>
+- Complex medical questions involving novel issues or the determination of
+causation.
+        </label>
+      </div>
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Allegations of extremely serious domestic violence or rape, particularly if witnessed
+by the child.
+        </label>
+      </div>
+
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Risk of serious physical or emotional harm arising from:<br>
+- death of another child in family, a parent or other significant person.<br>
+- a parent or other significant person who may have committed a grave crime, for
+example murder, manslaughter or rape.
+        </label>
+      </div>
+		  
+		 <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+History of suspicious death of a child in the family.
+        </label>
+      </div>
+		  
+		  
+		   <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Complex medical issues, including medical causation issues and
+medical treatment issues including where any of the parties
+suffer from psychiatric illness or psychological issues or any
+significant disability such as profound deafness, blindness or
+learning disability, or which will require specialist knowledge
+and services in respect of parenting capacity or the needs of
+the children
+        </label>
+      </div>
+		  
+		   
+		  
+		<h3 class="govuk-heading-s">Unusual/Complex issues relating to ethnicity or religion</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Significant contested issues in respect of religion, culture or ethnicity or involving
+medical treatment relating to the same.
+        </label>
+      </div>
+		
+		  
+		  <h3 class="govuk-heading-s">Non-subject child as a party (particularly if under 16) </h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where children (including parents who are under the age of 18) are, or may be, required to give evidence and be joined as a party.
+        </label>
+      </div>
+		  
+		  
+		   <h3 class="govuk-heading-s">Capacity issues </h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where there is a need for the Official Solicitor or another litigation
+friend to represent the interests of more than one incapacitated party.
+        </label>
+      </div>
+		  
+		     <h3 class="govuk-heading-s">
+Real possibility of conflict of expert evidence or difficulty in resolving conflict in
+the evidence of witnesses  </h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where there is an identified need for more than two expert
+witnesses to report on the same key issues.
+        </label>
+      </div>
+		   <h3 class="govuk-heading-s">
+Novel or difficult point of law </h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where the case involves a difficult point of law,
+issues of public policy or unusually complex or sensitive issues.
+        </label>
+      </div>
+		  
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Allegations of serious abuse where there are, or are
+likely to be, criminal proceedings and consideration of issues regarding disclosure
+of information or public interest immunity.
+        </label>
+      </div>
+		  
+		   <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Complex issues as to disclosure – where a party
+seeks leave to withhold information from another party, or where there is an issue
+about the release of confidential information involving a difficult point of law, or
+where disclosure of documentation involves a difficult or sensitive exercise of
+discretion or public policy issues.
+        </label>
+      </div>
+		  
+		   <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where there are concurrent criminal proceedings in
+the Crown Court relevant to the issues between the parties and joint directions
+hearings may be required.
+        </label>
+      </div>
+		  
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Cases that don’t need to be heard by a High Court judge but have significant
+immigration or status issues.
+        </label>
+      </div>
+		  
+		  
+		  <h3 class="govuk-heading-s">
+Existing proceedings relating to the child or a sibling which are proceeding before
+another court or have been recently completed before another court.  </h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Consideration must be given to listing the current proceedings before the judge who heard or is hearing the proceedings relating to the child or sibling in order to provide continuity.
+        </label>
+      </div>
+		  <h3 class="govuk-heading-s">
+Other case management issues </h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where a “split hearing” or finding of fact hearing is necessary
+and judicial continuity before a District Judge cannot be ensured.
+        </label>
+      </div>
+		  
+		  
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Where possible local authority failures to progress plans to
+protect the child(ren) in the case are likely to be addressed
+critically by the court because it is alleged that there has been
+systemic failure in the proceedings and other proceedings.
+        </label>
+      </div>
+		  
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="text" data-aria-controls="conditional-hcj">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+          High Court judge level 
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hcj">
+        
+		   <h3 class="govuk-heading-s">
+International issues</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+There is an issue concerning placement for adoption of the child
+outside the jurisdiction.
+        </label>
+      </div>
+		  
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Proceedings with an international element relating to recognition
+or enforcement of orders, conflict or comity of laws or which have exceptional
+immigration or asylum status issues.
+        </label>
+      </div>
+		  
+		  
+		   <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Cases in which an application is made for (a) permanent
+placement or (b) temporary removal from the jurisdiction to a non-Hague
+convention country.
+
+        </label>
+      </div>
+		  
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Cases in which a child has been brought to this jurisdiction in circumstances which might constitute a wrongful removal or retention either from a EC Member State, a Hague Convention country (a contracting State to the 1980 Hague Child Abduction Convention and/or a contracting State to the 1996 Hague Child Protection Convention) or a non-Convention country.
+
+        </label>
+      </div>
+		  
+		   <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Cases in which a child is alleged to have been abducted overseas and applications have been made in this jurisdiction such as for a declaration that the child was habitually resident in this country prior to the abduction or for an order that the child be returned with a request for assistance etc.
+
+
+        </label>
+      </div>
+
+		   <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+Cases in which Tipstaff Orders are applied for.
+
+
+        </label>
+      </div>
+		  
+		  
+		  <h3 class="govuk-heading-s">
+Inherent jurisdiction</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Injunctions invoking the inherent jurisdiction of the court.
+        </label>
+      </div>
+		  
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Interim or substantive relief which requires the inherent
+jurisdiction of the High Court to be invoked.
+        </label>
+      </div>
+		  
+		  <h3 class="govuk-heading-s">
+Other</h3>
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Applications for Declaratory Relief.
+        </label>
+      </div>
+		  
+		  
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Applications which require the jurisdiction of the Administrative Court to be invoked.
+        </label>
+      </div>
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Issues as to publicity (identification of a child or restriction on publication or
+injunctions seeking to restrict the freedom of the media)
+        </label>
+      </div>
+		  
+		   <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       
+Applications in medical treatment cases, for example for novel medical treatment or
+life saving procedures)
+        </label>
+      </div>
+		  
+		  
+		  
+      </div>
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  
+	  
 
 
 
